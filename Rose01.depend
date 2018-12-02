@@ -1,0 +1,153 @@
+# depslib dependency file v1.0
+1527357756 source:c:\cpp_programs_from_book\rose01\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<windows.h>
+	<conio.h>
+	"Global_Variables.h"
+	"TextFunctions.h"
+	"BattleFunctions.h"
+	"Enemies.h"
+	"ControlFunctions.h"
+	"Cutscenes.h"
+	"BackroundMovement.h"
+
+1527354950 c:\cpp_programs_from_book\rose01\global_variables.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<windows.h>
+	<conio.h>
+
+1527280695 c:\cpp_programs_from_book\rose01\textfunctions.h
+
+1527360612 c:\cpp_programs_from_book\rose01\battlefunctions.h
+
+1527280599 c:\cpp_programs_from_book\rose01\enemies.h
+
+1527360076 c:\cpp_programs_from_book\rose01\controlfunctions.h
+
+1527360369 c:\cpp_programs_from_book\rose01\area_yourhouse.h
+
+1527360693 c:\cpp_programs_from_book\rose01\cutscenes.h
+
+1527360693 c:\cpp_programs_from_book\rose01\display.h
+
+1527360396 c:\cpp_programs_from_book\rose01\backroundmovement.h
+	"Area_YourHouse.h"
+	"Display.h"
+
+1542588022 source:c:\cpp_programs_from_book\rose02\main.cpp
+	"Global_Variables.h"
+	"TextFunctions.h"
+	"Battle.h"
+	"ControlFunctions.h"
+	"BackroundMovement.h"
+	"Cutscenes.h"
+	"TitleScreen.h"
+	"Activities.h"
+	"Area2_Town.h"
+
+1542766857 c:\cpp_programs_from_book\rose02\global_variables.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<windows.h>
+	<conio.h>
+
+1542768232 c:\cpp_programs_from_book\rose02\textfunctions.h
+
+1532572918 c:\cpp_programs_from_book\rose02\battlefunctions.h
+
+1527361573 c:\cpp_programs_from_book\rose02\enemies.h
+
+1539977927 c:\cpp_programs_from_book\rose02\controlfunctions.h
+	"Area1_YourHouse.h"
+	"Area3_Forest.h"
+	"Area4_ElfVillage.h"
+
+1542772412 c:\cpp_programs_from_book\rose02\cutscenes.h
+
+1542335592 c:\cpp_programs_from_book\rose02\backroundmovement.h
+	"Display.h"
+
+1527647723 c:\cpp_programs_from_book\rose02\area_yourhouse.h
+	"Items.h"
+
+1537848419 c:\cpp_programs_from_book\rose02\display.h
+
+1542766932 c:\cpp_programs_from_book\rose02\titlescreen.h
+
+1527540722 c:\cpp_programs_from_book\rose02\worlditems.h
+
+1527537766 c:\cpp_programs_from_book\rose02\include\majoritems.h
+
+1527536480 source:c:\cpp_programs_from_book\rose02\src\majoritems.cpp
+	"MajorItems.h"
+
+1527538135 c:\cpp_programs_from_book\rose02\majoritems.h
+
+1527537918 source:c:\cpp_programs_from_book\rose02\majoritems.cpp
+	"MajorItems.h"
+
+1527645981 c:\cpp_programs_from_book\rose02\items.h
+
+1537818872 c:\cpp_programs_from_book\rose02\area1_yourhouse.h
+
+1542763481 c:\cpp_programs_from_book\rose02\activities.h
+
+1537818872 c:\cpp_programs_from_book\rose02\area2_town.h
+
+1542763765 c:\cpp_programs_from_book\rose02\area3_forest.h
+
+1538023873 c:\cpp_programs_from_book\rose02\area4_elfvillage.h
+
+1542765379 c:\cpp_programs_from_book\rose02\battle.h
+
+1543694038 source:c:\cpp_programs_from_book\current rose\main.cpp
+	"Global_Variables.h"
+	"TextFunctions.h"
+	"Battle.h"
+	"ControlFunctions.h"
+	"BackroundMovement.h"
+	"Cutscenes.h"
+	"TitleScreen.h"
+	"Activities.h"
+	"Area2_Town.h"
+
+1543692279 c:\cpp_programs_from_book\current rose\global_variables.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<windows.h>
+	<conio.h>
+
+1543694998 c:\cpp_programs_from_book\current rose\textfunctions.h
+
+1543696657 c:\cpp_programs_from_book\current rose\battle.h
+
+1542909201 c:\cpp_programs_from_book\current rose\controlfunctions.h
+	"Area1_YourHouse.h"
+	"Area3_Forest.h"
+	"Area4_ElfVillage.h"
+
+1537818872 c:\cpp_programs_from_book\current rose\area1_yourhouse.h
+
+1543605081 c:\cpp_programs_from_book\current rose\area3_forest.h
+
+1543604815 c:\cpp_programs_from_book\current rose\area4_elfvillage.h
+
+1542859585 c:\cpp_programs_from_book\current rose\backroundmovement.h
+	"Display.h"
+
+1543695325 c:\cpp_programs_from_book\current rose\display.h
+
+1543694255 c:\cpp_programs_from_book\current rose\cutscenes.h
+
+1543696791 c:\cpp_programs_from_book\current rose\titlescreen.h
+
+1542859590 c:\cpp_programs_from_book\current rose\activities.h
+
+1542927384 c:\cpp_programs_from_book\current rose\area2_town.h
+
