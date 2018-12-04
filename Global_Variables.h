@@ -20,6 +20,7 @@ using namespace std;
 int LoopNumber;
 int decision;
 bool movement = false;
+int RandomLuckValue;
 
 
 
@@ -60,6 +61,7 @@ int File1_sStatus;
 
 //current available areas to travel based on game progress
 int TravelStatus = 1;
+
 
 //activites statuses
 bool Inn = false;
@@ -160,7 +162,7 @@ bool Town_Fountain, Town_InnDesk, Town_InnTable = true, Town_Bushes, Town_Stove,
 bool Dungeon_Chest;
 
 //AREA 4
-bool Village_InnTable = true;
+bool Village_InnTable = true, Village_JewelCoins = false;
 
 
 
@@ -169,7 +171,7 @@ bool Village_InnTable = true;
                                                 //ITEMS
 
 //MAJOR ITEMS
-bool Player_Coat, Player_WoodenSword, Player_SteelSword, Player_Shield, Player_Armor;
+bool Player_WoodenSword, Player_SteelSword, Player_Shield, Player_Armor;
 
 //PLAYER COLLECTIVE ITEMS
 int pElixers = 0, pLuck = 0,  pCoins = 0, pFood = 0;
@@ -181,10 +183,10 @@ bool Town_Paper;
 bool Forest_Mushrooms, Forest_Daisy, Forest_Jewel, Forest_Hairpin;
 
 //AREA 4
-bool Village_Necklace, Village_Key;
+bool Village_Necklace, Village_Key, Village_Book;
 
 //AREA ????
-bool City_Cookbook;
+bool Town_Cookbook;
 
 
 

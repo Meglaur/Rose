@@ -9,6 +9,7 @@ void TitleScreen()
     void TitleScreenDisplayBar();
     void TitleScreenMenu();
     void TitleScreenMove();
+    Title_Screen = true;
 
     fPosition = 1;
 
@@ -165,12 +166,17 @@ void TitleScreenOptions()
 
 
         //this is where you switch around debug code
-        gPosition = 3;
+        gPosition = 41;
         TravelStatus = 2;
         pCoins = 110;
+        Village_Enter = true;
+        Town_SwordRoom = true;
+        Dungeon_Entrance = true;
         Dungeon_CrownPuzzle = true;
         Dungeon_Wings = true;
         Dungeon_BossRoom = true;
+        sminiScene_FirstEnemy = true;
+        NymphAttack = false;
         ControlLoop();
 
 

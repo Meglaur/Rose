@@ -22,8 +22,9 @@ void PlayerSleep()
     if(Inn == true)
     {
         cout << "The soft inn bed made you happy!" << endl;
-        cout << "*Luck + 3*" << endl;
-        pLuck += 3;
+        cout << "*Luck + 1*" << endl;
+        pLuck += 1;
+        RandomLuckValue += 1;
     }
 
     Pause();
@@ -31,6 +32,12 @@ void PlayerSleep()
 
 void TravelZone()
 {
+    void Debug();
+    void DoublePause();
+    void Pause();
+
+
+
     cout << "Leave the Area?";
     if(Inn == true)
     {
@@ -78,13 +85,11 @@ void TravelZone()
      {
      case 1:
          gPosition = 1;
-
          //reset certain things upon leaving an area
           YourHouse_Desk = false;
          break;
       case 2:
-         gPosition = 2;
-
+         gPosition = 2; Debug(); Move();
          //reset certain things upon leaving an area
          Town_Bushes = false;
          break;
@@ -123,29 +128,19 @@ void TravelZone()
         break;
 
      case 2:
-        gPosition = 2;
+        gPosition = 2; Debug(); Move();
         //RA
         Town_Bushes = false;
         break;
 
      case 3:
-        gPosition = 3;
+        gPosition = 3; Debug(); Move();
         //RA
         break;
 
      }
     break;
-
-
-
-     case 3:
-        break;
-
-
     }
-
-
-
 
 
 
@@ -154,6 +149,8 @@ void TravelZone()
 
 
     }
+
+
 }
 
 void GameOver()

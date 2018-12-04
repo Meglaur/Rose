@@ -25,7 +25,6 @@ int main()
     animationText = "                         Working Title Games";
     FastText();
     ClearScreen();
-    Title_Screen = true;
     TitleScreen();
 
 

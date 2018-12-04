@@ -3,14 +3,8 @@
 
 
 
-
-Okay so..
-
-Water - Eel - falling rain? Swirl of water shooting at you?
-Fire - Dragon - Fire Breath?
-Earth - Turtle - earth moves beneath you, hop from one to another?
-Air - Owl - swooping bird to avoid
-
+Current luck value placements are, when an enemy misses + 1, when its an enemies turn and their
+health is even and your health odd, when you get any sort of luck
 
 
 

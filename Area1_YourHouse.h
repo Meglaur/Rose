@@ -43,35 +43,9 @@ void Area_YourHouse()
                 cout << "You look around the entryway. There are a" << endl;
                 cout << "few coats and scarves hanging on the rack" << endl;
                 Pause();
-                cout << endl;
-                    if(Player_Coat == false)
-                    {
-                        cName = pName;
-                        animationText = "Maybe I should take one, in case it gets cold.";
-                        Dialogue();
 
-                        cout << "Take the coat?\n" << endl;
-                        cout << "               1. Yes                       2.No" << endl;
-                        cout << endl;
-                        cin >> decision;
-                        cout << endl;
-                        if(decision == 1)
-                        {
-                            cout << "You took the coat with you.\n" << endl;
-                            Player_Coat = true;
-                            Pause();
-
-                        }
-                        else
-                        {
-                            cout << "You decided not to take the coat with you" << endl;
-                            Pause();
-                        }
-
-                        Pause();
-
-                    }
         }
+
     }
 
 
@@ -259,6 +233,7 @@ void Area_YourHouse()
                             cout << "You stoked the fire. It fills you with warmth." << endl;
                             cout << "-Luck + 1-" << endl;
                             pLuck += 1;
+                            RandomLuckValue += 1;
                             YourHouse_Fireplace = true;
                             Pause();
                         }

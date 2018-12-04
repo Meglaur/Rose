@@ -121,7 +121,6 @@ void ItemScreen()
 
 
     //once
-    if(Player_Coat == true) {cout << "Coat" << endl; cout << "            ";}
 
     if(Player_WoodenSword == true) {cout << "Wooden Sword" << endl; cout << "            ";}
 
@@ -135,13 +134,15 @@ void ItemScreen()
 
     if(Forest_Daisy == true && Tiki == false) {cout << "Daisy" << endl; cout << "            ";}
 
-    if(Forest_Jewel == true) {cout << "Jewel" << endl; cout << "            ";}
+    if(Forest_Jewel == true && Village_JewelCoins == false) {cout << "Jewel" << endl; cout << "            ";}
 
     if(Forest_Hairpin == true) {cout << "Aida's Hairpin" << endl; cout << "            ";}
 
     if(Village_Necklace == true) {cout << "Fira Necklace" << endl; cout << "            ";}
 
-    if(City_Cookbook == true && Kuhar == false) {cout << "Cookbook" << endl; cout << "            ";}
+    if(Village_Book == true) {cout << "Rune Book" << endl; cout << "            ";}
+
+    if(Town_Cookbook == true && Kuhar == false) {cout << "Cookbook" << endl; cout << "            ";}
 
     if(Village_Key == true && Dungeon_Chest == false){cout << "Strange bronze key" << endl; cout << "            ";}
 

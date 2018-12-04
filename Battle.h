@@ -5,7 +5,6 @@ void CalculateEnemy()
     //tell the game what stats to give the enemy in battle based on who your fighting
 
 
-
     if(Enemy == Three_AngryFlower)
     {
         Enemy_Name = "Angry Flower";
@@ -36,7 +35,7 @@ void CalculateEnemy()
         Enemy_Approach = "              A skeleton covered in moss approaches you!\n\n                          He looks angry!!!";
         Enemy_Defeat = "You defeat the skeleton. Its bones clatter to the ground.";
         Enemy_Drops = elixers;
-        Enemy_DropText = "Coins";
+        Enemy_DropText = "       Coins";
         Enemy_XP = 115;
         Enemy_MaxHealth = 12;
         Enemy_DefenseGame = 2;
@@ -630,13 +629,26 @@ void Enemy_Turn()
 
     cout << "\n\n\n" << endl;
 
+    if(Enemy_Health % 2 == 0 && Player_Health % 2 == 1)
+    {
+        RandomLuckValue += 1;
+    }
 
     if(Enemy_Health < 6 && Enemy_ItemUsed == false && Enemy_UsingItem == true)
     {
         Enemy_Item = true;
     }
 
-    if(Enemy_Item == false)
+
+
+    if(pLuck > 5 && RandomLuckValue % 2 == 0)
+    {
+        RandomLuckValue += 1;
+        cout << "The Enemy is attacking, but it misses!" << endl;
+        Pause();
+        eTurn = false;
+    }
+    else if(Enemy_Item == false)
     {
         cout << "                           ";
         cout << "The " << Enemy_Name << " is attacking!" << endl;
@@ -715,7 +727,7 @@ void Enemy_Turn()
         Pause();
 
     }
-    else
+    else if(Enemy_Item == true)
     {
         cout << "\n\n\n\n\n\n\n\n\n" << endl;
         cout << "                ";
@@ -729,6 +741,10 @@ void Enemy_Turn()
         Enemy_Item = false;
         Enemy_ItemUsed = true;
     }
+
+
+
+
 
     if(Battle_Defend == true)
     {
@@ -751,7 +767,7 @@ void BattleDefeat()
     cout << "You gained " << Enemy_XP << " XP!" << endl;
     Player_XP += Enemy_XP;
     Pause();
-    cout << "                                ";
+    cout << "                         ";
     cout << "You got " << Enemy_DropText << "!" << endl;
 
     if(Enemy_Drops == food)
@@ -1663,7 +1679,7 @@ void DefendMiniGame3()
 
                             if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 1;
+                    Battle_Block = 0;
                 }
                 break;
 
@@ -1867,7 +1883,7 @@ void DefendMiniGame4()
 
                             if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 1;
+                    Battle_Block = 0;
                 }
                 break;
             case 9:
@@ -2166,7 +2182,7 @@ void DefendMiniGame5()
 
                 if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 0;
+                    Battle_Block = 1;
                 }
                 break;
 
@@ -2626,7 +2642,7 @@ void DefendMiniGame6()
 
                                     if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 0;
+                    Battle_Block = 1;
                 }
                 break;
 

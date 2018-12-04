@@ -82,6 +82,7 @@ void Area_Town()
                     cout << "You threw a coin into the fountain. It falls to the bottom." << endl;
                     cout << "*Luck + 1*";
                     pLuck += 1;
+                    RandomLuckValue += 1;
                     pCoins -= 1;
                     Town_Fountain = true;
                     Pause();
@@ -245,6 +246,7 @@ void Area_Town()
 
     }
 
+
     //House Path
     if(gPosition == 23)
     {
@@ -390,6 +392,7 @@ void Area_Town()
             {
             case 1:
                 PlayerSleep();
+
                 Inn = false; Town_InnTable = false;
                 break;
             case 2:
@@ -428,7 +431,28 @@ void Area_Town()
             gPosition = 24;
             break;
         case 4:
-            cout << "You go up to the desk. Theres some books and extra blankets stacked on top." << endl;
+            if(Town_Cookbook == false)
+            {
+                cout << "You look at the bookshelf. A sign hangs next to it." << endl;
+                animationText = "Sign: Take any book you like, and feel free to add your own!";
+                FastText();
+                cout << "Most of the books are boring, but you see an interesting cookbook.\nTake it?" << endl;
+                cout << "1. Yes" << endl;
+                cout << "2. No" << endl;
+                switch(decision)
+                {
+                    case 1:
+                        cout << "You take the cookbook with you." << endl; Pause(); Town_Cookbook = true;
+                        break;
+                    case 2:
+                        cout << "You decide to leave the book." << endl; Pause();
+                        break;
+                }
+            }
+            else
+            {
+                cout << "You see a bookshelf filled with boring books." << endl; Pause();
+            }
             Pause();
             break;
         case 5:
@@ -556,9 +580,9 @@ void Area_Town()
                 switch(decision)
                 {
                 case 1:
-                    cout << "Inside the Chest are 3 elixers and 15 coins!" << endl;
+                    cout << "Inside the Chest are 3 elixers and 10 coins!" << endl;
                     cout << "*Elixers + 3*" << endl;
-                    cout << "*Coins + 15*" << endl;
+                    cout << "*Coins + 10*" << endl;
                     pCoins += 15;
                     pElixers += 3;
                     Town_Chest = true;
@@ -654,6 +678,7 @@ void Area_Town()
                         cout << "You stoked the fire. It fills you with warmth." << endl;
                         cout << "-Luck + 1-" << endl;
                         pLuck += 1;
+                        RandomLuckValue += 1;
                         Town_Stove = true;
                         Pause();
                     }

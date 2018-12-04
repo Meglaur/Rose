@@ -184,10 +184,13 @@ void Area_ElfVillage()
             cout << "1. Where's the Elder's house?" << endl;
             cout << "2. Heard any rumours?" << endl;
             cout << "3. Nothing" << endl;
+            if(Forest_Jewel == true) {cout << "4. Would you be interested in buying a jewel?" << endl;}
             cout << endl;
             cin >> decision;
-            if(decision == 1)
+            switch(decision)
             {
+
+                case 1:
                 cName = "Shopkeeper";
                 animationText = "Shopkeeper: The Elder's house is up in the treetops. Just climb the stairs\ncarved in that tree outside and follow the rope bridge to the farthest house.";
                 Dialogue();
@@ -195,14 +198,31 @@ void Area_ElfVillage()
                 cName = pName;
                 animationText = "Thank You!";
                 Dialogue();
-
-            }
-            if(decision == 2)
-            {
+                break;
+                case 2:
                 cName = pName;
                 animationText = "I heard that Aida lost her hairpin and is looking for\nit. Poor girl...";
                 Dialogue();
+                break;
+                case 4:
+                    if(Forest_Jewel == true && Village_JewelCoins == false)
+                    {
+                        cName = " ";
+                        animationText = "You show her the jewel you found in the lake.\nShe looks it over.";
+                        Dialogue();
+
+                        cName = "Shopkeeper";
+                        animationText = "I'll give you 20 for it.";
+                        Dialogue();
+
+                        cName = " ";
+                        animationText = "You sell her the jewel, and get 20 coins!\n*Coins + 20*";
+                        Dialogue();  pCoins += 20;
+                    }
+                break;
+
             }
+
         break;
 
         }
@@ -309,13 +329,13 @@ void Area_ElfVillage()
             {
                 miniScene_Kuhar(); sminiScene_Kuhar = true;
             }
-            else if(sminiScene_Kuhar == true && Kuhar == false && City_Cookbook == false)
+            else if(sminiScene_Kuhar == true && Kuhar == false && Town_Cookbook == false)
             {
                 cName = "Kuhar";
                 animationText = "I hope someday you find that cookbook. I will\nkeep trying to make the special cake!";
                 Dialogue();
             }
-            else if(Kuhar == false && sminiScene_Kuhar == true && City_Cookbook == true)
+            else if(Kuhar == false && sminiScene_Kuhar == true && Town_Cookbook == true)
             {
                 cName = " ";
                 animationText = "You approach Kuhar and hand him the cookbook. He looks\necstatic.";
@@ -541,16 +561,24 @@ void Area_ElfVillage()
             Pause();
             break;
         case 4:
-            cout << "You go up to the bookshelf. It's filled with books in elvish\nrunes. You can't read them." << endl;
+            cout << "You go up to the bookshelf. It's filled with books in elvish." << endl;
             Pause();
-            //possibly add a need to read elvish runes in a dungeon and come back here to grab a book to help.
+            if(Village_Book == false)
+            {
+            cout << "One of the books is old and tattered, but it is filled\nwith runes. It seems like a translation book. Take it?\n" << endl;
+            cout << "1. Yes" << endl;
+            cout << "2. No\n" << endl;
+            cin >> decision; cout << endl;
+            if(decision == 1) {cout << "You take the book with you." << endl; DoublePause(); Village_Book = true;}
+            else {cout << "You decide not to take the book with you." << endl; DoublePause();}
+            }
             break;
         case 5:
             cName = "Innkeeper";
             animationText = "How can I help you?";
             Dialogue();
             cout << "1. Know anything about the forest?" << endl;
-            cout << "2. Got any Rumors?" << endl;
+            cout << "2. Why do you have a gatekeeper?" << endl;
             cout << "3. Nothing" << endl;
             cin >> decision;
             switch(decision)
@@ -560,13 +588,11 @@ void Area_ElfVillage()
                 Dialogue();
                 break;
             case 2:
-                animationText = "I heard Loni never sleeps, he takes his job so seriously. Everytime you exit\nor enter town he's always there, ever notice that?";
+                animationText = "Have you not seen the monsters roaming around the woods?\n It has been crazy out there lately. Luckily we have been\nsafe in the village, but it doesn't hurt to be cautious.";
                 Dialogue();
                 break;
             }
             Pause();
-
-
         }
     }
 

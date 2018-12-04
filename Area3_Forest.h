@@ -61,7 +61,7 @@ void Area_Forest()
             if(decision == 1)
             {
 
-                    if(Forest_Jewel == false)
+                    if(Forest_Jewel == false && pLuck > 8)
                     {
                         cout << "You go for a swim, and find a box at the bottom." << endl;
                         cout << "Inside is some sort of strange jewel. You take it" << endl;
@@ -148,7 +148,7 @@ void Area_Forest()
             if(Forest_Daisy == false)
             {
                 cName = pName;
-                animationText = "They are so pretty! Maybe I should pick one..";
+                animationText = "Maybe I should pick one...";
                 Dialogue();
 
                 cout << endl;
@@ -250,7 +250,7 @@ void Area_Forest()
         }
     }
 
-    //Dark Woods
+    //Dark Woods 2
     if(gPosition == 33)
     {
 
@@ -591,8 +591,12 @@ void Area_Forest()
             }
             break;
         case 3:
-            animationText = "On the wall is the markings 'II - 3'";
-            Dialogue();
+            cout << "You see strange rune markings on the wall." << endl; Pause();
+            if(Village_Book == true)
+            {
+                cout << "You take out the rune book, and use it to translate.\nOn the wall is the markings 'II - 3'" << endl;
+                Pause();
+            }
             break;
         case 4:
             gPosition = 33;
@@ -653,8 +657,12 @@ void Area_Forest()
             case 5:
                 cout << "You are at the entrance of a large cavern, with\na long rope bridge connecting to two other sides." << endl;
                 Pause();
-                cout << "In the middle of the rock floor is the markings 'I - 1'" << endl;
-                Pause();
+                cout << "You see strange rune markings on the floor." << endl; Pause();
+                if(Village_Book == true)
+                {
+                    cout << "You take out the rune book, and use it to translate.\nOn the floor is the markings 'I - 1'" << endl;
+                    Pause();
+                }
                 break;
         }
 
@@ -757,9 +765,13 @@ void Area_Forest()
                 break;
             case 5:
                 cout << "You are standing on a platform surrounded by water. Each wall has\na set of four fountains, with a pedestal in the middle before each wall." << endl; Pause();
-                cout << "On the floor in the middle of the room are the markings 'III - 2'" << endl;
+                cout << "You see strange rune markings on the floor." << endl; Pause();
+            if(Village_Book == true)
+            {
+                cout << "You take out the rune book, and use it to translate.\nOn the floor is the markings 'III - 2'" << endl;
                 Pause();
-                break;
+            }
+            break;
 
         }
 
@@ -771,9 +783,13 @@ void Area_Forest()
         switch(gMove)
         {
             case 1:
-                animationText = "You see the markings 'IV - 1'";
-                Dialogue();
-                break;
+            cout << "You see strange rune markings on the wall." << endl; Pause();
+            if(Village_Book == true)
+            {
+                cout << "You take out the rune book, and use it to translate.\nOn the wall is the markings 'IV - 1'" << endl;
+                Pause();
+            }
+            break;
             case 2:
                 Enemy = Three_Skeleton; RandomEnemyEncounter();
                 gPosition = 35;
@@ -827,7 +843,7 @@ void Area_Forest()
                 else if(Village_Key == true && Dungeon_Chest == false)
                 {
                     cout << "You try using the key you got from Tiki, and the chest opens!\nInside you find elixers!" << endl;
-                    cout << "*Elixers + 5*\n*Luck + 4*" << endl; Pause(); pElixers += 5; pLuck += 4;
+                    cout << "*Elixers + 5*\n*Luck + 2*" << endl; Pause(); pElixers += 5; pLuck += 2; RandomLuckValue += 1;
                     Dungeon_Chest = true;
                 }
                 else if (Village_Key == true && Dungeon_Chest == true) {cout << "You see an empty chest." << endl; Pause();}

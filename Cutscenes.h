@@ -502,15 +502,15 @@ void miniScene_Loni()
     Dialogue();
 
     cName = pName;
-    animationText = "My name is " + pName + ", I'm here to ask for your help.\nI need to know if there is a castle somewhere around here.";
+    animationText = "My name is " + pName + ". I would like to speak with the Elder.";
     Dialogue();
 
     cName = "Loni";
-    animationText = "A castle? Interesting... Well you seem harmless. You'll want to\ntalk to the Elder, he's the only one who would probably know what\nyour talking about. Go on in.";
+    animationText = "Well.....you seem harmless, but it has been dangerous around\nhere lately. I have my eye on you. go on in.";
     Dialogue();
 
     cName = pName;
-    animationText = tSpeaker + "Thank you!";
+    animationText = "Thank you!";
     Dialogue();
 
     cName = " ";
@@ -636,11 +636,11 @@ void miniScene_Kuhar()
     Dialogue();
 
     cName = "Kuhar";
-    animationText = "I'm trying to make a recipe called 'Elf Cake'. It's an\nold recipe and I can't remember everything that goes into it. I wish I could\nfind the cookbook that contains it, but I heard its a fancy cookbook from the\ncity and I can't go there.";
+    animationText = "I'm trying to make a recipe called 'Elf Cake'. It's an\nold recipe and I can't remember everything that goes into it.\nI know its in my cookbook, but I lost that a while ago.";
     Dialogue();
 
     cName = pName;
-    animationText = "I don't know of many cities..but if I find a cookbook\non my journey I'll bring it back to you!";
+    animationText = "If I see a cookbook I'll bring it back to you!";
     Dialogue();
 
     cName = "Kuhar";
