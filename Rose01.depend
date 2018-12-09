@@ -151,7 +151,7 @@
 
 1542927384 c:\cpp_programs_from_book\current rose\area2_town.h
 
-1543864894 source:c:\c++ code projects\rose\main.cpp
+1544121892 source:c:\c++ code projects\rose\main.cpp
 	"Global_Variables.h"
 	"TextFunctions.h"
 	"Battle.h"
@@ -162,38 +162,42 @@
 	"Activities.h"
 	"Area2_Town.h"
 
-1543957853 c:\c++ code projects\rose\global_variables.h
+1544141245 c:\c++ code projects\rose\global_variables.h
 	<iostream>
 	<cstdlib>
 	<cstdio>
 	<windows.h>
 	<conio.h>
+	<fstream>
+	<istream>
+	<ostream>
+	<sstream>
 
 1543694998 c:\c++ code projects\rose\textfunctions.h
 
-1543788702 c:\c++ code projects\rose\battle.h
+1544299300 c:\c++ code projects\rose\battle.h
 
-1543953107 c:\c++ code projects\rose\controlfunctions.h
+1544290856 c:\c++ code projects\rose\controlfunctions.h
 	"Area1_YourHouse.h"
 	"Area3_Forest.h"
 	"Area4_ElfVillage.h"
 
-1543957853 c:\c++ code projects\rose\area1_yourhouse.h
+1544290524 c:\c++ code projects\rose\area1_yourhouse.h
 
-1543957853 c:\c++ code projects\rose\area3_forest.h
+1544292146 c:\c++ code projects\rose\area3_forest.h
 
-1543954798 c:\c++ code projects\rose\area4_elfvillage.h
+1544292477 c:\c++ code projects\rose\area4_elfvillage.h
 
 1542859585 c:\c++ code projects\rose\backroundmovement.h
 	"Display.h"
 
-1543959023 c:\c++ code projects\rose\display.h
+1544288213 c:\c++ code projects\rose\display.h
 
-1543955351 c:\c++ code projects\rose\cutscenes.h
+1544289973 c:\c++ code projects\rose\cutscenes.h
 
-1543958855 c:\c++ code projects\rose\titlescreen.h
+1544299300 c:\c++ code projects\rose\titlescreen.h
 
-1543958267 c:\c++ code projects\rose\activities.h
+1544290421 c:\c++ code projects\rose\activities.h
 
-1543958307 c:\c++ code projects\rose\area2_town.h
+1544291669 c:\c++ code projects\rose\area2_town.h
 

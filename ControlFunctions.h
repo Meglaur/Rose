@@ -10,26 +10,141 @@
 
 void Save()
 {
-    /*
 
-    if File_Save == File_One)
-    {
-        File1_Health = Player_Health;
-        File1_MaxHealth = Player_Health;
-        File1_Coins = pCoins;
-        File1_Luck = pLuck;
-        File1_Elixers = pElixers;
-        File1_Food = pFood;
-        File1_Defense = Player_Defense;
-        File1_Damage = Player_Damage;
-        File1_XP = Player_XP;
+    void ClearScreen();
+    void FastText();
 
 
-        //Add all item statuses and cutscene statuses
-        //oi its a big job.
+    ClearScreen();
+    cout << "\n\n\n\n\n\n\n\n" << endl;
+    cout << "                               ";
+    cout << "Saving Game" << endl;
+    Pause();
+    cout << "                               ";
+    animationText = "  . . .";
+    SlowText();
+    Pause();
 
-    }
-    */
+
+       File1_Dungeon_BossRoom = Dungeon_BossRoom;
+       File1_Dungeon_Chest = Dungeon_Chest;
+       File1_Dungeon_Crank = Dungeon_Crank;
+       File1_Dungeon_CrownPuzzle = Dungeon_CrownPuzzle;
+       File1_Dungeon_Crowns = Dungeon_Crowns;
+       File1_Dungeon_dCrown = Dungeon_dCrown;
+       File1_Dungeon_dStatue = Dungeon_dStatue;
+       File1_Dungeon_eCrown = Dungeon_eCrown;
+       File1_Dungeon_Entrance = Dungeon_Entrance;
+       File1_Dungeon_eStatue = Dungeon_eStatue;
+       File1_Dungeon_FountainSet1 = Dungeon_FountainSet1;
+       File1_Dungeon_FountainSet2 = Dungeon_FountainSet2;
+       File1_Dungeon_FountainSet3 = Dungeon_FountainSet3;
+       File1_Dungeon_LeftWing = Dungeon_LeftWing;
+       File1_Dungeon_MainFountain = Dungeon_MainFountain;
+       File1_Dungeon_rCrown = Dungeon_rCrown;
+       File1_Dungeon_RightWing = Dungeon_RightWing;
+       File1_Dungeon_rStatue = Dungeon_rStatue;
+       File1_Dungeon_sCrown = Dungeon_sCrown;
+       File1_Dungeon_sStatue = Dungeon_sStatue;
+       File1_Dungeon_Wings = Dungeon_Wings;
+       File1_Forest_Daisy = Forest_Daisy;
+       File1_Forest_Gate = Forest_Gate;
+       File1_Forest_Hairpin = Forest_Hairpin;
+       File1_Forest_Jewel = Forest_Jewel;
+       File1_Forest_Mushrooms = Forest_Mushrooms;
+       File1_gPosition = gPosition;
+       File1_Grandmas_Items = Grandmas_Items;
+       File1_Kuhar = Kuhar;
+       File1_NymphAttack = NymphAttack;
+       File1_pCoins = pCoins;
+       File1_pElixers = pElixers;
+       File1_pFood = pFood;
+       File1_Player_Armor = Player_Armor;
+       File1_Player_Damage = Player_Damage;
+       File1_Player_Defense = Player_Defense;
+       File1_Player_Health = Player_Health;
+       File1_Player_MaxHealth = Player_Health;
+       File1_Player_Shield = Player_Shield;
+       File1_Player_WoodenSword = Player_WoodenSword;
+       File1_Player_XP = Player_XP;
+       File1_pLuck = pLuck;
+       File1_pName = pName;
+       File1_RandomLuckValue = RandomLuckValue;
+       File1_sCutscene_Elder = sCutscene_Elder;
+       File1_sCutscene_End = sCutscene_End;
+       File1_sCutscene_GrandmaHelps = sCutscene_GrandmaHelps;
+       File1_sCutscene_GrandmasList = sCutscene_GrandmasList;
+       File1_sCutscene_OldMan1 = sCutscene_OldMan1;
+       File1_sCutscene_OldMan2 = sCutscene_OldMan2;
+       File1_sminiScene_Aida = sminiScene_Aida;
+       File1_sminiScene_Chasm = sminiScene_Chasm;
+       File1_sminiScene_Dam = sminiScene_Dam;
+       File1_sminiScene_DungeonEnter = sminiScene_DungeonEnter;
+       File1_sminiScene_FirstEnemy = sminiScene_FirstEnemy;
+       File1_sminiScene_Kuhar = sminiScene_Kuhar;
+       File1_sStatus = sStatus;
+       File1_Tiki = Tiki;
+       File1_Town_Bushes = Town_Bushes;
+       File1_Town_Chest = Town_Chest;
+       File1_Town_Cookbook = Town_Cookbook;
+       File1_Town_Fountain = Town_Fountain;
+       File1_Town_Hilda = Town_Hilda;
+       File1_Town_InnDesk = Town_InnDesk;
+       File1_Town_InnTable = Town_InnTable;
+       File1_Town_Paper = Town_Paper;
+       File1_Town_Stove = Town_Stove;
+       File1_Town_SwordRoom = Town_SwordRoom;
+       File1_TravelStatus =  TravelStatus;
+       File1_Village_Book = Village_Book;
+       File1_Village_Enter = Village_Enter;
+       File1_Village_InnTable = Village_InnTable;
+       File1_Village_JewelCoins = Village_JewelCoins;
+       File1_Village_Key = Village_Key;
+       File1_Village_Necklace = Village_Necklace;
+       File1_YourHouse_Chest = YourHouse_Chest;
+       File1_YourHouse_Desk = YourHouse_Desk;
+       File1_YourHouse_Fireplace = YourHouse_Fireplace;
+       File1_YourHouse_Stove = YourHouse_Stove;
+
+
+       File1_Used = true;
+
+        //fstream outFile;
+        //outFile.open("User_File1.dat", ios_base::out);
+
+        ofstream outFile;
+        outFile.open("User_File1.dat");
+
+       //string
+       outFile << File1_Name << File1_pName;
+       outFile << File1_Used << File1_Dungeon_Crowns;
+       //int
+       outFile << File1_Dungeon_dCrown << File1_Dungeon_dCrown << File1_Dungeon_dStatue << File1_Dungeon_eCrown << File1_Dungeon_eStatue;
+       outFile << File1_Dungeon_rCrown << File1_Dungeon_rCrown << File1_Dungeon_rStatue;
+       outFile << File1_Dungeon_BossRoom << File1_Dungeon_Chest << File1_Dungeon_Crank << File1_Dungeon_CrownPuzzle;
+       outFile << File1_Dungeon_Entrance << File1_Dungeon_FountainSet1 << File1_Dungeon_FountainSet2 << File1_Dungeon_FountainSet3 << File1_Dungeon_LeftWing << File1_Dungeon_MainFountain;
+       outFile << File1_Dungeon_sCrown << File1_Dungeon_sStatue << File1_pCoins << File1_pElixers << File1_pFood;
+       outFile << File1_Player_Damage << File1_Player_Defense << File1_Player_Health << File1_Player_XP;
+       outFile << File1_Player_MaxHealth << File1_pLuck << File1_RandomLuckValue << File1_gPosition;
+       //bool
+       outFile << File1_Dungeon_RightWing << File1_Dungeon_Wings << File1_Forest_Daisy;
+       outFile << File1_Forest_Gate << File1_Forest_Hairpin << File1_Forest_Jewel << File1_Forest_Mushrooms;
+       outFile <<  File1_Grandmas_Items << File1_Kuhar << File1_NymphAttack << File1_Player_Armor;
+       outFile << File1_Player_Shield << File1_Player_WoodenSword  << File1_sCutscene_Elder;
+       outFile << File1_sCutscene_End << File1_sCutscene_GrandmaHelps << File1_sCutscene_GrandmasList << File1_sCutscene_OldMan1;
+       outFile << File1_sCutscene_OldMan2 << File1_sminiScene_Aida << File1_sminiScene_Chasm << File1_sminiScene_Dam;
+       outFile << File1_sminiScene_DungeonEnter << File1_sminiScene_FirstEnemy << File1_sminiScene_Kuhar << File1_sminiScene_NymphAppears;
+       outFile << File1_sStatus << File1_Tiki << File1_Town_Bushes << File1_Town_Chest;
+       outFile << File1_Town_Cookbook << File1_Town_Fountain << File1_Town_Hilda << File1_Town_InnDesk;
+       outFile << File1_Town_InnTable << File1_Town_Paper << File1_Town_Stove << File1_Town_SwordRoom;
+       outFile << File1_TravelStatus << File1_Village_Book << File1_Village_Enter << File1_Village_InnTable;
+       outFile << File1_Village_JewelCoins << File1_Village_Key << File1_Village_Necklace << File1_YourHouse_Chest;
+       outFile << File1_YourHouse_Desk << File1_YourHouse_Fireplace << File1_YourHouse_Stove << File1_Used;
+
+       outFile.close();
+
+
+
 
 }
 
@@ -38,7 +153,6 @@ void Status()
     //This Function tells the player what part of the game they are at, and what they need to do next.
     //It's based off of the variable sStatus, which changes every time they complete something and
     //the game progresses.
-
 
     void Move(); void Debug(); void ClearScreen();
 
@@ -126,8 +240,6 @@ void ItemScreen()
 
     if(Player_Shield == true) {cout << "Shield" << endl; cout << "            ";}
 
-    if(Player_SteelSword == true) {cout << "Steel Sword" << endl; cout << "            ";}
-
     if(Player_Armor == true) {cout << "Armor" << endl; cout << "            ";}
 
     if(Town_Paper == true && sCutscene_OldMan2 == false) {cout << "Paper" << endl; cout << "            ";}
@@ -136,7 +248,7 @@ void ItemScreen()
 
     if(Forest_Jewel == true && Village_JewelCoins == false) {cout << "Jewel" << endl; cout << "            ";}
 
-    if(Forest_Hairpin == true) {cout << "Aida's Hairpin" << endl; cout << "            ";}
+    if(Forest_Hairpin == true && Aida == false) {cout << "Aida's Hairpin" << endl; cout << "            ";}
 
     if(Village_Necklace == true) {cout << "Fira Necklace" << endl; cout << "            ";}
 
@@ -185,7 +297,15 @@ void UseItem()
     cout << "2. Food" << endl;
     cout << "3. Nothing" << endl;
     cout << endl;
-    cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
     cout << endl;
 
     switch(decision)

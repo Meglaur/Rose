@@ -871,7 +871,7 @@ void CalculateDisplay()
     //AREA FOUR - ELF VILLAGE
 
     if(gPosition == 4)
-    {dirUp = "Village Gate"; dirLeft = "Deep Forest"; dirRight = " "; dirDown = " "; dirInt = "Travel";}
+    {dirUp = "Village Gate"; dirLeft = "Deep Forest"; dirRight = " "; dirDown = " "; dirInt = "Look Around";}
 
     if(gPosition == 41)
     {dirUp = "Climb to treetops"; dirLeft = "Village Shop"; dirRight = "Kuhar's House"; dirDown = "Leave Village"; dirInt = "Statue";}

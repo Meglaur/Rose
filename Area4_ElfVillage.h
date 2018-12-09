@@ -72,7 +72,6 @@ void Area_ElfVillage()
 
     }
 
-
     //Main Path
     if(gPosition == 41)
     {
@@ -102,7 +101,6 @@ void Area_ElfVillage()
         }
     }
 
-
     //Village Shop
     if(gPosition == 42)
     {
@@ -124,7 +122,18 @@ void Area_ElfVillage()
                     cout << "                       2. Fira Necklace (Increases Defense) - 15 coins" << endl;
                 }
                 cout << "                       3. Nothing" << endl;
-                cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
+                        break;
+                        }
                 cout << endl;
                 switch(decision)
                 {
@@ -186,14 +195,22 @@ void Area_ElfVillage()
             cout << "3. Nothing" << endl;
             if(Forest_Jewel == true) {cout << "4. Would you be interested in buying a jewel?" << endl;}
             cout << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
             switch(decision)
             {
 
                 case 1:
                 cName = "Shopkeeper";
                 animationText = "Shopkeeper: The Elder's house is up in the treetops. Just climb the stairs\ncarved in that tree outside and follow the rope bridge to the farthest house.";
-                Dialogue();
+                Dialogue(); Pause();
 
                 cName = pName;
                 animationText = "Thank You!";
@@ -202,7 +219,7 @@ void Area_ElfVillage()
                 case 2:
                 cName = pName;
                 animationText = "I heard that Aida lost her hairpin and is looking for\nit. Poor girl...";
-                Dialogue();
+                Dialogue(); Pause();
                 break;
                 case 4:
                     if(Forest_Jewel == true && Village_JewelCoins == false)
@@ -232,7 +249,6 @@ void Area_ElfVillage()
 
     }
 
-
     //Village Shop House
     if(gPosition == 43)
     {
@@ -258,7 +274,15 @@ void Area_ElfVillage()
                 cout << "Offer her the daisy?\n" << endl;
                 cout << "               1. Yes                       2.No" << endl;
                 cout << endl;
-                cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                 cout << endl;
 
                 if(decision == 1)
@@ -282,6 +306,7 @@ void Area_ElfVillage()
                     Dialogue();
 
                     Village_Key = true;
+                    Tiki = true;
                 }
                     else{cout << "You decide not to give her the daisy" << endl; Pause();}
 
@@ -531,7 +556,15 @@ void Area_ElfVillage()
             cout << endl;
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
             cout << endl;
             switch(decision)
             {
@@ -568,7 +601,16 @@ void Area_ElfVillage()
             cout << "One of the books is old and tattered, but it is filled\nwith runes. It seems like a translation book. Take it?\n" << endl;
             cout << "1. Yes" << endl;
             cout << "2. No\n" << endl;
-            cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
+            cout << endl;
             if(decision == 1) {cout << "You take the book with you." << endl; DoublePause(); Village_Book = true;}
             else {cout << "You decide not to take the book with you." << endl; DoublePause();}
             }
@@ -580,7 +622,15 @@ void Area_ElfVillage()
             cout << "1. Know anything about the forest?" << endl;
             cout << "2. Why do you have a gatekeeper?" << endl;
             cout << "3. Nothing" << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
             switch(decision)
             {
             case 1:
@@ -610,7 +660,15 @@ void Area_ElfVillage()
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
             cout << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
              switch(decision)
             {
             case 1:

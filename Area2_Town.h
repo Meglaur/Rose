@@ -75,7 +75,15 @@ void Area_Town()
                 cout << "1: Yes" << endl;
                 cout << "2: No" << endl;
                 cout << endl;
-                cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                 switch(decision)
                 {
                 case 1:
@@ -118,7 +126,24 @@ void Area_Town()
                 cout << "                            4. Shield - 20 coins" << endl;
             }
             cout << "                            5. Nothing" << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
+                        break;
+                        case '4':
+                        decision = 4;
+                        break;
+                        case '5':
+                        decision = 5;
+                        break;
+                        }
             cout << endl;
             switch(decision)
             {
@@ -223,7 +248,15 @@ void Area_Town()
             cout << "1. What do you sell?" << endl;
             cout << "2. Can you tell me how to get coins?" << endl;
             cout << "3. Nothing" << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
             cout << endl;
             switch(decision)
             {
@@ -294,7 +327,15 @@ void Area_Town()
             Dialogue();
             cout << endl;
             cout << "               1. Yes                       2.No" << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
             cout << endl;
             switch(decision)
             {
@@ -349,7 +390,15 @@ void Area_Town()
             cout << "2. Got any Rumors?" << endl;
             cout << "3. Nothing" << endl;
             cout << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
             switch(decision)
             {
             case 1:
@@ -386,7 +435,15 @@ void Area_Town()
             cout << "(You will not be able to re-enter the room after leaving once you do)" << endl;
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
-            cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
             cout << endl;
             switch(decision)
             {
@@ -573,10 +630,18 @@ void Area_Town()
             cout << "You go up to the chest." << endl;
             if(Town_Chest == false)
             {
-                cout << "Open the chest?" << endl;
+                cout << "Open the chest?\n" << endl;
                 cout << "1. Yes" << endl;
-                cout << "2. No" << endl;
-                cin >> decision;
+                cout << "2. No\n" << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                 switch(decision)
                 {
                 case 1:
@@ -670,7 +735,15 @@ void Area_Town()
                 cout << "1. Yes" << endl;
                 cout << "2. No" << endl;
                 cout << endl;
-                cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                 cout << endl;
 
                 if(decision == 1)
@@ -723,7 +796,15 @@ void Area_Town()
                 animationText = "Would you like to listen to my story?";
                 Dialogue();
                 cout << "               1. Yes                       2.No" << endl;
-                cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                 cout << endl;
                 switch(decision)
                 {

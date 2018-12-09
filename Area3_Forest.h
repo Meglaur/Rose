@@ -56,7 +56,15 @@ void Area_Forest()
             cout << "Enter the lake?" << endl;
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
-            cin >> decision;
+                             switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
             cout << endl;
             if(decision == 1)
             {
@@ -116,7 +124,15 @@ void Area_Forest()
             cout << "1. Yes" << endl;
             cout << "2. No" << endl;
             cout << endl;
-            cin >> decision;
+                             switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
             cout << endl;
             if(decision == 1)
             {
@@ -144,7 +160,7 @@ void Area_Forest()
             break;
         case 2:
             cout << "You go up to the flower patch. There are daisies everywhere." << endl;
-            cout << endl;
+            cout << endl; Pause();
             if(Forest_Daisy == false)
             {
                 cName = pName;
@@ -152,10 +168,18 @@ void Area_Forest()
                 Dialogue();
 
                 cout << endl;
-                cout << "Take one of the daisies?" << endl;
+                cout << "Take one of the daisies\n?" << endl;
                 cout << "1. Yes" << endl;
-                cout << "2. No" << endl;
-                cin >> decision;
+                cout << "2. No\n" << endl;
+                                 switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
                 if(decision == 1)
                 {
                     cout << "You take one of the daisies. Maybe it will come in handy." << endl;
@@ -185,7 +209,15 @@ void Area_Forest()
              cout << "1. Yes" << endl;
              cout << "2. No" << endl;
              cout << endl;
-             cin >> decision;
+                              switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
              cout << endl;
              if(decision == 1)
              {
@@ -226,7 +258,6 @@ void Area_Forest()
         switch(gMove)
         {
         case 1:
-            cout << "You go up to the sign\n\n\n" << endl;
             cName = " ";
             animationText = "Sign:\n\n<-- Dark Woods\n--> Elf Village\nBeware of monsters!";
             Dialogue();
@@ -264,36 +295,6 @@ void Area_Forest()
             {
                 cout << "Its sealed tight. There isn't any going through it." << endl;
                 Pause();
-            }
-            else if(Forest_Gate == true)
-            {
-                cout << "Enter through the gate and cross the bridge?" << endl;
-                cout << "1. Yes" << endl;
-                cout << "2. No" << endl;
-                cout << endl;
-                cin >> decision;
-                cout << endl;
-                    if(decision == 1)
-                    {
-                        if(sminiScene_MountainTrail == false)
-                        {
-                            miniScene_MountainTrail();
-                            Pause();
-                            gPosition = 5;
-                        }
-                        else
-                        {
-                            cout << "You take the trail to the mountains.";
-                            DoublePause();
-                            gPosition = 5;
-                        }
-
-                    }
-                    else
-                    {
-                        cout << "You decide to stay where you are." << endl;
-                        DoublePause();
-                    }
             }
             break;
         case 2:
@@ -340,7 +341,22 @@ void Area_Forest()
             {
                 cout << "You see four beautiful statues against the wall. Go up to one?\n" << endl;
                 cout << "1. First Statue\n2. Second Statue\n3. Third Statue\n4. Fourth Statue\n5. Do nothing\n" << endl;
-                cin >> decision; cout << endl;
+                switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                case '3':
+                decision = 3;
+                break;
+                case '4':
+                decision = 4;
+                break;
+                }
+                cout << endl;
                 switch(decision)
                 {
                 case 1:
@@ -354,7 +370,22 @@ void Area_Forest()
                         if(Dungeon_rCrown == 5) {cout << "3. Use Ruby Crown\n" << endl;}
                         if(Dungeon_dCrown == 5) {cout << "4. Use Diamond Crown\n" << endl;}
                         cout << "5. Do Nothing\n" << endl;
-                        cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
+                        break;
+                        case '4':
+                        decision = 4;
+                        break;
+                        }
+                         cout << endl;
                         switch(decision)
                         {
                         case 1:
@@ -378,7 +409,16 @@ void Area_Forest()
                     {
                         cout << "Would you like to take the crown off the statue?\n" << endl;
                         cout << "1.Yes\n2.No\n" << endl;
-                        cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
+                        cout << endl;
                         if(decision == 1)
                         {
                             if(Dungeon_eCrown == 1) {Dungeon_eCrown = 5; Dungeon_rStatue = 0;}
@@ -401,7 +441,22 @@ void Area_Forest()
                         if(Dungeon_rCrown == 5) {cout << "3. Use Ruby Crown\n" << endl;}
                         if(Dungeon_dCrown == 5) {cout << "4. Use Diamond Crown\n" << endl;}
                         cout << "5. Do Nothing\n" << endl; cout << endl;
-                        cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
+                        break;
+                        case '4':
+                        decision = 4;
+                        break;
+                        }
+                         cout << endl;
                         switch(decision)
                         {
                         case 1:
@@ -425,7 +480,15 @@ void Area_Forest()
                     {
                         cout << "Would you like to take the crown off the statue?\n" << endl;
                         cout << "1.Yes\n2.No\n" << endl; cout << endl;
-                        cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                         if(decision == 1)
                         {
                             if(Dungeon_eCrown == 2) {Dungeon_eCrown = 5; Dungeon_sStatue = 0;}
@@ -449,7 +512,22 @@ void Area_Forest()
                         if(Dungeon_rCrown == 5) {cout << "3. Use Ruby Crown\n" << endl;}
                         if(Dungeon_dCrown == 5) {cout << "4. Use Diamond Crown\n" << endl;}
                         cout << "5. Do Nothing\n" << endl; cout << endl;
-                        cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
+                        break;
+                        case '4':
+                        decision = 4;
+                        break;
+                        }
+                        cout << endl;
                         switch(decision)
                         {
                         case 1:
@@ -473,7 +551,15 @@ void Area_Forest()
                     {
                         cout << "Would you like to take the crown off the statue?\n" << endl;
                         cout << "1.Yes\n2.No\n" << endl; cout << endl;
-                        cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                         if(decision == 1)
                         {
                             if(Dungeon_eCrown == 3) {Dungeon_eCrown = 5; Dungeon_dStatue = 0;}
@@ -497,7 +583,22 @@ void Area_Forest()
                         if(Dungeon_rCrown == 5) {cout << "3. Use Ruby Crown\n" << endl;}
                         if(Dungeon_dCrown == 5) {cout << "4. Use Diamond Crown\n" << endl;}
                         cout << "5. Do Nothing\n" << endl; cout << endl;
-                        cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
+                        break;
+                        case '4':
+                        decision = 4;
+                        break;
+                        }
+                        cout << endl;
                         switch(decision)
                         {
                         case 1:
@@ -522,7 +623,16 @@ void Area_Forest()
                     {
                         cout << "Would you like to take the crown off the statue?\n" << endl;
                         cout << "1.Yes\n2.No\n" << endl;
-                        cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
+                        cout << endl;
                         if(decision == 1)
                         {
                             if(Dungeon_eCrown == 4) {Dungeon_eCrown = 5; Dungeon_eStatue = 0;}
@@ -567,7 +677,22 @@ void Area_Forest()
                 if(Dungeon_dCrown == 0) {cout << "4. Diamond Crown" << endl;}
 
                 cout << "5. Nothing\n" << endl;
-                cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
+                        break;
+                        case '4':
+                        decision = 4;
+                        break;
+                        }
+                cout << endl;
                 switch(decision)
                 {
                 case 1:
@@ -575,13 +700,13 @@ void Area_Forest()
                     {cout << "You take the Emerald Crown from the shelf." << endl; Pause(); Dungeon_eCrown = 5;}
                     break;
                 case 2:
-                    if(Dungeon_sCrown == 0) {cout << "You take the Emerald Crown from the shelf." << endl; Pause(); Dungeon_sCrown = 5;}
+                    if(Dungeon_sCrown == 0) {cout << "You take the Sapphire Crown from the shelf." << endl; Pause(); Dungeon_sCrown = 5;}
                     break;
                 case 3:
                     if(Dungeon_rCrown == 0) {cout << "You take the Ruby Crown from the shelf." << endl; Pause(); Dungeon_rCrown = 5;}
                     break;
                 case 4:
-                    if(Dungeon_dCrown == 0) {cout << "You take the diamond crown from the shelf." << endl; Pause(); Dungeon_dCrown = 5;}
+                    if(Dungeon_dCrown == 0) {cout << "You take the Diamond crown from the shelf." << endl; Pause(); Dungeon_dCrown = 5;}
                     break;
                 case 5:
                     break;
@@ -701,10 +826,11 @@ void Area_Forest()
                 cName = " ";
                 animationText = "You see a set of four fountains, with a marble pedestal\nbefore you. It glows faintly.\nThe pedestal has something written on it.";
                 Dialogue();
-                animationText = "'The Order of the Fountains is hidden throughout the dungeon, figure it out\nand you may continue.'";
+                animationText = "'The Order of the Four Fountains is hidden throughout the dungeon, figure it\nout and you may continue.'";
                 Dialogue();
                 Dungeon_FountainSet = 2;
                 Dungeon_FountainOrder = 1321;
+                cout << "What is the answer?" << endl;
                 cin >> Dungeon_FountainGuess;
                 if(Dungeon_FountainGuess == Dungeon_FountainOrder)
                 {
@@ -1086,7 +1212,16 @@ void Area_Forest()
                 {
                 cout << "You find a crank. It looks old, but might have some use." << endl; Pause();
                 cout << "Take the crank?\n\n1. Yes\n2. No\n" << endl;
-                cin >> decision; cout << endl;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
+                cout << endl;
                     switch(decision)
                     {
                         case 1:
@@ -1262,7 +1397,15 @@ void Area_Forest()
                         if(Dungeon_Crank == true)
                          {
                            cout << "Use Crank?\n\n1.Yes\n2.No\n" << endl;
-                           cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                            switch(decision) {case 1: miniScene_Dam(); break; case 2: cout << "You decide not to use the crank."; DoublePause(); break; }
                          }
 
@@ -1370,6 +1513,7 @@ void Area_Forest()
 
 //}
 }
+
 
 
 

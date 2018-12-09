@@ -305,7 +305,7 @@ void BossBattle()
 
 
 
-    BossStage = 1;
+    //BossStage = 1;
     CalculateEnemy();
     ePosition = 1;
 
@@ -330,16 +330,22 @@ void BossBattle()
                 switch(BossStage)
                 {
                 case 1:
+                    Cutscene = true;
                     animationText = "The owl bursts back into smoke, which begins swirling\nagain. It forms into an enormous Tortoise!";
                     Dialogue();
                     break;
+                    Cutscene = false;
                 case 2:
+                    Cutscene = true;
                     animationText = "The Tortoise falls, and crumbles into white pieces before\nturning to smoke once more. It rises and takes another form,\nthat of a fire breathing dragon!";
                     Dialogue();
+                    Cutscene = false;
                     break;
                 case 3:
+                    Cutscene = true;
                     animationText = "The Dragon fades, and the smoke swirls one last time\nto create its final form. A snake-like wyvern appears from\nthe ground!";
                     Dialogue();
+                    Cutscene = false;
                     break;
                 }
 
@@ -496,7 +502,18 @@ void BattleOptions()
     cout << "2. Defend" << endl;
     cout << "3. Nothing." << endl;
     cout << endl;
-    cin >> decision;
+    switch(_getch())
+        {
+            case '1':
+            decision = 1;
+            break;
+            case '2':
+            decision = 2;
+            break;
+            case '3':
+            decision = 3;
+            break;
+        }
     cout << "\n\n" << endl;
 
     switch(decision)
@@ -528,7 +545,15 @@ void BattleRun()
     cout << "2. No" << endl;
     cout << endl;
     cout << endl;
-    cin >> decision;
+                     switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
     cout << endl;
 
     if(decision == 1)
@@ -569,7 +594,15 @@ void BattleItems()
     cout << endl;
     cout << "-------------------------------------" << endl;
     cout << endl;
-    cin >> decision;
+                     switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
 
     switch(decision)
     {
@@ -1040,7 +1073,7 @@ void DefendMiniGame1()
         Sleep(30);
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
-        cout << "                 Hit A with correct timing to block the attack!" << endl;
+        cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
         Sleep(150);
@@ -1343,7 +1376,7 @@ void DefendMiniGame2()
 
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
-        cout << "                 Hit A with correct timing to block the attack!" << endl;
+        cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
         Sleep(200);
@@ -1490,7 +1523,7 @@ void DefendMiniGame3()
 
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
-        cout << "                 Hit A with correct timing to block the attack!" << endl;
+        cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
         Sleep(150);
@@ -1743,7 +1776,7 @@ void DefendMiniGame4()
 
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
-        cout << "                 Hit A with correct timing to block the attack!" << endl;
+        cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
         Sleep(150);
@@ -1948,7 +1981,7 @@ void DefendMiniGame5()
 
               ClearScreen();
               cout << "\n\n\n\n\n\n" << endl;
-              cout << "                 Hit A with correct timing to block the attack!" << endl;
+              cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
               cout << "\n\n" << endl;
               cout << endl;
               cout << endl;
@@ -2000,7 +2033,7 @@ void DefendMiniGame5()
         Sleep(20);
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
-        cout << "                 Hit A with correct timing to block the attack!" << endl;
+        cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
         Sleep(200);
@@ -2274,7 +2307,10 @@ void DefendMiniGame6()
    dPosition = 1;
    Battle_Block = 5;
 
-
+    ClearScreen();
+    cout << "\n\n\n\n\n\n" << endl;
+    cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
+    cout << "\n\n" << endl;
     cout << endl;
     cout << endl;
     cout << endl;
@@ -2319,7 +2355,7 @@ void DefendMiniGame6()
        Sleep(30);
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
-        cout << "                 Hit A with correct timing to block the attack!" << endl;
+        cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
         Sleep(150);

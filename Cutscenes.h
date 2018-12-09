@@ -8,7 +8,31 @@ void Cutscene_Prolouge()
     Cutscene = true;
     sStatus = 1;
 
+    cName = "???";
+    animationText = pName + "!";
+    Dialogue();
+    animationText = pName + " wake up! \n";
+    Dialogue();
+    animationText ="You must come find me, I'm trapped in some sort of dark castle and I \nneed help.";
+    Dialogue();
+    animationText =" You must wake up, and hurry! Go to Grandma. She can help you. Wake up\nand go to her!";
+    Dialogue();
 
+
+    cName = " ";
+    animationText = "You wake up in bed with a start, the voice still echoing in your mind.";
+    Dialogue();
+
+
+    cName = pName;
+    animationText = "Rose? Rose where are you?";
+    Dialogue();
+
+
+    cName = " ";
+    animationText = "You need to find your sister...";
+    Dialogue();
+/*
 
     cName = " ";
     animationText = "You sit in the garden outside your house, gazing at the stars.\nBeside you your sister Rose makes a crown out of lilies.";
@@ -102,7 +126,7 @@ void Cutscene_Prolouge()
     Dialogue();
 
 
-
+*/
     dirUp = "Bed";
     dirDown = " ";
     dirLeft = "Desk";
@@ -560,9 +584,11 @@ void miniScene_NymphAppears()
 
 void miniScene_Dam()
 {
+    tSpeaker = text;
+    TextColor();
     animationText = "You use the crank in the machine to try to open the water way, but\nturning it makes a squeaking sound. You see the nymph approach...";
-    Dialogue();
-    animationText = "Luckily you finish opening it in time, and water burts out of the\nopening.";
+    Dialogue(); Pause();
+    animationText = "Luckily you finish opening it in time, and water bursts out of the\nopening.";
     Dialogue();
     animationText = "The sound is deafening, and you see the nymph that was close behind\nyou start screaming and holding her ears.";
     Dialogue();
@@ -572,6 +598,7 @@ void miniScene_Dam()
     Dialogue();
     NymphAttack = false;
     sminiScene_Dam = true;
+    Dungeon_BossRoom = true;
 }
 
 void miniScene_Chasm()
@@ -590,34 +617,6 @@ void miniScene_Chasm()
 
     sminiScene_Chasm = true;
 
-}
-
-void miniScene_MountainTrail()
-{
-
-    //currently unused after demo miniscene
-
-        cName = " ";
-        animationText = "You enter the gate and cross the bridge, ending up\nat the beginning of a trail. A sign along the way says";
-        Dialogue();
-        animationText = "that it leads to the mountains and sky village.";
-        Dialogue();
-        Slowtext = true;
-        animationText = ". . . . .";
-        Dialogue();
-        animationText = "You camp for the night once it gets dark and go\nto sleep";
-        Dialogue();
-        animationText = "z z Z";
-        Slowtext = true;
-        Dialogue();
-        animationText = "You wake up at dawn with health regained to full\nand high spirits. You pack up and decide to set";
-        Dialogue();
-        animationText = "out again. Eventually that morning you end up in\nthe mountains, at a place called 'the base of sky";
-        Dialogue();
-        animationText = "village'. You add the trail you took to your map.\nYou can now travel to the mountains!";
-
-        TravelStatus = 4;
-        Player_Health = Player_MaxHealth;
 }
 
 void miniScene_Kuhar()

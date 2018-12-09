@@ -129,7 +129,15 @@ void Area_YourHouse()
                         cout << "1. Yes" << endl;
                         cout << "2. No" << endl;
                         cout << endl;
-                        cin >> decision;
+                                         switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
                         cout << endl;
 
                         if(decision == 1)
@@ -165,7 +173,15 @@ void Area_YourHouse()
                         cout << "1. Yes" << endl;
                         cout << "2. No " << endl;
                         cout << endl;
-                        cin >> decision;
+                                         switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
                         cout << endl;
                             if(decision == 1)
                             {
@@ -225,7 +241,15 @@ void Area_YourHouse()
                     cout << "1. Yes" << endl;
                     cout << "2. No" << endl;
                     cout << endl;
-                    cin >> decision;
+                                     switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
                     cout << endl;
 
                         if(decision == 1)
@@ -275,7 +299,15 @@ void Area_YourHouse()
                 cout << "1. Yes" << endl;
                 cout << "2. No" << endl;
                 cout << endl;
-                cin >> decision;
+                 switch(_getch())
+                {
+                case '1':
+                decision = 1;
+                break;
+                case '2':
+                decision = 2;
+                break;
+                }
                 cout << endl;
                     if(decision == 1)
                     {
@@ -299,7 +331,15 @@ void Area_YourHouse()
                         cout << "1. Yes" << endl;
                         cout << "2. No" << endl;
                         cout << endl;
-                        cin >> decision;
+                        switch(_getch())
+                        {
+                        case '1':
+                        decision = 1;
+                        break;
+                        case '2':
+                        decision = 2;
+                        break;
+                        }
                         cout << endl;
                             if(decision == 1)
                             {

@@ -48,6 +48,7 @@
 		<Unit filename="Notes.h" />
 		<Unit filename="TextFunctions.h" />
 		<Unit filename="TitleScreen.h" />
+		<Unit filename="User_File1.dat" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
