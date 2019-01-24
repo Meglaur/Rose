@@ -295,6 +295,7 @@ void UseItem()
     cout << "Use Item:" << endl;
     cout << "1. Elixers" << " [" << pElixers << "]" << endl;
     cout << "2. Food" << " [" << pFood << "]" << endl;
+    if(Village_Book == true)
     {
         cout << "3. Rune Book" << endl;
     }
