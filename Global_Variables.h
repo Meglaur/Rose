@@ -300,7 +300,7 @@ bool File1_Dungeon_FountainSet1, File1_Dungeon_FountainSet2, File1_Dungeon_Fount
 bool FirePuzzle_PillarsON;
 
 
-
+bool Rune_34, Rune_35, Rune_36, Rune_37;
 
 
 
@@ -331,6 +331,9 @@ bool File1_Tiki, File1_Kuhar, File_Aida;
 
 
                                     //GAME BACKROUND VARIABLES
+
+//Game Speed Variables
+int attackbar_speed, enemyframe_speed;
 
 //Game Over Variables
 bool Gameover = false;

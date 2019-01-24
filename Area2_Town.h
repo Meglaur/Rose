@@ -496,6 +496,11 @@ void Area_Town()
                 cout << "Most of the books are boring, but you see an interesting cookbook.\nTake it?" << endl;
                 cout << "1. Yes" << endl;
                 cout << "2. No" << endl;
+                switch(getch())
+                {
+                    case '1': decision = 1; break;
+                    case '2': decision = 2; break;
+                }
                 switch(decision)
                 {
                     case 1:
@@ -529,7 +534,7 @@ void Area_Town()
             if(sCutscene_OldMan1 == false && sCutscene_GrandmaHelps == false)
             {
                 cName = "Old Man";
-                animationText = "Good Evening to you";
+                animationText = "Good Evening to you.";
                 Dialogue();
             }
             else if(sCutscene_OldMan1 == false && sCutscene_GrandmaHelps == true)

@@ -156,7 +156,7 @@ void Area_ElfVillage()
                     if(Village_Necklace == false)
                     {
 
-                        if(pCoins >= 5)
+                        if(pCoins >= 15)
                         {
                             cout << "        You bought the Fira Necklace! Your defense increased by one!";
                             DoublePause();
@@ -322,7 +322,7 @@ void Area_ElfVillage()
             cout << "She smiles and stares at the daisy you gave her." << endl;
             Pause();
         }
-
+        break;
         case 4:
             gPosition = 42;
             break;
@@ -611,7 +611,7 @@ void Area_ElfVillage()
                         break;
                         }
             cout << endl;
-            if(decision == 1) {cout << "You take the book with you." << endl; DoublePause(); Village_Book = true;}
+            if(decision == 1) {cout << "You take the book with you! You can look at it by\nchoosing the book in the Use Item screen." << endl; DoublePause(); Village_Book = true;}
             else {cout << "You decide not to take the book with you." << endl; DoublePause();}
             }
             break;

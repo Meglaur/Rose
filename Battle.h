@@ -862,6 +862,9 @@ void AttackMiniGame1()
         aPosition += 1;
 
 
+
+
+
         if(aPosition >= 21)
         {
             aPosition = 1;
@@ -1017,6 +1020,8 @@ void AttackMiniGame1()
 
     cout << "\n                             ";
 
+           Sleep(attackbar_speed);
+
 
     }
 
@@ -1051,32 +1056,32 @@ void DefendMiniGame1()
  cout << "    \\_ \\//___                             " << endl;
  cout << "      \\//___/                              " << endl;
  cout << "      //                                    " << endl;
- cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
+ cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;\
+
 
                 if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 0;
                 }
 
-            Sleep(1000);
+            Sleep(1000); //This sleep shows the beginning picture of the enemy attack and holds for 1 second
 
    while(Battle_Block == 5)
    {
        dPosition += 1;
        if (dPosition > 9)
        {
-           Sleep(100);
+           Sleep(100); //This sleep waits a milisecond before telling you you've missed your shot to block
            Battle_Block = 0;
        }
 
 
-        Sleep(30);
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
         cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
-        Sleep(150);
+        Sleep(enemyframe_speed); //This sleep waits a small time between each frame
 
         switch(dPosition)
         {
@@ -1094,6 +1099,7 @@ void DefendMiniGame1()
  cout << "      \\//___/                              " << endl;
  cout << "      //                                    " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
+ Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -1118,8 +1124,7 @@ case 2:
  cout << "      \\//___/                              " << endl;
  cout << "      //                                    " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
-              Sleep(200);
-
+ Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -1149,7 +1154,6 @@ cout << endl;
 
 
 
-
                 if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 0;
@@ -1172,7 +1176,7 @@ case 4:
  cout << "      \\//___/                              " << endl;
  cout << "      //                                    " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
-
+ Sleep(30);
                  if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 0;
@@ -1195,7 +1199,7 @@ case 5:
  cout << "      \\//___/                               " << endl;
  cout << "      //                                     " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_______@_/\\\\/\\  " << endl;
-
+ Sleep(30);
           if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 0;
@@ -1220,7 +1224,7 @@ case 6:
  cout << "      \\//___/                               " << endl;
  cout << "      //                                     " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
-
+ Sleep(30);
 
                 if(GetKeyState(' ') & 0x8000)
                 {
@@ -1245,7 +1249,8 @@ case 7:
  cout << "      \\//___/                               " << endl;
  cout << "      //                                     " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
-                            if(GetKeyState(' ') & 0x8000)
+     Sleep(30);
+                             if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 0;
                 }
@@ -1268,7 +1273,9 @@ case 8:
  cout << "      \\//___/            *                  " << endl;
  cout << "      //                                     " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
-                            if(GetKeyState(' ') & 0x8000)
+  Sleep(30);
+
+        if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 1;
                 }
@@ -1291,7 +1298,7 @@ case 9:
  cout << "      \\//___/                               " << endl;
  cout << "      //                     *               " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
-
+ Sleep(30);
                             if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 1;
@@ -1314,7 +1321,7 @@ case 10:
  cout << "      \\//___/            *                  " << endl;
  cout << "      //                                     " << endl;
  cout << "   /\\//__/\\\\///\\\\///\\/\\_________*_/\\\\/\\  " << endl;
-
+ Sleep(30);
 
                        if(GetKeyState(' ') & 0x8000)
                 {
@@ -1379,7 +1386,7 @@ void DefendMiniGame2()
         cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
-        Sleep(200);
+        Sleep(enemyframe_speed);
 
         switch(dPosition)
         {
@@ -1401,6 +1408,7 @@ void DefendMiniGame2()
               cout << "                          " << "     \\  / " << endl;
               cout << "                          " << "      \\/\\\\ " << endl;
               cout << "                          " << "         \\\\_      " << endl;
+               Sleep(30);
 
 
 
@@ -1416,6 +1424,7 @@ void DefendMiniGame2()
               cout << "                         _________| " << endl;
               cout << "                        /         |>> " << endl;
               cout << "                        \\---------| " << endl;
+               Sleep(30);
 
 
 
@@ -1435,6 +1444,7 @@ void DefendMiniGame2()
               cout << "                              /  / " << endl;
               cout << "                             /  /" << endl;
               cout << "                             |_/ " << endl;
+               Sleep(30);
 
 
                  if(GetKeyState(' ') & 0x8000)
@@ -1453,6 +1463,7 @@ void DefendMiniGame2()
              cout << "                                    | | " << endl;
              cout << "                                    | | " << endl;
              cout << "                                    \\ / " << endl;
+              Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -1507,14 +1518,14 @@ void DefendMiniGame3()
                     Battle_Block = 0;
                 }
 
-            Sleep(1000);
+            Sleep(enemyframe_speed);
 
    while(Battle_Block == 5)
    {
        dPosition += 1;
        if (dPosition > 8)
        {
-           Sleep(100);
+           Sleep(250);
            Battle_Block = 0;
        }
 
@@ -1553,7 +1564,7 @@ void DefendMiniGame3()
             cout << "                                _    _                             " << endl;
             cout << "\n\n\n\n\n\n\n";
             cout << "                                   @                        " << endl;
-
+            Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -1577,7 +1588,7 @@ void DefendMiniGame3()
             cout << "                                 _    _                      " << endl;
             cout << "\n\n\n\n\n\n\n";
             cout << "                                    @                        " << endl;
-
+            Sleep(30);
 
                 if(GetKeyState(' ') & 0x8000)
                 {
@@ -1604,7 +1615,7 @@ void DefendMiniGame3()
 		    cout << "                         \\____            ____/              " << endl;
 			cout << "                          ___/            \\___               " << endl;
 			cout << "                          \\__      @       __/               " << endl;
-
+            Sleep(30);
 
                  if(GetKeyState(' ') & 0x8000)
                 {
@@ -1630,7 +1641,7 @@ void DefendMiniGame3()
 		    cout << "                    ____/                      \\____              " << endl;
 			cout << "                    \\___                        ___/               " << endl;
 			cout << "                     __/           @            \\__               " << endl;
-
+            Sleep(30);
 
                 if(GetKeyState(' ') & 0x8000)
                 {
@@ -1657,6 +1668,7 @@ void DefendMiniGame3()
 		    cout << "                        \\____            ____/              " << endl;
 			cout << "                         ___/            \\___               " << endl;
 			cout << "                         \\__      @       __/               " << endl;
+            Sleep(30);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -1683,6 +1695,8 @@ void DefendMiniGame3()
 		    cout << "                           \\____    ____/              " << endl;
 			cout << "                             ___/    \\___               " << endl;
 			cout << "                             \\__  @   __/               " << endl;
+            Sleep(30);
+
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -1709,6 +1723,8 @@ void DefendMiniGame3()
 		    cout << "                              \\____                " << endl;
 			cout << "                                ___/                  " << endl;
 			cout << "                                \\__                   " << endl;
+            Sleep(30);
+
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -1779,7 +1795,7 @@ void DefendMiniGame4()
         cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
-        Sleep(150);
+        Sleep(enemyframe_speed);
 
         switch(dPosition)
         {
@@ -1825,6 +1841,7 @@ void DefendMiniGame4()
               cout << "                                      \\_____/____\\______\\____/             " << endl;
 	          cout << "                                        |  /             |  /                 " << endl;
               cout << "   @                                    |__              |__                  " << endl;
+              Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -1843,6 +1860,7 @@ void DefendMiniGame4()
 	        cout << "                                      \\_____/    \\      /   _/              " << endl;
             cout << "                                        \\___\\_____\\____/___/               " << endl;
             cout << "   @                                      \\__/         \\__/                 " << endl;
+              Sleep(30);
 
                  if(GetKeyState(' ') & 0x8000)
                 {
@@ -1860,6 +1878,7 @@ void DefendMiniGame4()
 	        cout << "                                  \\_\\____/       /\\  \\__/              " << endl;
             cout << "                                    \\|_  \\_____/   \\_\\/                " << endl;
             cout << "   @                                   \\_______|___/                      " << endl;
+              Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -1878,6 +1897,7 @@ void DefendMiniGame4()
             cout << "                          /    \\_____  /    \\__/\\                  " << endl;
 	        cout << "                          \\____ /    \\/     _\\__/                  " << endl;
             cout << "   @                           \\______\\____/                        " << endl;
+              Sleep(30);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -1896,6 +1916,7 @@ void DefendMiniGame4()
 	        cout << "                      \\_\\____/       /\\  \\__/              " << endl;
             cout << "                        \\|_  \\_____/   \\_\\/                " << endl;
             cout << "   @                       \\_______|___/                      " << endl;
+              Sleep(30);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -1913,6 +1934,7 @@ void DefendMiniGame4()
             cout << "              /    \\_____  /    \\__/\\                  " << endl;
 	        cout << "              \\____ /    \\/     _\\__/                  " << endl;
             cout << "   @               \\______\\____/                        " << endl;
+              Sleep(30);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -1930,6 +1952,7 @@ void DefendMiniGame4()
 	        cout << "     \\_\\____/       /\\  \\__/              " << endl;
             cout << "       \\|_  \\_____/   \\_\\/                " << endl;
             cout << "   @     \\_______|___/                      " << endl;
+              Sleep(30);
 
 
                        if(GetKeyState(' ') & 0x8000)
@@ -1948,6 +1971,7 @@ void DefendMiniGame4()
             cout << "   \\_____  /    \\__/\\                  " << endl;
 	        cout << "____ /    \\/     _\\__/                  " << endl;
             cout << "   \\______\\____/                        " << endl;
+              Sleep(30);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -1994,28 +2018,28 @@ void DefendMiniGame5()
               cout << endl;
               cout << endl;
               cout << endl;
-			  cout << "                              \\_|                                               ";
-              cout << "                             / -\\                                               ";
-              cout << "                      /\\_    |/\\__                                             ";
-              cout << "                     _/   \\   \\\\                                               ";
-              cout << "                    _/      \\_/ /                                                 ";
-              cout << "                 /            \\                                                 ";
-              cout << "               _/           / |                                                 ";
-              cout << "              /            / /                                                  ";
-              cout << "             /           _/_/                                                   ";
-              cout << "            /            _/                                                     ";
-              cout << "           /          /\\/                                                       ";
-		      cout << "          /_______/\\ / \\\\_                                                    ";
-              cout << "                      \\\\                                                         ";
-              cout << "                     // _                                                         ";
-              cout << "                   \\__/                                                        ";
-              cout << "                                                     @                       " << endl;
+			  cout << "                              \\_|                      " << endl;
+              cout << "                             / -\\                      " << endl;
+              cout << "                      /\\_    |/\\__                    " << endl;
+              cout << "                    _/   \\   \\\\                      " << endl;
+              cout << "                  _/      \\_/ /                        " << endl;
+              cout << "                 /            \\                        " << endl;
+              cout << "               _/           / |                         " << endl;
+              cout << "              /            / /                          " << endl;
+              cout << "             /           _/_/                           " << endl;
+              cout << "            /            _/                             " << endl;
+              cout << "           /          /\\/                              " << endl;
+		      cout << "          /_______/\\ / \\\\_                           " << endl;
+              cout << "                    \\\\                                " << endl;
+              cout << "                    // _                                " << endl;
+              cout << "                   \\__/                                " << endl;
+              cout << "                                                     @  " << endl;
 
 
                 if(GetKeyState(' ') & 0x8000)
-                {
+               {
                     Battle_Block = 0;
-                }
+               }
 
             Sleep(1000);
 
@@ -2024,19 +2048,18 @@ void DefendMiniGame5()
        dPosition += 1;
        if (dPosition > 7)
        {
-           Sleep(300);
+           Sleep(100);
            Battle_Block = 0;
        }
 
 
 
-        Sleep(20);
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
         cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
-        Sleep(200);
+        Sleep(enemyframe_speed);
 
         switch(dPosition)
         {
@@ -2053,23 +2076,23 @@ void DefendMiniGame5()
               cout << endl;
               cout << endl;
               cout << endl;
-			  cout << "                              \\_|                                               ";
-              cout << "                             / -\\                                               ";
-              cout << "                      /\\_    |/\\__                                             ";
-              cout << "                     _/   \\   \\\\                                               ";
-              cout << "                    _/      \\_/ /                                                 ";
-              cout << "                 /            \\                                                 ";
-              cout << "               _/           / |                                                 ";
-              cout << "              /            / /                                                  ";
-              cout << "             /           _/_/                                                   ";
-              cout << "            /            _/                                                     ";
-              cout << "           /          /\\/                                                       ";
-		      cout << "          /_______/\\ / \\\\_                                                    ";
-              cout << "                      \\\\                                                         ";
-              cout << "                     // _                                                         ";
-              cout << "                   \\__/                                                        ";
-              cout << "                                                     @                       " << endl;
-
+			  cout << "                              \\_|                      " << endl;
+              cout << "                             / -\\                      " << endl;
+              cout << "                      /\\_    |/\\__                    " << endl;
+              cout << "                    _/   \\   \\\\                      " << endl;
+              cout << "                  _/      \\_/ /                        " << endl;
+              cout << "                 /            \\                        " << endl;
+              cout << "               _/           / |                         " << endl;
+              cout << "              /            / /                          " << endl;
+              cout << "             /           _/_/                           " << endl;
+              cout << "            /            _/                             " << endl;
+              cout << "           /          /\\/                              " << endl;
+		      cout << "          /_______/\\ / \\\\_                           " << endl;
+              cout << "                    \\\\                                " << endl;
+              cout << "                    // _                                " << endl;
+              cout << "                   \\__/                                " << endl;
+              cout << "                                                     @  " << endl;
+             Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -2104,7 +2127,7 @@ void DefendMiniGame5()
 		      cout << endl;
 		      cout << endl;
               cout << "                                                     @                       " << endl;
-
+             Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -2140,7 +2163,7 @@ void DefendMiniGame5()
              cout << endl;
              cout << endl;
              cout << "                                                     @                       " << endl;
-
+             Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -2176,7 +2199,7 @@ void DefendMiniGame5()
               cout << endl;
               cout << endl;
               cout << "                                                     @                       " << endl;
-
+             Sleep(30);
 
                  if(GetKeyState(' ') & 0x8000)
                 {
@@ -2211,7 +2234,7 @@ void DefendMiniGame5()
             cout << endl;
             cout << endl;
             cout << "                                                     @            " << endl;
-
+             Sleep(30);
 
                 if(GetKeyState(' ') & 0x8000)
                 {
@@ -2247,6 +2270,8 @@ void DefendMiniGame5()
               cout << "                                           \\        \\                      " << endl;
               cout << endl;
               cout << "                                                     @                       " << endl;
+             Sleep(30);
+
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -2282,6 +2307,9 @@ void DefendMiniGame5()
              cout << "                                           \\       \\                   " << endl;
              cout << "                                            \\        \\                  " << endl;
              cout << "                                             \\________\\                       " << endl;
+             Sleep(30);
+
+
                 {
                     Battle_Block = 0;
                 }
@@ -2346,19 +2374,18 @@ void DefendMiniGame6()
        dPosition += 1;
        if (dPosition > 13)
        {
-           Sleep(100);
+           Sleep(90);
            Battle_Block = 0;
        }
 
 
 
-       Sleep(30);
         ClearScreen();
         cout << "\n\n\n\n\n\n" << endl;
         cout << "                 Hit spacebar with correct timing to block the attack!" << endl;
         cout << "\n\n" << endl;
 
-        Sleep(150);
+        Sleep(enemyframe_speed);
 
         switch(dPosition)
         {
@@ -2387,6 +2414,7 @@ void DefendMiniGame6()
     cout << endl;
     cout << endl;
     cout << "_______________________________@___________________________     " << endl;
+    Sleep(40);
 
                 if(GetKeyState(' ') & 0x8000)
                 {
@@ -2415,6 +2443,7 @@ void DefendMiniGame6()
     cout << endl;
     cout << endl;
     cout << "_______________________________@___________________________     " << endl;
+    Sleep(40);
 
 
 
@@ -2449,6 +2478,7 @@ void DefendMiniGame6()
     cout << endl;
     cout << endl;
     cout << "_______________________________@___________________________     " << endl;
+    Sleep(40);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -2478,6 +2508,7 @@ void DefendMiniGame6()
     cout << endl;
     cout << endl;
     cout << "_______________________________@___________________________     " << endl;
+    Sleep(40);
 
                  if(GetKeyState(' ') & 0x8000)
                 {
@@ -2506,6 +2537,7 @@ void DefendMiniGame6()
     cout << endl;
     cout << endl;
     cout << "_______________________________@___________________________     " << endl;
+    Sleep(40);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -2536,6 +2568,7 @@ void DefendMiniGame6()
     cout << endl;
     cout << endl;
     cout << "_______________________________@___________________________     " << endl;
+    Sleep(40);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -2561,6 +2594,7 @@ void DefendMiniGame6()
     cout << " __/    /                                                        " << endl;
     cout << "/ /    /                                                         " << endl;
     cout << "_/    /________________________@____________________________     " << endl;
+    Sleep(40);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -2589,6 +2623,7 @@ void DefendMiniGame6()
     cout << " / / (  /                                                        " << endl;
     cout << " \\/  ) /                                                        " << endl;
     cout << "_/  ( /_________________________@__________________________      " << endl;
+    Sleep(40);
 
                             if(GetKeyState(' ') & 0x8000)
                 {
@@ -2616,6 +2651,7 @@ void DefendMiniGame6()
     cout << " \\/  ) /                                                           " << endl;
     cout << "_/  ( /_________________________@__________________________        " << endl;
 
+    Sleep(40);
 
                        if(GetKeyState(' ') & 0x8000)
                 {
@@ -2644,6 +2680,7 @@ void DefendMiniGame6()
     cout << "/   (/                                                           " << endl;
     cout << "    /                                                            " << endl;
     cout << "   /___________________________@_________________________        " << endl;
+    Sleep(40);
 
 
                             if(GetKeyState(' ') & 0x8000)
@@ -2673,6 +2710,7 @@ void DefendMiniGame6()
     cout << "  /    /                                                           " << endl;
     cout << " /    /                                                            " << endl;
     cout << "/____/_______________________@__________________________           " << endl;
+    Sleep(40);
 
 
 
@@ -2704,6 +2742,7 @@ void DefendMiniGame6()
     cout << "  /    /                   |  ^\\ \\                               " << endl;
     cout << " /    /                     \____\\/                               " << endl;
     cout << "/____/_______________________@__________________________           " << endl;
+    Sleep(40);
 
 
                 if(GetKeyState(' ') & 0x8000)
@@ -2734,7 +2773,9 @@ void DefendMiniGame6()
     cout << "  /    /                   \\     \\\\                               " << endl;
     cout << " /    /                     \\     \\\\                              " << endl;
     cout << "/____/_______________________\\ ____\\\\______________________       " << endl;
-                                    if(GetKeyState(' ') & 0x8000)
+    Sleep(40);
+
+                    if(GetKeyState(' ') & 0x8000)
                 {
                     Battle_Block = 0;
                 }

@@ -201,3 +201,103 @@
 
 1544291669 c:\c++ code projects\rose\area2_town.h
 
+1548347922 source:c:\c++ projects\rose\backups\dec 09 2018\rose\main.cpp
+	"Global_Variables.h"
+	"TextFunctions.h"
+	"Battle.h"
+	"ControlFunctions.h"
+	"BackroundMovement.h"
+	"Cutscenes.h"
+	"TitleScreen.h"
+	"Activities.h"
+	"Area2_Town.h"
+
+1548121066 c:\c++ projects\rose\backups\dec 09 2018\rose\global_variables.h
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<windows.h>
+	<conio.h>
+	<fstream>
+	<istream>
+	<ostream>
+	<sstream>
+
+1543695000 c:\c++ projects\rose\backups\dec 09 2018\rose\textfunctions.h
+
+1548350254 c:\c++ projects\rose\backups\dec 09 2018\rose\battle.h
+
+1548346431 c:\c++ projects\rose\backups\dec 09 2018\rose\controlfunctions.h
+	"Area1_YourHouse.h"
+	"Area3_Forest.h"
+	"Area4_ElfVillage.h"
+
+1544290526 c:\c++ projects\rose\backups\dec 09 2018\rose\area1_yourhouse.h
+
+1548347341 c:\c++ projects\rose\backups\dec 09 2018\rose\area3_forest.h
+
+1548347341 c:\c++ projects\rose\backups\dec 09 2018\rose\area4_elfvillage.h
+
+1547837711 c:\c++ projects\rose\backups\dec 09 2018\rose\backroundmovement.h
+	"Display.h"
+
+1548124847 c:\c++ projects\rose\backups\dec 09 2018\rose\display.h
+
+1544289974 c:\c++ projects\rose\backups\dec 09 2018\rose\cutscenes.h
+
+1548350665 c:\c++ projects\rose\backups\dec 09 2018\rose\titlescreen.h
+
+1548347341 c:\c++ projects\rose\backups\dec 09 2018\rose\activities.h
+
+1548124847 c:\c++ projects\rose\backups\dec 09 2018\rose\area2_town.h
+
+1544469982 source:c:\c++ projects\rose\backups\dec 09 2018\rose\global_variables.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<windows.h>
+	<conio.h>
+	<fstream>
+	<istream>
+	<ostream>
+	<sstream>
+
+1544469982 c:\c++ projects\rose\backups\dec 09 2018\rose\global_variables.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	<windows.h>
+	<conio.h>
+	<fstream>
+	<istream>
+	<ostream>
+	<sstream>
+
+1544469993 c:\c++ projects\rose\backups\dec 09 2018\rose\textfunctions.cpp
+
+1544469989 c:\c++ projects\rose\backups\dec 09 2018\rose\battle.cpp
+
+1544470090 c:\c++ projects\rose\backups\dec 09 2018\rose\controlfunctions.cpp
+	"Area1_YourHouse.cpp"
+	"Area3_Forest.cpp"
+	"Area4_ElfVillage.cpp"
+
+1544469561 c:\c++ projects\rose\backups\dec 09 2018\rose\area1_yourhouse.cpp
+
+1544469570 c:\c++ projects\rose\backups\dec 09 2018\rose\area3_forest.cpp
+
+1544469572 c:\c++ projects\rose\backups\dec 09 2018\rose\area4_elfvillage.cpp
+
+1544469574 c:\c++ projects\rose\backups\dec 09 2018\rose\backroundmovement.cpp
+	"Display.cpp"
+
+1544469983 c:\c++ projects\rose\backups\dec 09 2018\rose\display.cpp
+
+1544469985 c:\c++ projects\rose\backups\dec 09 2018\rose\cutscenes.cpp
+
+1544469995 c:\c++ projects\rose\backups\dec 09 2018\rose\titlescreen.cpp
+
+1544470111 c:\c++ projects\rose\backups\dec 09 2018\rose\activities.cpp
+
+1544469565 c:\c++ projects\rose\backups\dec 09 2018\rose\area2_town.cpp
+

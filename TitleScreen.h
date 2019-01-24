@@ -70,13 +70,20 @@ void TitleScreenDisplay()
 
 void TitleScreenMove()
 {
+
      switch(_getch())
     {
     case 'a':
         fMove = 1;
         break;
+    case 'A':
+        fMove = 1;
+        break;
     case 'd':
         fMove = 2;
+        break;
+    case 'D':
+        fMove = 3;
         break;
     case '\r':
         fMove = 3;
@@ -171,14 +178,17 @@ void TitleScreenOptions()
         Pause();
         Title_Screen = false;
 
+        GameSpeed();
+
 
 
         //this is where you switch around debug code
+
+
+
         gPosition = 38;
         Dungeon_BossRoom = true;
         pElixers = 20;
-        BossStage = 2;
-
         TravelStatus = 2;
         pCoins = 110;
         Village_Enter = true;
@@ -186,8 +196,6 @@ void TitleScreenOptions()
         Dungeon_Entrance = true;
         Dungeon_CrownPuzzle = true;
         Dungeon_Wings = true;
-        Dungeon_BossRoom = true;
-        sminiScene_FirstEnemy = true;
         NymphAttack = false;
         ControlLoop();
 
@@ -331,6 +339,7 @@ void NewGame()
 
     void Cutscene_Prolouge();
     void SlowText();
+    void GameSpeed();
 
 
     Title_Screen = false;
@@ -354,11 +363,15 @@ void NewGame()
                 cin >> pName;
 
 
+    GameSpeed();
+
+
     ClearScreen();
+
 
     cout << "\n\n\n\n\n\n\n              ";
     animationText = "Would You like to see the Controls before you begin?";
-    FastText();
+    FastText(); Pause();
     cout << endl;
     cout << "                       1. Yes                  2. No" << endl;
     cout << endl;

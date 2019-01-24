@@ -168,7 +168,7 @@ void Area_Forest()
                 Dialogue();
 
                 cout << endl;
-                cout << "Take one of the daisies\n?" << endl;
+                cout << "Take one of the daisies?\n" << endl;
                 cout << "1. Yes" << endl;
                 cout << "2. No\n" << endl;
                                  switch(_getch())
@@ -721,6 +721,11 @@ void Area_Forest()
             {
                 cout << "You take out the rune book, and use it to translate.\nOn the wall is the markings 'II - 3'" << endl;
                 Pause();
+                if(Rune_34 == false)
+                {
+                     cout << "Your Rune Book is updated!" << endl; Rune_34 = true;
+                Pause();
+                }
             }
             break;
         case 4:
@@ -787,6 +792,12 @@ void Area_Forest()
                 {
                     cout << "You take out the rune book, and use it to translate.\nOn the floor is the markings 'I - 1'" << endl;
                     Pause();
+                    if(Rune_35 == false)
+                    {
+                        cout << "Your Rune Book is updated!" << endl; Rune_35 = true;
+                        Pause();
+                    }
+
                 }
                 break;
         }
@@ -896,6 +907,12 @@ void Area_Forest()
             {
                 cout << "You take out the rune book, and use it to translate.\nOn the floor is the markings 'III - 2'" << endl;
                 Pause();
+                if(Rune_36 == false)
+                {
+                    cout << "Your Rune Book is updated!" << endl; Rune_36 = true;
+                    Pause();
+                }
+
             }
             break;
 
@@ -914,6 +931,12 @@ void Area_Forest()
             {
                 cout << "You take out the rune book, and use it to translate.\nOn the wall is the markings 'IV - 1'" << endl;
                 Pause();
+                if(Rune_37 == false)
+                {
+                    cout << "Your Rune Book is updated!" << endl; Rune_37 = true;
+                    Pause();
+                }
+
             }
             break;
             case 2:
@@ -957,7 +980,18 @@ void Area_Forest()
                 gPosition = 39; Debug(); Move();
                 break;
             case 2:
-                if(Dungeon_BossRoom == true) {Cutscene_DungeonBossApproach();}
+                if(Dungeon_BossRoom == true)
+                {
+                    cout << "Would you like to enter the Boss Room?\n" << endl;
+                    cout << "1. Yes" << endl;
+                    cout << "2. No\n" << endl;
+
+
+                    switch(getch()) {case '1': decision = 1; break; case '2': decision = 2; break;}
+
+                    if(decision == 1) {Cutscene_DungeonBossApproach();}
+
+                }
                 else
                 {
                     cout << "You go up a winding path to an enormous door with intricate carvings\nIt is sealed shut, but has a strange leaf shaped hole in\nthe center. You feel more uneasy than ever being near\nthis room." << endl;
@@ -1720,27 +1754,56 @@ void DungeonWaterPuzzle()
 
     //ask the player to guess the order they were shown
     cout << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
-    cout << "What order were the fountains in?\n" << endl;
-    cin >> Dungeon_FountainGuess;
-
-    //check if they were right
-    if(Dungeon_FountainGuess == Dungeon_FountainOrder)
+    cout << "Would you like to guess the order of the fountains?\n" << endl;
+    cout << "1. Yes\n2. No\n" << endl;
+    switch(_getch())
+        {
+            case '1':
+            decision = 1;
+            break;
+            case '2':
+            decision = 2;
+            break;
+        }
+    cout << endl;
+    switch(decision)
     {
-        animationText = "The fountains all turn on. You guessed correctly!";
-        Dialogue(); Pause();
-        minigame_win = true;
+    case 1:
+        cout << "What order were the fountains in?\n" << endl;
+        cin >> Dungeon_FountainGuess;
+        cout << endl;
+
+        //check if they were right
+        if(Dungeon_FountainGuess == Dungeon_FountainOrder)
+        {
+            animationText = "The fountains all turn on. You guessed correctly!";
+            Dialogue(); Pause();
+            minigame_win = true;
+        }
+        else{animationText = "Nothing Happens."; Dialogue();}
+        break;
+    case 2:
+        break;
     }
-    else{animationText = "Nothing Happens."; Dialogue();}
+
 
 
 
 }
+
+
+
+
+//Fire Puzzle
 
 void DungeonFirePuzzle()
 {
 
     void FirePuzzleScreen();
     void FirePuzzleMovement();
+    void GameOver();
+
+
     minigame_win = false;
     exitminigame = false;
     //need something to constantly run a screen where pathway is shown and fire is spurting in intervals
@@ -1754,6 +1817,12 @@ void DungeonFirePuzzle()
         FirePuzzleScreen();
         FirePuzzleMovement();
 
+        if(Player_Health <= 0)
+        {
+            exitminigame = true;
+            GameOver();
+        }
+
         if(gPosition == 373 && Dungeon_RightWing == false)
         {
             minigame_win = true;
@@ -1761,14 +1830,14 @@ void DungeonFirePuzzle()
             gPosition = 37;
         }
 
+
+
     }
 
 
 
 }
 
-
-//Fire Puzzle
 void FirePuzzleScreen()
 {
     void HealthBar();
@@ -1842,7 +1911,7 @@ void FirePuzzleMovement()
     {
 
     case 37:
-        if(FirePuzzle_PillarsON == true)
+        if(FirePuzzle_PillarsON == true && gMove == 3)
         {
             gPosition = 37; Player_Health -= 3;
         }

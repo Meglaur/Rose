@@ -19,6 +19,8 @@ void ControlLoop()
     Gameover = false;
 
 
+
+
         if(Gameover == false)
         {
             TopScreen();
@@ -36,7 +38,8 @@ void ControlLoop()
             CalculateDisplay();
         }
 
-
+    decision = 0;
+    gMove = 0;
 
 
 

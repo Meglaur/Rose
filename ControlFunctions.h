@@ -293,9 +293,12 @@ void UseItem()
 
 
     cout << "Use Item:" << endl;
-    cout << "1. Elixers" << endl;
-    cout << "2. Food" << endl;
-    cout << "3. Nothing" << endl;
+    cout << "1. Elixers" << " [" << pElixers << "]" << endl;
+    cout << "2. Food" << " [" << pFood << "]" << endl;
+    {
+        cout << "3. Rune Book" << endl;
+    }
+    cout << "0. Nothing" << endl;
     cout << endl;
                         switch(_getch())
                         {
@@ -304,6 +307,9 @@ void UseItem()
                         break;
                         case '2':
                         decision = 2;
+                        break;
+                        case '3':
+                        decision = 3;
                         break;
                         }
     cout << endl;
@@ -344,6 +350,27 @@ void UseItem()
         }
         else{cout << "You're out of food!" << endl; Pause();}
         break;
+    case 3:
+        cout << "You flip through the pages, which include strange runes\ntranslated with their matching letters and numbers next to them. The\nlast page seems to be meant for writing translations." << endl;
+        cout << "\nRune Book Logs:\n" << endl;
+        if(Rune_34 == true)
+        {
+            cout << "Entrance Markings, Second Position is three." << endl;
+        }
+        if(Rune_35 == true)
+        {
+            cout << "Cavern Markings, First Position is one. " << endl;
+        }
+        if(Rune_36 == true)
+        {
+            cout << "Water Room Markings, Third Position is two." << endl;
+        }
+        if(Rune_37 == true)
+        {
+            cout << "Fire Room Markings, Fourth Position is one." << endl;
+        }
+        Pause();
+        break;
     }
 
         Pause(); Debug(); Move();
@@ -355,3 +382,51 @@ void ReturntoTitleScreen()
     void TitleScreen();
     TitleScreen();
 }
+
+void GameSpeed()
+{
+        void FastText();
+        void FastText();
+
+        attackbar_speed = 8;
+        enemyframe_speed = 250;
+
+        ClearScreen();
+        cout << "\n\n\n\n\n\n\n                             ";
+        animationText = "Choose Your Game Speed..."; FastText();
+        animationText = "1. Turtle (Slow/Old Computer)\n2. Bunny (Medium Computer with decent speed)\n3. Cheetah(Gaming Computer)\n";
+        FastText();
+
+        switch(getch())
+        {
+        case '1':
+            decision = 1;
+            break;
+        case '2':
+            decision = 2;
+            break;
+        case '3':
+            decision = 3;
+            break;
+        }
+
+        switch(decision)
+        {
+        case 1:
+            attackbar_speed = 0;
+            enemyframe_speed = 200;
+            break;
+        case 2:
+            attackbar_speed = 4;
+            enemyframe_speed = 225;
+            break;
+        case 3:
+            attackbar_speed = 8;
+            enemyframe_speed = 250;
+            break;
+
+        }
+
+
+}
+

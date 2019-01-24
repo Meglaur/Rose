@@ -178,7 +178,8 @@ NOTES:-----------------------------------------------
 
 
 
-
+//make a code input option where you can type in change coins etc and if it matches up with preset variables it
+//can change something about the game. Limited but useful. setCoins, setHealth, etc.
 
 
 
@@ -257,4 +258,8 @@ Area Two______ Town
 26 - Old Mans House
 27 - Upstairs Room in old mans house with sword and chest of collectives
 28 - Grandmas House
+
+
+
+
 

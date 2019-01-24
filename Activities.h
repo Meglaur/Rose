@@ -47,8 +47,13 @@ void TravelZone()
     cout << "1. Yes" << endl;
     cout << "2. No" << endl;
     cout << endl;
-    cin >> decision;
-    cout << endl;
+
+    switch(getch())
+    {
+        case 1: decision = 1; break;
+        case 2: decision = 2; break;
+    }
+
     if(decision == 2)
     {
         cout << "You decided not to leave the area." << endl; DoublePause();
@@ -79,7 +84,12 @@ void TravelZone()
      cout << " __" << endl;
      cout << "|  | 1.House - - - - - - - - - " << endl;
      cout << " -- " << endl;
-     cin >> decision;
+
+        switch(getch())
+     {
+     case 1: decision = 1; break;
+     case 2: decision = 2; break;
+     }
 
      switch(decision)
      {
@@ -117,7 +127,13 @@ void TravelZone()
      cout << "                                   -----|-------" << endl;
      if(Village_Enter == true)
      cout << "                                        Elf Village" << endl;
-     cin >> decision;
+
+
+     switch(getch())
+     {
+     case 1: decision = 1; break;
+     case 2: decision = 2; break;
+     }
 
      switch(decision)
      {

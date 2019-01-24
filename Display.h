@@ -396,7 +396,7 @@ void Minimap()
     break;
     case 39:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
@@ -408,182 +408,182 @@ void Minimap()
     break;
     case 391:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |____@________| |" << endl;
+    cout << "                                                          " << "| | ___@________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 392:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |________@____| |" << endl;
+    cout << "                                                          " << "| | _______@____| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 393:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |____________@| |" << endl;
+    cout << "                                                          " << "| | ___________@| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 394:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |@            | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 395:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |    @        | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 396:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |        @    | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 397:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |            @| |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 398:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |@            | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 399:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |    @        | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 3910:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |        @    | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 3911:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |            @| |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 3912:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |@            | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 3913:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |    @        | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 3914:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |        @    | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 3915:
     cout << "                                                          " << " _________________ " << endl;
-    cout << "                                                          " << "|  _____________  |" << endl;
+    cout << "                                                          " << "|   ____________  |" << endl;
     cout << "                                                          " << "| |            @| |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
     cout << "                                                          " << "| |             | |" << endl;
     cout << "                                                          " << "| |  #   #   #  | |" << endl;
-    cout << "                                                          " << "| |_____________| |" << endl;
+    cout << "                                                          " << "| | ____________| |" << endl;
     cout << "                                                          " << " _________________ " << endl;
     break;
 
@@ -769,7 +769,7 @@ void CalculateDisplay()
     {dirUp = "  Inn Counter"; dirLeft = "   Upstairs"; dirRight = " "; dirDown = "  Main Square"; dirInt = "Talk to the Innkeeper";}
 
     if(gPosition == 25) //Two_InnRoom
-    {dirUp = "     Bed"; dirLeft = "      Table"; dirRight = "Downstairs"; dirDown = "     Desk"; dirInt = "Look Around";}
+    {dirUp = "     Bed"; dirLeft = "      Table"; dirRight = "Downstairs"; dirDown = "  BookShelf"; dirInt = "Look Around";}
 
     if(gPosition == 26) //Two_OldManHouse
     {dirUp = "   Old Man"; dirLeft = "    House Path"; dirRight = "Upstairs"; dirDown = "  Pictures"; dirInt = "Look Around";}
@@ -839,7 +839,7 @@ void CalculateDisplay()
 
     if(gPosition == 397)
     {dirUp = "Ordinary Looking Path"; dirLeft = "   Perched Crows"; dirDown = "   Rose Bushes"; dirInt = "Look Around";
-    if(Dungeon_Crank == false) {dirRight = "Old Crank";} else {dirRight = " ";} }
+    if(Dungeon_Crank == false) {dirRight = "Old Crank On The Ground.";} else {dirRight = " ";} }
 
     if(gPosition == 398)
     {dirUp = "Pool of Water"; dirLeft = " "; dirRight = "Gap with Vines"; dirDown = "Ordinary Looking Path"; dirInt = "Look Around";}
