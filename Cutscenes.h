@@ -530,7 +530,7 @@ void miniScene_Loni()
     Dialogue();
 
     cName = "Loni";
-    animationText = "Well.....you seem harmless, but it has been dangerous around\nhere lately. I have my eye on you. go on in.";
+    animationText = "Well.....you seem harmless, but it has been dangerous around\nhere lately. I have my eye on you. Go on in.";
     Dialogue();
 
     cName = pName;
@@ -669,7 +669,7 @@ void miniScene_Aida()
     Dialogue();
 
     cName = "Aida";
-    animationText = "Thank you! That is very sweet. I think it's somewhere in the clearing,\nI used to walk there a lot before the monsters were around here";
+    animationText = "Thank you! That is very sweet. I think it's somewhere in the clearing,\nI used to walk there a lot before the monsters were around here.";
     Dialogue();
 
     cName = pName;

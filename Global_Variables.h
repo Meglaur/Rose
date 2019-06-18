@@ -331,6 +331,13 @@ bool File1_Tiki, File1_Kuhar, File_Aida;
 
 
                                     //GAME BACKROUND VARIABLES
+//GameModes
+string CreatorMode = "Creator", PlayerMode = "Player", gameMode = PlayerMode;
+
+//Creator Controls
+int CreatorCommand;
+
+
 
 //Game Speed Variables
 int attackbar_speed, enemyframe_speed;

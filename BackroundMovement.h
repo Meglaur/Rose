@@ -20,7 +20,9 @@ void ControlLoop()
 
 
 
-
+        //Run a loop where the program displays the gameplay screen, gives the player a chance
+        //to input, calculates the new position based on user input, and calculate the new
+        //display based on the user input.
         if(Gameover == false)
         {
             TopScreen();
@@ -38,6 +40,7 @@ void ControlLoop()
             CalculateDisplay();
         }
 
+    //clear the decision and movement variables each loop to prevent carrying over
     decision = 0;
     gMove = 0;
 
@@ -89,6 +92,7 @@ void Move()
     void Save();
     void ItemScreen();
     void ReturntoTitleScreen();
+    void CreatorCMD();
 
     cout << "\n\n";
 
@@ -125,6 +129,24 @@ void Move()
             case 'l':
                 Save(); Title_Screen = true; ReturntoTitleScreen();
                 break;
+            case 'g':
+                if(gameMode == PlayerMode)
+                {
+                    cout << "switched to CreatorMode:" << endl;
+                    gameMode = CreatorMode;
+                    Pause();
+                }
+                else if(gameMode == CreatorMode)
+                {
+                    cout << "switched to PlayerMode:" << endl;
+                    Pause();
+                    gameMode = PlayerMode;
+                }
+                break;
+            case 'f':
+                CreatorCMD();
+                break;
+
             }
 
 

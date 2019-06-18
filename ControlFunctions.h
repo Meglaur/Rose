@@ -270,9 +270,9 @@ void ItemScreen()
 
     if(Dungeon_Wings == true) {cout << "Mechanical Wings" << endl; cout << "            ";}
 
-    if(Dungeon_RightWing == true) {cout << "Right Wing Piece" << endl; cout << "            ";}
+    if(Dungeon_RightWing == true && Dungeon_Wings == false) {cout << "Right Wing Piece" << endl; cout << "            ";}
 
-    if(Dungeon_LeftWing == true) {cout << "Left Wing Piece" << endl; cout << "            ";}
+    if(Dungeon_LeftWing == true && Dungeon_Wings == false) {cout << "Left Wing Piece" << endl; cout << "            ";}
 
     cout << endl;
     cout << endl;
@@ -431,3 +431,113 @@ void GameSpeed()
 
 }
 
+void CreatorCMD()
+{
+      if(gameMode == CreatorMode)
+                {
+                    cout << "What would you like to do?" << endl;
+                    cout << "1. Health 2. Coins 3. Elixers 4. Location." << endl;
+                    cout << "5. Damage 6. Defense 7. Access Area 8. Get Item" << endl;
+                    cout << "9. Nothing" << endl;
+                    cin >> CreatorCommand;
+
+                    switch(CreatorCommand)
+                    {
+                    case 1:
+                        cout << "Set Health to: ";
+                        cin >> CreatorCommand; Player_MaxHealth = CreatorCommand;
+                        Player_Health = Player_MaxHealth;
+                        break;
+                    case 2:
+                        cout << "Set Coins to: ";
+                        cin >> CreatorCommand; pCoins = CreatorCommand;
+                        break;
+                    case 3:
+                        cout << "Set Elixers to: ";
+                        cin >> CreatorCommand; pElixers = CreatorCommand;
+                        break;
+                    case 4:
+                        cout << "Where would you like to go?" << endl;
+                        cout << "(Room Codes 1,11-16,2,21-29,3,31-39,391-3915,4,41-49)" << endl;
+                        cin >> CreatorCommand;
+                        gPosition = CreatorCommand;
+                        break;
+                    case 5:
+                        cout << "Set Player Damage to: ";
+                        cin >> CreatorCommand; Player_Damage = CreatorCommand;
+                        break;
+                    case 6:
+                        cout << "Set Player Defense to: ";
+                        cin >> CreatorCommand; Player_Defense = CreatorCommand;
+                        break;
+                    case 7:
+                        cout << "Which area would you like access to?" << endl;
+                        cout << "1. Old Man Sword Room" << endl;
+                        cout << "2. Current Town's Inn" << endl;
+                        cout << "3. Dungeon" << endl;
+                        cout << "4. Dungeon Cavern (Front)" << endl;
+                        cout << "5. Dungeon Cavern (Back)" << endl;
+                        cout << "6. Boss Room" << endl;
+                        cin >> CreatorCommand;
+
+                        switch(CreatorCommand)
+                        {
+                        case 1:
+                            Town_SwordRoom = true; break;
+                        case 2:
+                            Inn = true; break;
+                        case 3:
+                            Dungeon_Entrance = true; break;
+                        case 4:
+                            Dungeon_CrownPuzzle = true; break;
+                        case 5:
+                            Dungeon_Wings = true; break;
+                        case 6:
+                            Dungeon_BossRoom = true; break;
+                        }
+                        break;
+
+                        case 8:
+                            cout << "Which Item would you like?" << endl;
+                            cout << "1. Armor 2. Wooden Sword 3. Shield" << endl;
+                            cout << "4. Daisy 5. Hairpin 6. Paper 7. Jewel" << endl;
+                            cout << "8. Rune Book 9. Cookbook 10. Necklace" << endl;
+                            cout << "11. Strange Key 12. Crank 13. Wings" << endl;
+                            cin >> CreatorCommand;
+
+                            switch(CreatorCommand)
+                            {
+                            case 1:
+                                Player_Armor = true; break;
+                            case 2:
+                                Player_WoodenSword = true; break;
+                            case 3:
+                                Player_Shield = true; break;
+                            case 4:
+                                Forest_Daisy = true; break;
+                            case 5:
+                                Forest_Hairpin = true; break;
+                            case 6:
+                                Town_Paper = true; break;
+                            case 7:
+                                Forest_Jewel = true; break;
+                            case 8:
+                                Village_Book = true; break;
+                            case 9:
+                                Town_Cookbook = true; break;
+                            case 10:
+                                Village_Necklace = true; break;
+                            case 11:
+                                Village_Key = true; break;
+                            case 12:
+                                Dungeon_Crank = true; break;
+                            case 13:
+                                Dungeon_Wings = true; break;
+                            }
+                        break;
+                    }
+
+
+
+                }
+}

@@ -22,6 +22,8 @@ void Dialogue()
         //that switches between pictures for each cutscene, make the value change to a two digit if cutscene
         //has more than one picture like room codes
         cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+
+
     }
     else
     {
@@ -109,7 +111,7 @@ void TextColor()
     }
     if(tSpeaker == pName)
     {
-        SetConsoleTextAttribute(color, 13); //purple
+        SetConsoleTextAttribute(color, 3); //purple was 13, 3 is aqua
     }
     if(tSpeaker == tHelper)
     {

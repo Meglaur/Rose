@@ -287,14 +287,12 @@ void Area_ElfVillage()
 
                 if(decision == 1)
                 {
-                    cout << "You give Tiki the flower." << endl;
-                    cout << endl;
                     cName = "Tiki";
                     animationText = "Pretty! Thank you weird person!";
                     Dialogue();
 
                     cName = " ";
-                    animationText = "She gives you a key";
+                    animationText = "She gives you a key.";
                     Dialogue();
 
                     cName = "Tiki";
@@ -497,6 +495,7 @@ void Area_ElfVillage()
 
                 cName = " ";
                 animationText = "She gives you 20 coins!!  *Coins + 20*";
+                Dialogue();
 
                 cName = pName;
                 animationText = "Thank you!";

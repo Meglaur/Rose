@@ -83,7 +83,7 @@ void TitleScreenMove()
         fMove = 2;
         break;
     case 'D':
-        fMove = 3;
+        fMove = 2;
         break;
     case '\r':
         fMove = 3;
@@ -183,6 +183,7 @@ void TitleScreenOptions()
 
 
         //this is where you switch around debug code
+
 
 
 
@@ -394,6 +395,10 @@ void NewGame()
         Pause();
     }
 
+
+    cout << "\n\n" << endl;
+    cout << "You can review the controls at any time by pressing 'C'" << endl;
+    Pause();
 
     ClearScreen();
     cout << "\n\n\n\n\n\n\n";

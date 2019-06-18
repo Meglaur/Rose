@@ -25,7 +25,7 @@ int main()
     cout << "\n\n\n\n\n\n\n\n\n\n\n" << endl;
     cout << "--------------------------------------------------------------------------------\n\n\n\n\n\n\n\n" << endl;
     animationText = "                         Working Title Games";
-    FastText();
+    FastText(); Pause();
     ClearScreen();
     TitleScreen();
 

@@ -62,16 +62,16 @@ void CalculateEnemy()
         switch(BossStage)
 
         {
-            case 1:
+            case 0:
                 Enemy_DefenseGame = 3;
                 break;
-            case 2:
+            case 1:
                 Enemy_DefenseGame = 4;
                 break;
-            case 3:
+            case 2:
                 Enemy_DefenseGame = 5;
                 break;
-            case 4:
+            case 3:
                 Enemy_DefenseGame = 6;
                 break;
 
@@ -107,6 +107,8 @@ void EnemyApproach()
 
 void BattleMove()
 {
+    void CreatorCMD();
+
     switch(_getch())
     {
     case 'a':
@@ -117,6 +119,23 @@ void BattleMove()
         break;
     case '\r':
         eMove = 3;
+        break;
+    case 'g':
+        if(gameMode == PlayerMode)
+    {
+        cout << "switched to CreatorMode:" << endl;
+        gameMode = CreatorMode;
+        Pause();
+    }
+    else if(gameMode == CreatorMode)
+    {
+        cout << "switched to PlayerMode:" << endl;
+        Pause();
+        gameMode = PlayerMode;
+    }
+    break;
+    case 'f':
+        CreatorCMD();
         break;
     }
 }
@@ -234,6 +253,7 @@ void BattleLoop()
     void Enemy_Turn();
     void GameOver();
 
+
     if(eTurn == true)
     {
         Enemy_Turn();
@@ -281,7 +301,7 @@ void Battle()
         BattleLoop();
         if(Player_Health <= 0)
         {
-        GameOver();
+        GameOver(); break;
         break;
         }
     }

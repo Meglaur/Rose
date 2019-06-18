@@ -224,6 +224,8 @@ void Area_Forest()
                  cout << "You look closer at the tree. Something sparkles up\nin the branches. You climb the tree and find a silver hair pin!" << endl;
                  cout << "\n\n" << endl;
 
+                 Pause();
+
                  cName = pName;
                  animationText = "How did this get all the way up here?";
                  Dialogue();

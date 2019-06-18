@@ -15,7 +15,7 @@ void Area_YourHouse()
     void PlayerSleep();
 
 
-
+    //space text below gameplay screen
     cout << "\n\n\n\n\n\n\n\n\n";
 
 
@@ -68,11 +68,14 @@ void Area_YourHouse()
                 gPosition = 16; Debug();
                 break;
             case 5:
+                //if the player has already gotten the armor, display message
                 if(Player_Armor == true)
                 {
                     cout << "There is an empty armor stand hanging on the wall." << endl;
                     Pause();
                 }
+                //if the player doesnt have the armor, either display message or have them
+                //take the armor item, depending on cutscene status of GrandmaHelps
                 if(Player_Armor == false)
                 {
                     cout << "There is armor hanging on the wall." << endl;
@@ -98,6 +101,7 @@ void Area_YourHouse()
                         Dialogue();
                         Player_Armor = true;
 
+                        //If the player has gotten the three required items for grandma, update game
                          if(Player_Shield == true && Player_Armor == true && Player_WoodenSword == true)
                         {
                             cName = pName;
@@ -118,6 +122,7 @@ void Area_YourHouse()
     //Kitchen
     if(gPosition == 12)
     {
+        //this function has several containers the player can take item from
 
         switch(gMove)
         {
@@ -129,15 +134,17 @@ void Area_YourHouse()
                         cout << "1. Yes" << endl;
                         cout << "2. No" << endl;
                         cout << endl;
-                                         switch(_getch())
-                {
-                case '1':
-                decision = 1;
-                break;
-                case '2':
-                decision = 2;
-                break;
-                }
+
+                            switch(_getch())
+                            {
+                                case '1':
+                                    decision = 1;
+                                    break;
+                                case '2':
+                                    decision = 2;
+                                    break;
+                            }
+
                         cout << endl;
 
                         if(decision == 1)
@@ -173,16 +180,19 @@ void Area_YourHouse()
                         cout << "1. Yes" << endl;
                         cout << "2. No " << endl;
                         cout << endl;
-                                         switch(_getch())
-                {
-                case '1':
-                decision = 1;
-                break;
-                case '2':
-                decision = 2;
-                break;
-                }
+
+                            switch(_getch())
+                            {
+                                case '1':
+                                    decision = 1;
+                                    break;
+                                case '2':
+                                    decision = 2;
+                                    break;
+                            }
+
                         cout << endl;
+
                             if(decision == 1)
                             {
                                 cout << "You took the elixers." << endl;
@@ -241,15 +251,16 @@ void Area_YourHouse()
                     cout << "1. Yes" << endl;
                     cout << "2. No" << endl;
                     cout << endl;
-                                     switch(_getch())
-                {
-                case '1':
-                decision = 1;
-                break;
-                case '2':
-                decision = 2;
-                break;
-                }
+                        switch(_getch())
+                        {
+                            case '1':
+                                decision = 1;
+                                break;
+                            case '2':
+                                decision = 2;
+                                break;
+                        }
+
                     cout << endl;
 
                         if(decision == 1)
@@ -295,20 +306,23 @@ void Area_YourHouse()
         switch(gMove)
         {
             case 1:
+                //Run the Sleep Function in Activities if the player decides to sleep in the bed
                 cout << "Would you like to sleep?" << endl;
                 cout << "1. Yes" << endl;
                 cout << "2. No" << endl;
                 cout << endl;
                  switch(_getch())
                 {
-                case '1':
-                decision = 1;
-                break;
-                case '2':
-                decision = 2;
-                break;
+                    case '1':
+                        decision = 1;
+                        break;
+                    case '2':
+                        decision = 2;
+                        break;
                 }
+
                 cout << endl;
+
                     if(decision == 1)
                     {
                         PlayerSleep();
@@ -333,14 +347,16 @@ void Area_YourHouse()
                         cout << endl;
                         switch(_getch())
                         {
-                        case '1':
-                        decision = 1;
-                        break;
-                        case '2':
-                        decision = 2;
-                        break;
+                            case '1':
+                                decision = 1;
+                                break;
+                            case '2':
+                                decision = 2;
+                                break;
                         }
+
                         cout << endl;
+
                             if(decision == 1)
                             {
                                 cout << "You opened the desk. You found 10 coins!" << endl;

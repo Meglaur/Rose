@@ -201,7 +201,7 @@
 
 1544291669 c:\c++ code projects\rose\area2_town.h
 
-1548347922 source:c:\c++ projects\rose\backups\dec 09 2018\rose\main.cpp
+1548355193 source:c:\c++ projects\rose\backups\dec 09 2018\rose\main.cpp
 	"Global_Variables.h"
 	"TextFunctions.h"
 	"Battle.h"
@@ -212,7 +212,7 @@
 	"Activities.h"
 	"Area2_Town.h"
 
-1548121066 c:\c++ projects\rose\backups\dec 09 2018\rose\global_variables.h
+1549065529 c:\c++ projects\rose\backups\dec 09 2018\rose\global_variables.h
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -223,33 +223,33 @@
 	<ostream>
 	<sstream>
 
-1543695000 c:\c++ projects\rose\backups\dec 09 2018\rose\textfunctions.h
+1549064169 c:\c++ projects\rose\backups\dec 09 2018\rose\textfunctions.h
 
-1548350254 c:\c++ projects\rose\backups\dec 09 2018\rose\battle.h
+1550460929 c:\c++ projects\rose\backups\dec 09 2018\rose\battle.h
 
-1548346431 c:\c++ projects\rose\backups\dec 09 2018\rose\controlfunctions.h
+1550461583 c:\c++ projects\rose\backups\dec 09 2018\rose\controlfunctions.h
 	"Area1_YourHouse.h"
 	"Area3_Forest.h"
 	"Area4_ElfVillage.h"
 
-1544290526 c:\c++ projects\rose\backups\dec 09 2018\rose\area1_yourhouse.h
+1554144548 c:\c++ projects\rose\backups\dec 09 2018\rose\area1_yourhouse.h
 
-1548347341 c:\c++ projects\rose\backups\dec 09 2018\rose\area3_forest.h
+1548350941 c:\c++ projects\rose\backups\dec 09 2018\rose\area3_forest.h
 
-1548347341 c:\c++ projects\rose\backups\dec 09 2018\rose\area4_elfvillage.h
+1548350941 c:\c++ projects\rose\backups\dec 09 2018\rose\area4_elfvillage.h
 
-1547837711 c:\c++ projects\rose\backups\dec 09 2018\rose\backroundmovement.h
+1554145101 c:\c++ projects\rose\backups\dec 09 2018\rose\backroundmovement.h
 	"Display.h"
 
-1548124847 c:\c++ projects\rose\backups\dec 09 2018\rose\display.h
+1548128447 c:\c++ projects\rose\backups\dec 09 2018\rose\display.h
 
-1544289974 c:\c++ projects\rose\backups\dec 09 2018\rose\cutscenes.h
+1549065194 c:\c++ projects\rose\backups\dec 09 2018\rose\cutscenes.h
 
-1548350665 c:\c++ projects\rose\backups\dec 09 2018\rose\titlescreen.h
+1550461115 c:\c++ projects\rose\backups\dec 09 2018\rose\titlescreen.h
 
-1548347341 c:\c++ projects\rose\backups\dec 09 2018\rose\activities.h
+1554144548 c:\c++ projects\rose\backups\dec 09 2018\rose\activities.h
 
-1548124847 c:\c++ projects\rose\backups\dec 09 2018\rose\area2_town.h
+1548128447 c:\c++ projects\rose\backups\dec 09 2018\rose\area2_town.h
 
 1544469982 source:c:\c++ projects\rose\backups\dec 09 2018\rose\global_variables.cpp
 	<iostream>

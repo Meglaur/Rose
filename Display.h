@@ -801,7 +801,7 @@ void CalculateDisplay()
     //FOREST AREA TWO: DUNGEON
 
     if(gPosition == 34)
-    {if(Dungeon_CrownPuzzle == false){dirUp = "Statues";} else {dirUp = "Cavern Entrance";}
+    {if(Dungeon_CrownPuzzle == false){dirUp = "    Statues";} else {dirUp = "Cavern Entrance";}
     dirLeft = "Marble Shelf"; dirRight = "Strange Markings"; dirDown = "Leave Dungeon"; dirInt = "Look Around";}
 
     if(gPosition == 35)

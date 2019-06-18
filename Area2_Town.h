@@ -155,6 +155,7 @@ void Area_Town()
                     cout << "                              *Elixers + 3*" << endl;
                     DoublePause();
 
+                    cName = "Shopkeeper";
                     animationText = "Thank you for your buisness.";
                     Dialogue();
                     pElixers += 3;
@@ -170,6 +171,7 @@ void Area_Town()
                     cout << "                                 *Food + 3*" << endl;
                     DoublePause();
 
+                    cName = "Shopkeeper";
                     animationText = "Thank you for your buisness.";
                     Dialogue();
                     pFood += 3;
@@ -183,6 +185,8 @@ void Area_Town()
                 {
                     cout << "                           You bought some paper!" << endl;
                     DoublePause();
+
+                    cName = "Shopkeeper";
                     animationText = "Thank you for your buisness.\n";
                     Dialogue();
                     Town_Paper = true;
@@ -261,10 +265,14 @@ void Area_Town()
             switch(decision)
             {
             case 1:
+
+                cName = "Shopkeeper";
                 animationText = "If you would like to see what I sell, come up to the counter.";
                 Dialogue();
                 break;
             case 2:
+
+                cName = "Shopkeeper";
                 animationText = "I heard that searching through each area you come upon can bring one coins.";
                 Dialogue();
                 break;
