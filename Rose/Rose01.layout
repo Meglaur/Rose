@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="..\Dec 09 2018\Rose\Activities.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5537" topLine="157" />
+		</Cursor>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Area2_Town.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="26905" topLine="785" />
+		</Cursor>
+		<Folding>
+			<Collapse line="20" />
+		</Folding>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Area3_Forest.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="65654" topLine="1756" />
+		</Cursor>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Area4_ElfVillage.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="24926" topLine="708" />
+		</Cursor>
+		<Folding>
+			<Collapse line="76" />
+		</Folding>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Area1_YourHouse.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12445" topLine="198" />
+		</Cursor>
+		<Folding>
+			<Collapse line="23" />
+			<Collapse line="53" />
+			<Collapse line="123" />
+		</Folding>
+	</File>
+	<File name="..\Dec 09 2018\Rose\BackroundMovement.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3669" topLine="5" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+		</Folding>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Battle.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="20671" topLine="369" />
+		</Cursor>
+		<Folding>
+			<Collapse line="143" />
+			<Collapse line="168" />
+			<Collapse line="188" />
+			<Collapse line="247" />
+			<Collapse line="280" />
+			<Collapse line="315" />
+			<Collapse line="391" />
+			<Collapse line="466" />
+			<Collapse line="516" />
+			<Collapse line="669" />
+		</Folding>
+	</File>
+	<File name="..\Dec 09 2018\Rose\ControlFunctions.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14477" topLine="374" />
+		</Cursor>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Cutscenes.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="28221" topLine="21" />
+		</Cursor>
+		<Folding>
+			<Collapse line="5" />
+			<Collapse line="19" />
+			<Collapse line="159" />
+			<Collapse line="205" />
+			<Collapse line="235" />
+			<Collapse line="319" />
+			<Collapse line="346" />
+			<Collapse line="407" />
+			<Collapse line="479" />
+			<Collapse line="499" />
+			<Collapse line="535" />
+			<Collapse line="570" />
+			<Collapse line="591" />
+			<Collapse line="605" />
+			<Collapse line="624" />
+			<Collapse line="642" />
+			<Collapse line="671" />
+			<Collapse line="705" />
+			<Collapse line="720" />
+			<Collapse line="748" />
+		</Folding>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Display.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="72430" topLine="116" />
+		</Cursor>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Global_Variables.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3835" topLine="183" />
+		</Cursor>
+	</File>
+	<File name="..\Dec 09 2018\Rose\Notes.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7432" topLine="166" />
+		</Cursor>
+	</File>
+	<File name="..\Dec 09 2018\Rose\TextFunctions.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="889" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\Dec 09 2018\Rose\TitleScreen.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9039" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="5" />
+			<Collapse line="29" />
+			<Collapse line="52" />
+			<Collapse line="71" />
+			<Collapse line="94" />
+			<Collapse line="151" />
+			<Collapse line="240" />
+		</Folding>
+	</File>
+	<File name="..\Dec 09 2018\Rose\main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="451" topLine="0" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
