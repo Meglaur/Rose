@@ -69,42 +69,42 @@ void Area_YourHouse()
                 break;
             case 5:
                 //if the player has already gotten the armor, display message
-                if(Player_Armor == true)
+                if(Item.Armor == true)
                 {
                     cout << "There is an empty armor stand hanging on the wall." << endl;
                     Pause();
                 }
                 //if the player doesnt have the armor, either display message or have them
                 //take the armor item, depending on cutscene status of GrandmaHelps
-                if(Player_Armor == false)
+                if(Item.Armor == false)
                 {
                     cout << "There is armor hanging on the wall." << endl;
                     cout << "It looks old, but strong." << endl;
                     cout << endl;
                     DoublePause();
 
-                    if(sCutscene_GrandmaHelps == false)
+                    if(cutscene.GrandmaHelps == false)
                     {
 
-                        cName = pName;
+                        Character.Name = Player.Name;
                         animationText = "Maybe I shouldn't touch that just yet.";
                         Dialogue();
                     }
                     else
                     {
-                        cName = pName;
+                        Character.Name = Player.Name;
                         animationText = "Grandma said I would need that before I\nleave, I'll take it with me.";
                         Dialogue();
 
-                        cName = " ";
+                        Character.Name = " ";
                         animationText = "You got the Armor!\nYou got a major item!";
                         Dialogue();
-                        Player_Armor = true;
+                        Item.Armor = true;
 
                         //If the player has gotten the three required items for grandma, update game
-                         if(Player_Shield == true && Player_Armor == true && Player_WoodenSword == true)
+                         if(Item.Shield == true && Item.Armor == true && Item.WoodenSword == true)
                         {
-                            cName = pName;
+                            Character.Name = Player.Name;
                             animationText = "I got all of the things Grandma wanted me to collect! I'd better go back \nto her.";
                             Dialogue();
                             Grandmas_Items = true;
@@ -128,7 +128,7 @@ void Area_YourHouse()
         {
 
             case 1:
-                    if(YourHouse_Stove == false)
+                    if(House.Stove == false)
                     {
                         cout << "There is stew on the stove. Take some?" << endl;
                         cout << "1. Yes" << endl;
@@ -151,8 +151,8 @@ void Area_YourHouse()
                         {
                             cout << "You took some stew." << endl;
                             cout << "-Food + 1-" << endl;
-                            pFood += 1;
-                            YourHouse_Stove = true;
+                            Item.Food += 1;
+                            House.Stove = true;
                             Pause();
                         }
                         else
@@ -169,7 +169,7 @@ void Area_YourHouse()
                     break;
             case 2:
 
-                    if(YourHouse_Chest == true)
+                    if(House.Chest == true)
                     {
                         cout << "The chest is empty." << endl;
                     }
@@ -197,8 +197,8 @@ void Area_YourHouse()
                             {
                                 cout << "You took the elixers." << endl;
                                 cout << "-Elixers + 2-" << endl;
-                                pElixers += 2;
-                                YourHouse_Chest = true; Pause();
+                                Item.Elixers += 2;
+                                House.Chest = true; Pause();
                             }
                             else
                             {
@@ -239,7 +239,7 @@ void Area_YourHouse()
                 break;
             case 3:
 
-                if(YourHouse_Fireplace == true)
+                if(House.Fireplace == true)
                 {
                     cout << "The fire is roaring. It fills you with warmth." << endl;
                 }
@@ -267,9 +267,9 @@ void Area_YourHouse()
                         {
                             cout << "You stoked the fire. It fills you with warmth." << endl;
                             cout << "-Luck + 1-" << endl;
-                            pLuck += 1;
+                            Player.Luck += 1;
                             RandomLuckValue += 1;
-                            YourHouse_Fireplace = true;
+                            House.Fireplace = true;
                             Pause();
                         }
                         else
@@ -335,7 +335,7 @@ void Area_YourHouse()
                     break;
             case 2:
 
-                    if(YourHouse_Desk == true)
+                    if(House.Desk == true)
                     {
                         cout << "The desk is empty." << endl;
                     }
@@ -361,8 +361,8 @@ void Area_YourHouse()
                             {
                                 cout << "You opened the desk. You found 10 coins!" << endl;
                                 cout << "-Coins + 10-" << endl;
-                                pCoins += 10;
-                                YourHouse_Desk = true; Pause();
+                                Item.Coins += 10;
+                                House.Desk = true; Pause();
                             }
                             else
                             {

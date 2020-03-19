@@ -8,7 +8,7 @@ void TopScreen()
     void Minimap();
     void HealthBar();
 
-    tSpeaker = tTopScreen;
+    Character.Speaker = Text.TopScreen;
     TextColor();
 
 
@@ -34,7 +34,7 @@ void TopScreen()
     cout << endl;
     cout << "______________________________________________________________________________" << endl;
 
-    tSpeaker = text;
+    Character.Speaker = Character.Narrator;
     TextColor();
 }
 
@@ -319,7 +319,7 @@ void Minimap()
     cout << "                                                          " << " _________________ " << endl;
     break;
     case 34:
-    if(Dungeon_CrownPuzzle == false)
+    if(CrownPuzzle == false)
     {
     cout << "                                                          " << " _________________" << endl;
     cout << "                                                          " << "|\\____    ___|    |" << endl;
@@ -800,23 +800,23 @@ void CalculateDisplay()
 
     //FOREST AREA TWO: DUNGEON
 
-    if(gPosition == 34)
-    {if(Dungeon_CrownPuzzle == false){dirUp = "    Statues";} else {dirUp = "Cavern Entrance";}
+    if(gPosition == 34) //Dungeon Entrance
+    {if(CrownPuzzle == false){dirUp = "    Statues";} else {dirUp = "Cavern Entrance";}
     dirLeft = "Marble Shelf"; dirRight = "Strange Markings"; dirDown = "Leave Dungeon"; dirInt = "Look Around";}
 
-    if(gPosition == 35)
+    if(gPosition == 35) //Cavern Entrance
     {dirUp = "    Chasm"; dirLeft = "    Water Room"; dirRight = "Fire Room"; dirDown = "Dungeon Entrance"; dirInt = "Look Around";}
 
-    if(gPosition == 36)
+    if(gPosition == 36) //Water Room
     {dirUp = "Silver Fountains"; dirLeft = "Gold Fountains"; dirRight = "Cavern Entrance"; dirDown = "Silver Fountains"; dirInt = "Look Around";}
 
-    if(gPosition == 37)
+    if(gPosition == 37) //Fire Room
     {dirUp = "Strange Markings"; dirLeft = "Cavern Entrance"; dirRight = "Fire Path"; dirDown = " "; dirInt = "Look Around";}
 
-    if(gPosition == 38)
+    if(gPosition == 38) //Back of Cavern
     {dirUp = "    Maze"; dirLeft = "    Sealed Room"; dirRight = "Chest"; dirDown = "Cavern Entrance"; dirInt = "Look Around";}
 
-    if(gPosition == 39)
+    if(gPosition == 39) //Entrance to Maze
     {dirUp = "  Soft Grass"; dirRight = " Willow Tree"; dirLeft = " "; dirDown = "Back of Cavern"; dirInt = "Look Around";}
 
     if(gPosition == 391)
@@ -839,7 +839,7 @@ void CalculateDisplay()
 
     if(gPosition == 397)
     {dirUp = "Ordinary Looking Path"; dirLeft = "   Perched Crows"; dirDown = "   Rose Bushes"; dirInt = "Look Around";
-    if(Dungeon_Crank == false) {dirRight = "Old Crank On The Ground.";} else {dirRight = " ";} }
+    if(Crank == false) {dirRight = "Old Crank On The Ground.";} else {dirRight = " ";} }
 
     if(gPosition == 398)
     {dirUp = "Pool of Water"; dirLeft = " "; dirRight = "Gap with Vines"; dirDown = "Ordinary Looking Path"; dirInt = "Look Around";}
@@ -870,34 +870,34 @@ void CalculateDisplay()
 
     //AREA FOUR - ELF VILLAGE
 
-    if(gPosition == 4)
+    if(gPosition == 4) //Village Gate
     {dirUp = "Village Gate"; dirLeft = "Deep Forest"; dirRight = " "; dirDown = " "; dirInt = "Look Around";}
 
-    if(gPosition == 41)
+    if(gPosition == 41) //Village Entrance
     {dirUp = "Climb to treetops"; dirLeft = "Village Shop"; dirRight = "Kuhar's House"; dirDown = "Leave Village"; dirInt = "Statue";}
 
-    if(gPosition == 42)
+    if(gPosition == 42) //Shop
     {dirUp = "   Upstairs"; dirLeft = "     Counter"; dirRight = "Main Path"; dirDown = " "; dirInt = "Talk to Shopkeeper";}
 
-    if(gPosition == 43)
+    if(gPosition == 43) //Shop Upstairs House
     {dirUp = "     Bed"; dirLeft = "     Desk"; dirRight = "Tiki"; dirDown = "    Shop"; dirInt = "Look Around";}
 
-    if(gPosition == 44)
+    if(gPosition == 44) //Kuhar's House
     {dirUp = "    Kuhar"; dirLeft = "      Main Path"; dirRight = "Firefly Jar"; dirDown = "   Dresser"; dirInt = "Look Around";}
 
-    if(gPosition == 45)
+    if(gPosition == 45) //Treetop Bridges
     {dirUp = " Ground Path"; dirDown = "Elder's House"; dirLeft = "  Aida's House"; dirRight = "OakWood Inn"; dirInt = "Look Around";}
 
-    if(gPosition == 46)
+    if(gPosition == 46) //Aida's House
     {dirUp = "    Aida"; dirLeft = "        Bed"; dirRight = "Treetop Bridge"; dirDown = "    Chest"; dirInt = "Look Around";}
 
-    if(gPosition == 47)
+    if(gPosition == 47) //Inn
     {dirUp = "   Upstairs"; dirLeft = "Treetop Bridge"; dirRight = "Counter"; dirDown = "   Bookshelf"; dirInt = "Talk to Innkeeper";}
 
-    if(gPosition == 48)
+    if(gPosition == 48) //Inn Room
     {dirUp = "  Hammock"; dirLeft = "     Table"; dirRight = "Bookshelf"; dirDown = " Downstairs"; dirInt = "Look Around";}
 
-    if(gPosition == 49)
+    if(gPosition == 49) //Elders House
     {dirUp = "Treetop Bridge"; dirLeft = "       Staff"; dirRight = "Bed"; dirDown = "    Elder"; dirInt = "Look Around";}
 
 }
@@ -920,67 +920,67 @@ void HealthBar()
     SetConsoleTextAttribute(color, 4);
 
 
-    switch(Player_Health)
+    switch(Player.Health)
     {
         case 1:
-            tHealthBar = "|";
+            Text.HealthBar = "|";
             break;
         case 2:
-            tHealthBar = "||";
+            Text.HealthBar = "||";
             break;
         case 3:
-            tHealthBar = "|||";
+            Text.HealthBar = "|||";
             break;
         case 4:
-            tHealthBar = "||||";
+            Text.HealthBar = "||||";
             break;
         case 5:
-            tHealthBar = "|||||";
+            Text.HealthBar = "|||||";
             break;
         case 6:
-            tHealthBar = "||||||";
+            Text.HealthBar = "||||||";
             break;
         case 7:
-            tHealthBar = "|||||||";
+            Text.HealthBar = "|||||||";
             break;
         case 8:
-            tHealthBar = "||||||||";
+            Text.HealthBar = "||||||||";
             break;
         case 9:
-            tHealthBar = "|||||||||";
+            Text.HealthBar = "|||||||||";
             break;
         case 10:
-            tHealthBar = "||||||||||";
+            Text.HealthBar = "||||||||||";
             break;
         case 11:
-            tHealthBar = "|||||||||||";
+            Text.HealthBar = "|||||||||||";
             break;
         case 12:
-            tHealthBar = "||||||||||||";
+            Text.HealthBar = "||||||||||||";
             break;
         case 13:
-            tHealthBar = "|||||||||||||";
+            Text.HealthBar = "|||||||||||||";
             break;
         case 14:
-            tHealthBar = "||||||||||||||";
+            Text.HealthBar = "||||||||||||||";
             break;
         case 15:
-            tHealthBar = "|||||||||||||||";
+            Text.HealthBar = "|||||||||||||||";
             break;
         case 16:
-            tHealthBar = "||||||||||||||||";
+            Text.HealthBar = "||||||||||||||||";
             break;
         case 17:
-            tHealthBar = "|||||||||||||||||";
+            Text.HealthBar = "|||||||||||||||||";
             break;
         case 18:
-            tHealthBar = "||||||||||||||||||";
+            Text.HealthBar = "||||||||||||||||||";
             break;
         case 19:
-            tHealthBar = "|||||||||||||||||||";
+            Text.HealthBar = "|||||||||||||||||||";
             break;
         case 20:
-            tHealthBar = "||||||||||||||||||||";
+            Text.HealthBar = "||||||||||||||||||||";
             break;
 
     }
@@ -988,8 +988,8 @@ void HealthBar()
 
 
 
-    cout << " " << pName << ": " << tHealthBar << " : " << Player_Health;
-    tSpeaker = text;
+    cout << " " << Player.Name << ": " << Text.HealthBar << " : " << Player.Health;
+    Character.Speaker = Character.Narrator;
     TextColor();
 
 

@@ -20,20 +20,12 @@ using namespace std;
 int main()
 {
 
+    OpeningtheGame();
 
-
-    cout << "\n\n\n\n\n\n\n\n\n\n\n" << endl;
-    cout << "--------------------------------------------------------------------------------\n\n\n\n\n\n\n\n" << endl;
-    animationText = "                         Working Title Games";
-    FastText(); Pause();
-    ClearScreen();
-    TitleScreen();
-
-
-    while(sCutscene_End == false)
+    while(cutscene.End == false)
     {
         ControlLoop();
-        if(Player_Health <= 0)
+        if(Player.Health <= 0)
        {
            GameOver();
        }

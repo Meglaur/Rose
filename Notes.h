@@ -6,61 +6,61 @@
 Current luck value placements are, when an enemy misses + 1, when its an enemies turn and their
 health is even and your health odd, when you get any sort of luck
 
-       inFile >> File1_Name >> File1_Used >> File1_pName >> File1_gPosition;
-       inFile  >> File1_Dungeon_BossRoom >> File1_Dungeon_Chest >> File1_Dungeon_Crank >> File1_Dungeon_CrownPuzzle;
-       inFile >> File1_Dungeon_Crowns >> File1_Dungeon_dCrown >> File1_Dungeon_dCrown >> File1_Dungeon_dStatue;
-       inFile >> File1_Dungeon_eCrown >> File1_Dungeon_Entrance >> File1_Dungeon_eStatue >> File1_Dungeon_FountainSet1;
-       inFile >> File1_Dungeon_FountainSet2 >> File1_Dungeon_FountainSet3 >> File1_Dungeon_LeftWing >> File1_Dungeon_MainFountain;
-       inFile >> File1_Dungeon_rCrown >> File1_Dungeon_rCrown >> File1_Dungeon_rStatue >> File1_Dungeon_RightWing;
-       inFile >> File1_Dungeon_sCrown >> File1_Dungeon_sStatue >> File1_Dungeon_Wings >> File1_Forest_Daisy;
-       inFile >> File1_Forest_Gate >> File1_Forest_Hairpin >> File1_Forest_Jewel >> File1_Forest_Mushrooms;
+       inFile >> File1.Name >> File1.Used >> File1_Player.Name >> File1.gPosition;
+       inFile  >> File1_Room.Boss >> File1_Chest >> File1_Crank >> File1_CrownPuzzle;
+       inFile >> File1_Crowns >> File1_dCrown >> File1_dCrown >> File1_dStatue;
+       inFile >> File1_eCrown >> File1_Room.Dungeon >> File1_eStatue >> File1_FountainSet1;
+       inFile >> File1_FountainSet2 >> File1_FountainSet3 >> File1_LeftWing >> File1_MainFountain;
+       inFile >> File1_rCrown >> File1_rCrown >> File1_rStatue >> File1_RightWing;
+       inFile >> File1_sCrown >> File1_sStatue >> File1_Wings >> File1_Item.Daisy;
+       inFile >> File1_Item.Gate >> File1_Item.Hairpin >> File1_Item.Jewel >> File1_Item.Mushrooms;
        inFile >>  File1_Grandmas_Items >> File1_Kuhar;
-       inFile >> File1_NymphAttack >> File1_pCoins >> File1_pElixers >> File1_pFood;
-       inFile >> File1_Player_Armor >> File1_Player_Damage >> File1_Player_Defense >> File1_Player_Health;
-       inFile >> File1_Player_MaxHealth >> File1_Player_Shield >> File1_Player_WoodenSword >> File1_Player_XP;
-       inFile >> File1_pLuck >> File1_RandomLuckValue >> File1_sCutscene_Elder;
-       inFile >> File1_sCutscene_End >> File1_sCutscene_GrandmaHelps >> File1_sCutscene_GrandmasList >> File1_sCutscene_OldMan1;
-       inFile >> File1_sCutscene_OldMan2 >> File1_sminiScene_Aida >> File1_sminiScene_Chasm >> File1_sminiScene_Dam;
-       inFile >> File1_sminiScene_DungeonEnter >> File1_sminiScene_FirstEnemy >> File1_sminiScene_Kuhar >> File1_sminiScene_NymphAppears;
-       inFile >> File1_sStatus >> File1_Tiki >> File1_Town_Bushes >> File1_Town_Chest;
-       inFile >> File1_Town_Cookbook >> File1_Town_Fountain >> File1_Town_Hilda >> File1_Town_InnDesk;
-       inFile >> File1_Town_InnTable >> File1_Town_Paper >> File1_Town_Stove >> File1_Town_SwordRoom;
-       inFile >> File1_TravelStatus >> File1_Village_Book >> File1_Village_Enter >> File1_Village_InnTable;
-       inFile >> File1_Village_JewelCoins >> File1_Village_Key >> File1_Village_Necklace >> File1_YourHouse_Chest;
-       inFile >> File1_YourHouse_Desk >> File1_YourHouse_Fireplace >> File1_YourHouse_Stove >> File1_Used;
+       inFile >> File1_NymphAttack >> File1_Item.Coins >> File1_Item.Elixers >> File1_Item.Food;
+       inFile >> File1_Item.Armor >> File1_Player.Damage >> File1_Player.Defense >> File1_Player.Health;
+       inFile >> File1_Player.MaxHealth >> File1_Item.Shield >> File1_Item.WoodenSword >> File1_Player.XP;
+       inFile >> File1_Player.Luck >> File1_RandomLuckValue >> File1_cutscene.Elder;
+       inFile >> File1_cutscene.End >> File1_cutscene.GrandmaHelps >> File1_cutscene.GrandmasList >> File1_cutscene.OldMan1;
+       inFile >> File1_cutscene.OldMan2 >> File1_miniscene.Aida >> File1_miniscene.Chasm >> File1_miniscene.Dam;
+       inFile >> File1_miniscene.DungeonEnter >> File1_miniscene.FirstEnemy >> File1_miniscene.Kuhar >> File1_miniscene.NymphAppears;
+       inFile >> File1_sStatus >> File1_Tiki >> File1_Town.Bushes >> File1_Item.Chest;
+       inFile >> File1_Item.Cookbook >> File1_Item.Fountain >> File1_Item.Hilda >> File1_Item.InnDesk;
+       inFile >> File1_Item.InnTable >> File1_Item.Paper >> File1_Item.Stove >> File1_Room.SwordRoom;
+       inFile >> File1_TravelStatus >> File1_Item.Book >> File1_Room.Village >> File1_Item.InnTable;
+       inFile >> File1_Item.JewelCoins >> File1_Item.Key >> File1_Item.Necklace >> File1_House.Chest;
+       inFile >> File1_House.Desk >> File1_House.Fireplace >> File1_House.Stove >> File1.Used;
 
 
 
 
 
-    //if(File1_Used == false)
+    //if(File1.Used == false)
     //{
         cout << "\n\n\n\n\n\n\n                             ";
         animationText = "Name Your Save File..."; FastText();
         cout << "                                  ----------" << endl;
         cout << "                                  ";
-        cin >> File1_Name;
-        File1_Used = true;
+        cin >> File1.Name;
+        File1.Used = true;
    // }
-    /*else if(File1_Used == true && File2_Used == false)
+    /*else if(File1.Used == true && File2.Used == false)
     {
         cout << "\n\n\n\n\n\n\n                             ";
         animationText = "Name Your Save File..."; FastText();
         cout << "                                  ----------" << endl;
         cout << "                                  ";
-        cin >> File2_Name;
-        File2_Used = true;
+        cin >> File2.Name;
+        File2.Used = true;
     }
-    else if(File1_Used == true && File2_Used == true && File3_Used == false)
+    else if(File1.Used == true && File2.Used == true && File3.Used == false)
     {
         cout << "\n\n\n\n\n\n\n                             ";
         animationText = "Name Your Save File..."; FastText();
         cout << "                                  ----------" << endl;
         cout << "                                  ";
-        cin >> File3_Name;
-        File3_Used = true;
+        cin >> File3.Name;
+        File3.Used = true;
     }
-    else if(File1_Used == true && File2_Used == true && File3_Used == true)
+    else if(File1.Used == true && File2.Used == true && File3.Used == true)
     {
         cout << "\n\n\n\n\n\n" << endl;
         cout << "There are no save files left! Erase one?" << endl;
@@ -74,9 +74,9 @@ health is even and your health odd, when you get any sort of luck
         {
             cout << "Which save file do you want to replace?" << endl;
             cout << endl;
-            cout << "1. " << File1_Name << endl;
-            cout << "2. " << File2_Name << endl;
-            cout << "3. " << File3_Name << endl;
+            cout << "1. " << File1.Name << endl;
+            cout << "2. " << File2.Name << endl;
+            cout << "3. " << File3.Name << endl;
             text
             cout << endl;
             switch(decision)
@@ -96,7 +96,7 @@ health is even and your health odd, when you get any sort of luck
                 animationText = "Name Your Save File..."; FastText();
                 cout << "                                  ----------" << endl;
                 cout << "                                  ";
-                cin >> File1_Name;
+                cin >> File1.Name;
                 //add new game file stuff for one here to reset
                 break;
             case 2:
@@ -115,7 +115,7 @@ health is even and your health odd, when you get any sort of luck
                 animationText = "Name Your Save File..."; FastText();
                 cout << "                                  ----------" << endl;
                 cout << "                                  ";
-                cin >> File2_Name;
+                cin >> File2.Name;
                 break;
                 //reset file two
             case 3:
@@ -132,7 +132,7 @@ health is even and your health odd, when you get any sort of luck
                 animationText = "Name Your Save File..."; FastText();
                 cout << "                                  ----------" << endl;
                 cout << "                                  ";
-                cin >> File3_Name;
+                cin >> File3.Name;
                 break;
                 //reset file three
 
@@ -151,7 +151,7 @@ health is even and your health odd, when you get any sort of luck
 bugs:------------------------------------------
 
 traveling menu goes twice when choosing area twoe
-textcolor for thelper dont work
+textcolor for Character.Helper dont work
 
 
 TO DO:------------------------
@@ -164,7 +164,7 @@ TO DO:------------------------
 NOTES:-----------------------------------------------
 
 //reason color doesnt work in non cutscenes is because topscreen makes color white
-//might be able to get rid of tSpeaker mostly with cName switch
+//might be able to get rid of Character.Speaker mostly with Character.Name switch
 
 
 //the reason sometimes a string to string comparison like enemy to skeleton or bull doesnt work

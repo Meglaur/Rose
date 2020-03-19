@@ -1,0 +1,89 @@
+Hi there! Thanks for playing my demo game, before you get started, there are a few things you should know...
+--------------------------------------------------------------------------------------------------------------
+
+1. To play the game, access the file labeled bin, then the file named Debug within that, and run Rose01.exe!
+That should start the game, if it doesnt, or anything doesnt work, text me at 1-815-383-6695 and i can try to
+fix it :)
+
+	-if you would like to, you can create a shortcut of the .exe and put it on your desktop to be able to play it without going
+	your files. Just left click and choose create shortcut and drag that wherever you want it.
+
+--------------------------------------------------------------------------------------------------------------------
+
+2. This game is labelled a demo for a reason, it is unfortunately filled with bugs. I spent a lot of time creating it and had an enormous
+amount of fun, but this was my first major coding project and its not perfect. So expect strange things to happen, its
+just kind of part of the experience.
+
+3. The game is run through a command line, meaning it takes your input at each step to continue the game. If something isnt
+happening, try hitting enter to continue the game forward, this applies to exiting menu screens, selecting things, etc. A good 
+rule in general with this game is if your stuck, try hitting enter.
+
+4. The attacking and defending minigames within a battle run based on the speed of your computer, so as your computer speeds
+up and slows down, sometimes those minigames will suddenly speed up or slow down. I'm sorry about this but at the moment that
+is an inevitable bug, so be patient and if you need to use creator mode (see below) to give yourself handicaps for fights, feel
+free! The beginning of the game should let you select the general speed of your computer however, to hopefully give a base
+speed for the game that will run normally.
+
+5.. I've created a few commands you can access in game to fix things should you have problems or just want to play around.
+You can access Creator Mode by pressing G while playing, and bring up the command menu by pressing F while in 
+Creator Mode. You can change your health, the amount of coins or elixers you have, the location you are at (this works
+based on location codes, a list of which I will provide below), give yourself more defense points, access areas that are usually
+closed off until certain criteria is met, and give yourself certain items. Its up to you how you use this.
+
+Location Codes
+
+Each general area begins with either a 1,2,3, or 4. Each room within the area is the digit/s following the area code.
+
+Area 1 - Your house
+
+1 - Garden
+11 - Hallway
+12 - Kitchen
+13 - Library
+14 - Your Room
+15 - Rose's Room
+16 - Entryway
+
+Area 2 - Town
+
+2 - Gate
+21 - Main Square
+22 - Edwins Shop
+23 - House Path
+24 - Inn
+25 - Inn Room
+26 - Old Mans House
+27 - Old Mans Sword Room
+28 - Grandmas House
+29 - Hildas House
+
+Area 3 - The Forest and Forest Dungeon
+
+3 - Entrance of Forest
+31 - Clearing
+32 - Deep Woods
+33 - Dark Woods
+34 - Dungeon Entrance
+35 - Cavern Entrance
+36 - Fountain Room
+37 - Fire Room
+38 - Back of Cavern
+39 - Entrance of Maze
+391-3915 - Maze Positions (I'm not labelling them all)
+
+Area 4 - Elf Village
+
+4 - Village Gate
+41 - Entrance
+42 - Shop
+43 - Shop Upstairs House
+44 - Kuhar's House
+45 - Treetop Bridges
+46 - Aida's House
+47 - Inn
+48 - Inn Room
+49 - Elders House
+
+
+
+

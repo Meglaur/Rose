@@ -2,138 +2,111 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Cutscenes.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1146" topLine="0" />
+			<Cursor1 position="869" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="TextFunctions.h" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1967" topLine="238" />
+		</Cursor>
+	</File>
+	<File name="Display.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="72430" topLine="965" />
+		</Cursor>
+	</File>
+	<File name="Battle.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="20671" topLine="369" />
 		</Cursor>
 		<Folding>
-			<Collapse line="6" />
-			<Collapse line="139" />
-		</Folding>
-	</File>
-	<File name="Notes.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8216" topLine="167" />
-		</Cursor>
-	</File>
-	<File name="TextFunctions.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="943" topLine="12" />
-		</Cursor>
-		<Folding>
-			<Collapse line="102" />
-			<Collapse line="138" />
-			<Collapse line="166" />
-		</Folding>
-	</File>
-	<File name="Global_Variables.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="279" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="Area3_Forest.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5206" topLine="41" />
-		</Cursor>
-		<Folding>
-			<Collapse line="29" />
-		</Folding>
-	</File>
-	<File name="Area2_Town.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="301" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="4" />
-			<Collapse line="20" />
-			<Collapse line="47" />
-			<Collapse line="111" />
-		</Folding>
-	</File>
-	<File name="Area4_ElfVillage.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5200" topLine="42" />
-		</Cursor>
-		<Folding>
-			<Collapse line="22" />
-			<Collapse line="76" />
-		</Folding>
-	</File>
-	<File name="Area1_YourHouse.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3706" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="23" />
-			<Collapse line="53" />
-			<Collapse line="123" />
-			<Collapse line="227" />
-		</Folding>
-	</File>
-	<File name="Battle.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2433" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="2" />
-			<Collapse line="87" />
-			<Collapse line="108" />
 			<Collapse line="143" />
 			<Collapse line="168" />
 			<Collapse line="188" />
 			<Collapse line="247" />
 			<Collapse line="280" />
+			<Collapse line="315" />
+			<Collapse line="391" />
+			<Collapse line="466" />
+			<Collapse line="516" />
+			<Collapse line="669" />
 		</Folding>
 	</File>
-	<File name="BackroundMovement.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+	<File name="Cutscenes.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4516" topLine="6" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="51" />
-		</Folding>
-	</File>
-	<File name="Activities.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7895" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="5" />
-		</Folding>
-	</File>
-	<File name="ControlFunctions.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7078" topLine="9" />
-		</Cursor>
-		<Folding>
-			<Collapse line="11" />
-			<Collapse line="151" />
-		</Folding>
-	</File>
-	<File name="Display.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="63394" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="4" />
-		</Folding>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="434" topLine="5" />
+			<Cursor1 position="11202" topLine="314" />
 		</Cursor>
 	</File>
-	<File name="TitleScreen.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+	<File name="Global_Variables.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3777" topLine="54" />
+			<Cursor1 position="3835" topLine="183" />
+		</Cursor>
+	</File>
+	<File name="Notes.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7432" topLine="166" />
+		</Cursor>
+	</File>
+	<File name="TitleScreen.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9587" topLine="260" />
 		</Cursor>
 		<Folding>
 			<Collapse line="5" />
 			<Collapse line="29" />
-			<Collapse line="52" />
 			<Collapse line="71" />
+			<Collapse line="94" />
+		</Folding>
+	</File>
+	<File name="Area2_Town.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="26905" topLine="785" />
+		</Cursor>
+		<Folding>
+			<Collapse line="20" />
+		</Folding>
+	</File>
+	<File name="ControlFunctions.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14477" topLine="374" />
+		</Cursor>
+	</File>
+	<File name="Area1_YourHouse.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12445" topLine="198" />
+		</Cursor>
+		<Folding>
+			<Collapse line="23" />
+			<Collapse line="53" />
+			<Collapse line="123" />
+		</Folding>
+	</File>
+	<File name="Activities.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5537" topLine="157" />
+		</Cursor>
+	</File>
+	<File name="Area4_ElfVillage.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="24926" topLine="708" />
+		</Cursor>
+		<Folding>
+			<Collapse line="76" />
+		</Folding>
+	</File>
+	<File name="Area3_Forest.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="65654" topLine="1756" />
+		</Cursor>
+	</File>
+	<File name="BackroundMovement.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3669" topLine="5" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>

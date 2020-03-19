@@ -25,11 +25,11 @@ void Area_ElfVillage()
         switch(gMove)
         {
         case 1:
-               if(Village_Enter == false)
+               if(Room.Village == false)
                 {
                    miniScene_Loni();
                 }
-                else if(Village_Enter == true)
+                else if(Room.Village == true)
                 {
                     cout << "You pass by Loni as you enter the gate." << endl;
                     if(Loni < 3)
@@ -57,7 +57,7 @@ void Area_ElfVillage()
 
             break;
         case 2:
-            Enemy = Three_AngryFlower; RandomEnemyEncounter(); gPosition = 32;
+            enemy = Enemy.AngryFlower; RandomEnemyEncounter(); gPosition = 32;
             break;
         case 3:
             break;
@@ -117,7 +117,7 @@ void Area_ElfVillage()
             cout << "\n\n\n\n\n\n\n\n";
 
             cout << "                       1. Elixers - 5 coins" << endl;
-                if(Village_Necklace == false)
+                if(Item.Necklace == false)
                 {
                     cout << "                       2. Fira Necklace (Increases Defense) - 15 coins" << endl;
                 }
@@ -138,36 +138,36 @@ void Area_ElfVillage()
                 switch(decision)
                 {
                 case 1:
-                    if(pCoins >= 5)
+                    if(Item.Coins >= 5)
                     {
                         cout << "                         You bought some elixers!" << endl;
                         cout << "                              *Elixers + 3*" << endl;
                         DoublePause();
-                        cName = "Shopkeeper";
+                        Character.Name = "Shopkeeper";
                         animationText = "Thank you so much.";
                         Dialogue();
-                        pElixers += 3;
-                        pCoins -= 5;
+                        Item.Elixers += 3;
+                        Item.Coins -= 5;
                     }
                     else {cout << "                    You don't have enough coins for that!" << endl; Pause();}
                     Pause();
                     break;
                 case 2:
-                    if(Village_Necklace == false)
+                    if(Item.Necklace == false)
                     {
 
-                        if(pCoins >= 15)
+                        if(Item.Coins >= 15)
                         {
                             cout << "        You bought the Fira Necklace! Your defense increased by one!";
                             DoublePause();
 
-                            cName = "Shopkeeper";
+                            Character.Name = "Shopkeeper";
                             animationText = "Thank you so much! Someone finally bought it!";
                             Dialogue();
 
-                            Village_Necklace = true;
-                            Player_Defense += 1;
-                            pCoins -= 15;
+                            Item.Necklace = true;
+                            Player.Defense += 1;
+                            Item.Coins -= 15;
                         }
                     else{cout << "                    You don't have enough coins for that!" << endl; Pause();}
                     Pause();
@@ -187,13 +187,13 @@ void Area_ElfVillage()
         case 4:
             break;
         case 5:
-            cName = "Shopkeeper";
+            Character.Name = "Shopkeeper";
             animationText = "How can I help you?";
             Dialogue();
             cout << "1. Where's the Elder's house?" << endl;
             cout << "2. Heard any rumours?" << endl;
             cout << "3. Nothing" << endl;
-            if(Forest_Jewel == true) {cout << "4. Would you be interested in buying a jewel?" << endl;}
+            if(Item.Jewel == true) {cout << "4. Would you be interested in buying a jewel?" << endl;}
             cout << endl;
                         switch(_getch())
                         {
@@ -208,33 +208,33 @@ void Area_ElfVillage()
             {
 
                 case 1:
-                cName = "Shopkeeper";
+                Character.Name = "Shopkeeper";
                 animationText = "Shopkeeper: The Elder's house is up in the treetops. Just climb the stairs\ncarved in that tree outside and follow the rope bridge to the farthest house.";
                 Dialogue(); Pause();
 
-                cName = pName;
+                Character.Name = Player.Name;
                 animationText = "Thank You!";
                 Dialogue();
                 break;
                 case 2:
-                cName = pName;
+                Character.Name = Player.Name;
                 animationText = "I heard that Aida lost her hairpin and is looking for\nit. Poor girl...";
                 Dialogue(); Pause();
                 break;
                 case 4:
-                    if(Forest_Jewel == true && Village_JewelCoins == false)
+                    if(Item.Jewel == true && Item.JewelCoins == false)
                     {
-                        cName = " ";
+                        Character.Name = " ";
                         animationText = "You show her the jewel you found in the lake.\nShe looks it over.";
                         Dialogue();
 
-                        cName = "Shopkeeper";
+                        Character.Name = "Shopkeeper";
                         animationText = "I'll give you 20 for it.";
                         Dialogue();
 
-                        cName = " ";
+                        Character.Name = " ";
                         animationText = "You sell her the jewel, and get 20 coins!\n*Coins + 20*";
-                        Dialogue();  pCoins += 20;
+                        Dialogue();  Item.Coins += 20;
                     }
                 break;
 
@@ -266,10 +266,10 @@ void Area_ElfVillage()
             cout << "You go up to the child playing by the window.\n" << endl;
         if(Tiki == false)
         {
-            cName = "Tiki";
+            Character.Name = "Tiki";
             animationText = "Hi! I like pretty things. Do you have any?";
             Dialogue();
-            if(Forest_Daisy == true)
+            if(Item.Daisy == true)
             {
                 cout << "Offer her the daisy?\n" << endl;
                 cout << "               1. Yes                       2.No" << endl;
@@ -287,23 +287,23 @@ void Area_ElfVillage()
 
                 if(decision == 1)
                 {
-                    cName = "Tiki";
+                    Character.Name = "Tiki";
                     animationText = "Pretty! Thank you weird person!";
                     Dialogue();
 
-                    cName = " ";
+                    Character.Name = " ";
                     animationText = "She gives you a key.";
                     Dialogue();
 
-                    cName = "Tiki";
+                    Character.Name = "Tiki";
                     animationText = "I found this on the ground. You can have it, it's not pretty.";
                     Dialogue();
 
-                    cName = " ";
+                    Character.Name = " ";
                     animationText = "Strange key acquired....wonder what its for?";
                     Dialogue();
 
-                    Village_Key = true;
+                    Item.Key = true;
                     Tiki = true;
                 }
                     else{cout << "You decide not to give her the daisy" << endl; Pause();}
@@ -339,60 +339,60 @@ void Area_ElfVillage()
         case 1:
             if(Kuhar == true)
             {
-                cName = " ";
+                Character.Name = " ";
                 animationText = "You see Kuhar cooking something. He seems to be getting\ngood. He notices you.";
                 Dialogue();
 
-                cName = "Kuhar";
+                Character.Name = "Kuhar";
                 animationText = "Oh hello again! Thank's again for all your help.";
                 Dialogue();
 
             }
-            else if(Kuhar == false && sminiScene_Kuhar == false)
+            else if(Kuhar == false && miniscene.Kuhar == false)
             {
-                miniScene_Kuhar(); sminiScene_Kuhar = true;
+                miniScene_Kuhar(); miniscene.Kuhar = true;
             }
-            else if(sminiScene_Kuhar == true && Kuhar == false && Town_Cookbook == false)
+            else if(miniscene.Kuhar == true && Kuhar == false && Item.Cookbook == false)
             {
-                cName = "Kuhar";
+                Character.Name = "Kuhar";
                 animationText = "I hope someday you find that cookbook. I will\nkeep trying to make the special cake!";
                 Dialogue();
             }
-            else if(Kuhar == false && sminiScene_Kuhar == true && Town_Cookbook == true)
+            else if(Kuhar == false && miniscene.Kuhar == true && Item.Cookbook == true)
             {
-                cName = " ";
+                Character.Name = " ";
                 animationText = "You approach Kuhar and hand him the cookbook. He looks\necstatic.";
                 Dialogue();
 
-                cName = "Kuhar";
+                Character.Name = "Kuhar";
                 animationText = "Kuhar: Thank you thank you thank you thank you\nthank you!!!! Now I can finally pursue my dream!";
                 Dialogue();
 
-                cName = pName;
+                Character.Name = Player.Name;
                 animationText = "Your very welcome!";
                 Dialogue();
 
-                cName = " ";
+                Character.Name = " ";
                 animationText = "Kuhar starts cooking up a storm. He waves for you to sit down.\nYou sit at the table and wait for him to finish.";
                 Dialogue();
 
-                cName = "Kuhar";
+                Character.Name = "Kuhar";
                 animationText = "I made you a Elf Cake! The recipe came out just\nas I hoped it would!";
                 Dialogue();
 
-                cName = " ";
+                Character.Name = " ";
                 animationText = "Kuhar hands you the Elf Cake. You eat it, it's delicious! You feel\nkind of strange though...";
                 Dialogue();
 
-                cName = "Kuhar";
+                Character.Name = "Kuhar";
                 animationText = "It gives the person who eats it more Attack Power!";
                 Dialogue();
 
-                cName = " ";
+                Character.Name = " ";
                 animationText = "Your damage increased by 2!";
                 Dialogue();
 
-                Player_Damage += 2; Kuhar = true;
+                Player.Damage += 2; Kuhar = true;
 
             }
             break;
@@ -465,47 +465,47 @@ void Area_ElfVillage()
         case 1:
             if(Aida == true)
             {
-                cName = "Aida";
+                Character.Name = "Aida";
                 animationText = "Good luck on your journey. I hope you find your sister.";
                 Dialogue();
             }
-            else if(Aida == false && sminiScene_Aida == false)
+            else if(Aida == false && miniscene.Aida == false)
             {
-                miniScene_Aida(); sminiScene_Aida = true;
+                miniScene_Aida(); miniscene.Aida = true;
             }
-            else if(Aida == false && sminiScene_Aida == true && Forest_Hairpin == false)
+            else if(Aida == false && miniscene.Aida == true && Item.Hairpin == false)
             {
-                cName = "Aida";
+                Character.Name = "Aida";
                 animationText = "I hope you are able to find my hairpin.";
                 Dialogue();
             }
-            else if(Aida == false && sminiScene_Aida == true && Forest_Hairpin == true)
+            else if(Aida == false && miniscene.Aida == true && Item.Hairpin == true)
             {
-                cName = "Aida";
-                animationText = "You found it! Thank you so much " + pName + "!";
+                Character.Name = "Aida";
+                animationText = "You found it! Thank you so much " + Player.Name + "!";
                 Dialogue();
 
-                cName = " ";
+                Character.Name = " ";
                 animationText = "Aida puts the hairpin in her hair and walks to the chest.";
                 Dialogue();
 
-                cName = "Aida";
+                Character.Name = "Aida";
                 animationText = "Aida: I don't really know how to make it up to you\nbut I hope this helps you on your journey.";
                 Dialogue();
 
-                cName = " ";
+                Character.Name = " ";
                 animationText = "She gives you 20 coins!!  *Coins + 20*";
                 Dialogue();
 
-                cName = pName;
+                Character.Name = Player.Name;
                 animationText = "Thank you!";
                 Dialogue();
 
-                tSpeaker = pName;
+                Character.Speaker = Player.Name;
                 TextColor();
 
 
-                pCoins += 20;
+                Item.Coins += 20;
                 Aida = true;
             }
             break;
@@ -549,7 +549,7 @@ void Area_ElfVillage()
             gPosition = 45;
             break;
         case 3:
-            cName = "Innkeeper";
+            Character.Name = "Innkeeper";
             animationText = "Would you like to stay the night? - 5 coins";
             Dialogue();
             cout << endl;
@@ -568,18 +568,18 @@ void Area_ElfVillage()
             switch(decision)
             {
             case 1:
-                if(pCoins >= 5)
+                if(Item.Coins >= 5)
                 {
                 animationText = "Heres the key to your room, you'll find it upstairs.";
                 Dialogue();
-                pCoins -= 5;
+                Item.Coins -= 5;
                 Inn = true;
                 }
                  else if(Inn == true)
                 {
                     cout << "You already have a room!" << endl;
                 }
-                else if(pCoins < 5)
+                else if(Item.Coins < 5)
                 {
                     cout << "You don't have enough coins for that!" << endl;
                 }
@@ -595,7 +595,7 @@ void Area_ElfVillage()
         case 4:
             cout << "You go up to the bookshelf. It's filled with books in elvish." << endl;
             Pause();
-            if(Village_Book == false)
+            if(Item.Book == false)
             {
             cout << "One of the books is old and tattered, but it is filled\nwith runes. It seems like a translation book. Take it?\n" << endl;
             cout << "1. Yes" << endl;
@@ -610,12 +610,12 @@ void Area_ElfVillage()
                         break;
                         }
             cout << endl;
-            if(decision == 1) {cout << "You take the book with you! You can look at it by\nchoosing the book in the Use Item screen." << endl; DoublePause(); Village_Book = true;}
+            if(decision == 1) {cout << "You take the book with you! You can look at it by\nchoosing the book in the Use Item screen." << endl; DoublePause(); Item.Book = true;}
             else {cout << "You decide not to take the book with you." << endl; DoublePause();}
             }
             break;
         case 5:
-            cName = "Innkeeper";
+            Character.Name = "Innkeeper";
             animationText = "How can I help you?";
             Dialogue();
             cout << "1. Know anything about the forest?" << endl;
@@ -672,7 +672,7 @@ void Area_ElfVillage()
             {
             case 1:
                 PlayerSleep();
-                Inn = false; Village_InnTable = false;
+                Inn = false; Town.InnTable = false;
                 break;
             case 2:
                 cout << "You decide not to sleep." << endl; Pause();
@@ -687,12 +687,12 @@ void Area_ElfVillage()
             break;
 
         case 2:
-            if(Village_InnTable == false)
+            if(Town.InnTable == false)
             {
             cout << "You go up to the table in the room. The Innkeeper left a meal on it for you." << endl;
             cout << "*Food + 2*" << endl;
-            pFood += 2;
-            Village_InnTable = true;
+            Item.Food += 2;
+            Town.InnTable = true;
             }
             else
             {
@@ -708,7 +708,7 @@ void Area_ElfVillage()
             cout << "You decide to go back downstairs." << endl;
             if(Inn == false)
             {
-            cName = "Innkeeper";
+            Character.Name = "Innkeeper";
             animationText = "Thank you for staying the night. Come again!";
             Dialogue();
             }
@@ -733,18 +733,18 @@ void Area_ElfVillage()
             cout << "You go up to the wall, a beautifully carved staff hangs on a\ndecorative rack." << endl;
             if(sStatus < 6)
             {
-            cName = pName;
+            Character.Name = Player.Name;
             animationText = "This staff is beautiful.";
             Dialogue();
 
-            cName = "Elder";
-            animationText = "Thank you. It was a gift from my people when I helped lead\nthem against enemies long ago, now it sits in decoration. I fear\nI may have to use it soon if the monsters of the dark woods approach our village.";
+            Character.Name = "Elder";
+            animationText = "Thank you. It was a gift from my people when I helped lead\nthem against enemies long ago, now it sits in decoration. I fear\nI may have to use it soon if the monsters of the dark woods approach our Item.";
             Dialogue();
 
             }
             else if(sStatus >= 6)
             {
-                cName = "Elder";
+                Character.Name = "Elder";
                 animationText = "Once again a beautiful decoration, and nothing more.\nI thank you for that.";
                 Dialogue();
             }
@@ -754,13 +754,13 @@ void Area_ElfVillage()
             Pause();
             break;
         case 4:
-            if(sCutscene_Elder == false)
+            if(cutscene.Elder == false)
             {
                 Cutscene_Elder1();
             }
             else
             {
-                cName = "Elder";
+                Character.Name = "Elder";
                 animationText = "Good luck on the heavy task that is before you. We\nall stand with you.";
                 Dialogue();
             }

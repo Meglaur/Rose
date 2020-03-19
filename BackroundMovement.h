@@ -18,6 +18,8 @@ void ControlLoop()
 
     Gameover = false;
 
+        decision = 0;
+        gMove = 0;
 
 
         //Run a loop where the program displays the gameplay screen, gives the player a chance
@@ -41,8 +43,7 @@ void ControlLoop()
         }
 
     //clear the decision and movement variables each loop to prevent carrying over
-    decision = 0;
-    gMove = 0;
+
 
 
 
@@ -120,7 +121,7 @@ void Move()
                 ItemScreen();
                 break;
             case 'c':
-                cout << tControls << endl;
+                cout << Text.Controls << endl;
                 Move();
                 break;
             case 'p':
@@ -152,8 +153,6 @@ void Move()
 
 
 }
-
-
 
 
 

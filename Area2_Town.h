@@ -1,5 +1,5 @@
 
-//This file contains the code for all of the rooms within the Second area of the game, the First Town.
+//This file contains the code for all of the rooms within the Second area of the game, the First Item.
 
 void Area_Town()
 {
@@ -63,7 +63,7 @@ void Area_Town()
         case 5:
             cout << "You go up to the fountain in the middle of the square." << endl;
             cout << "You feel cool standing next to the water.\n" << endl;
-            if(Town_Fountain == true)
+            if(Town.Fountain == true)
             {
                 cout << "The coin you threw in glistens in the sunlight.";
                 Pause();
@@ -89,10 +89,10 @@ void Area_Town()
                 case 1:
                     cout << "You threw a coin into the fountain. It falls to the bottom." << endl;
                     cout << "*Luck + 1*";
-                    pLuck += 1;
+                    Player.Luck += 1;
                     RandomLuckValue += 1;
-                    pCoins -= 1;
-                    Town_Fountain = true;
+                    Item.Coins -= 1;
+                    Town.Fountain = true;
                     Pause();
                     break;
                 case 2:
@@ -121,7 +121,7 @@ void Area_Town()
             cout << "                            1. Elixers - 5 coins" << endl;
             cout << "                            2. Pumpkin Pie - 2 coins" << endl;
             cout << "                            3. Paper - 5 coins" << endl;
-            if(Player_Shield == false)
+            if(Item.Shield == false)
             {
                 cout << "                            4. Shield - 20 coins" << endl;
             }
@@ -148,86 +148,86 @@ void Area_Town()
             switch(decision)
             {
             case 1:
-                if(pCoins >= 5)
+                if(Item.Coins >= 5)
                 {
 
                     cout << "                         You bought some elixers!" << endl;
                     cout << "                              *Elixers + 3*" << endl;
                     DoublePause();
 
-                    cName = "Shopkeeper";
+                    Character.Name = "Shopkeeper";
                     animationText = "Thank you for your buisness.";
                     Dialogue();
-                    pElixers += 3;
-                    pCoins -= 5;
+                    Item.Elixers += 3;
+                    Item.Coins -= 5;
                 }
                 else {cout << "                    You don't have enough coins for that!" << endl;}
                 Pause();
                 break;
             case 2:
-                if(pCoins >= 2)
+                if(Item.Coins >= 2)
                 {
                     cout << "                          You bought a pumpkin pie!" << endl;
                     cout << "                                 *Food + 3*" << endl;
                     DoublePause();
 
-                    cName = "Shopkeeper";
+                    Character.Name = "Shopkeeper";
                     animationText = "Thank you for your buisness.";
                     Dialogue();
-                    pFood += 3;
-                    pCoins -= 2;
+                    Item.Food += 3;
+                    Item.Coins -= 2;
                 }
                 else {cout << "                    You don't have enough coins for that!" << endl;}
                 Pause();
                 break;
             case 3:
-                if(pCoins >= 5 && Town_Paper == false)
+                if(Item.Coins >= 5 && Item.Paper == false)
                 {
                     cout << "                           You bought some paper!" << endl;
                     DoublePause();
 
-                    cName = "Shopkeeper";
+                    Character.Name = "Shopkeeper";
                     animationText = "Thank you for your buisness.\n";
                     Dialogue();
-                    Town_Paper = true;
-                    pCoins -= 5;
+                    Item.Paper = true;
+                    Item.Coins -= 5;
                 }
-                else if(pCoins >= 5 && Town_Paper == true)
+                else if(Item.Coins >= 5 && Item.Paper == true)
                 {
-                    cName = pName;
+                    Character.Name = Player.Name;
                     animationText = "Didn't i already buy that?";
                     Dialogue();
                 }
-                else if(pCoins <= 5)
+                else if(Item.Coins <= 5)
                 {cout << "                    You don't have enough coins for that!" << endl;}
                 Pause();
                 break;
             case 4:
-                if(pCoins >= 20 && Player_Shield == false)
+                if(Item.Coins >= 20 && Item.Shield == false)
                 {
-                     cName = " ";
+                     Character.Name = " ";
                     cout << "                          You bought the Shield!" << endl;
                     DoublePause();
 
-                    cName = "Shopkeeper";
+                    Character.Name = "Shopkeeper";
                     animationText = "Thank you so much for your buisness!";
                     Dialogue();
 
-                    Player_Shield = true;
-                    pCoins -= 20;
-                     if(Player_Shield == true && Player_Armor == true && Player_WoodenSword == true)
+                    Item.Shield = true;
+                    Item.Coins -= 20;
+                     if(Item.Shield == true && Item.Armor == true && Item.WoodenSword == true)
                     {
                         Grandmas_Items = true;
-                        cName = pName;
+                        Character.Name = Player.Name;
                         animationText = "I got all of the things Grandma wanted me to collect! I'd better go back \nto her.";
                         Dialogue();
                     }
                 }
-                else if(Player_Shield == true)
+                else if(Item.Shield == true)
                 {
 
                 }
-                else if(Player_Shield == false && pCoins <= 20)
+                else if(Item.Shield == false && Item.Coins <= 20)
                  {
                      cout << "                    You don't have enough coins for that!" << endl;
                  }
@@ -246,7 +246,7 @@ void Area_Town()
         case 4:
             break;
         case 5:
-            cName = "Shopkeeper";
+            Character.Name = "Shopkeeper";
             animationText = "Welcome to the shop, how can I help you?";
             Dialogue();
             cout << "1. What do you sell?" << endl;
@@ -266,13 +266,13 @@ void Area_Town()
             {
             case 1:
 
-                cName = "Shopkeeper";
+                Character.Name = "Shopkeeper";
                 animationText = "If you would like to see what I sell, come up to the counter.";
                 Dialogue();
                 break;
             case 2:
 
-                cName = "Shopkeeper";
+                Character.Name = "Shopkeeper";
                 animationText = "I heard that searching through each area you come upon can bring one coins.";
                 Dialogue();
                 break;
@@ -307,12 +307,12 @@ void Area_Town()
             break;
         case 5:
             cout << "You look through the bushes." << endl;
-            if(Town_Bushes == false)
+            if(Town.Bushes == false)
             {
                 cout << "For some reason, you find coins in them." << endl;
                 cout << "*Coins + 5*" << endl;
-                pCoins += 5;
-                Town_Bushes = true; Pause();
+                Item.Coins += 5;
+                Town.Bushes = true; Pause();
             }
             else
             {
@@ -330,7 +330,7 @@ void Area_Town()
         switch(gMove)
         {
         case 1:
-            cName = "Innkeeper";
+            Character.Name = "Innkeeper";
             animationText = "Innkeeper: Would you like to stay the night? - 5 coins";
             Dialogue();
             cout << endl;
@@ -348,20 +348,20 @@ void Area_Town()
             switch(decision)
             {
             case 1:
-                if(pCoins >= 5 && Inn == false)
+                if(Item.Coins >= 5 && Inn == false)
                 {
                 Inn = true;
-                Town_InnTable = false;
+                Town.InnTable = false;
                 animationText = "Innkeeper: Heres the key to your room, you'll find it upstairs.";
                 Dialogue();
-                pCoins -= 5;
+                Item.Coins -= 5;
                 }
                 else if(Inn == true)
                 {
                     cout << "You already have a room!" << endl;
                     Pause();
                 }
-                else if(pCoins < 5)
+                else if(Item.Coins < 5)
                 {
                     cout << "You don't have enough coins for that!" << endl;
                     Pause();
@@ -391,7 +391,7 @@ void Area_Town()
             gPosition = 21;
             break;
         case 5:
-            cName = "Innkeeper";
+            Character.Name = "Innkeeper";
             animationText = "Innkeeper: How can I help you?";
             Dialogue();
             cout << "1. Can I buy a room?" << endl;
@@ -458,7 +458,7 @@ void Area_Town()
             case 1:
                 PlayerSleep();
 
-                Inn = false; Town_InnTable = false;
+                Inn = false; Town.InnTable = false;
                 break;
             case 2:
                 cout << "You decide not to sleep." << endl; Pause();
@@ -473,12 +473,12 @@ void Area_Town()
             break;
 
         case 2:
-            if(Town_InnTable == false)
+            if(Town.InnTable == false)
             {
             cout << "You go up to the table in the room. The Innkeeper left a meal on it for you." << endl;
             cout << "*Food + 2*" << endl;
-            pFood += 2;
-            Town_InnTable = true;
+            Item.Food += 2;
+            Town.InnTable = true;
             }
             else
             {
@@ -489,14 +489,14 @@ void Area_Town()
         case 3:
             if(Inn == false)
             {
-            cName = "Innkeeper";
+            Character.Name = "Innkeeper";
             animationText = "Innkeeper: Thank you for staying the night. Come again!";
             Dialogue();
             }
             gPosition = 24;
             break;
         case 4:
-            if(Town_Cookbook == false)
+            if(Item.Cookbook == false)
             {
                 cout << "You look at the bookshelf. A sign hangs next to it." << endl;
                 animationText = "Sign: Take any book you like, and feel free to add your own!";
@@ -512,7 +512,7 @@ void Area_Town()
                 switch(decision)
                 {
                     case 1:
-                        cout << "You take the cookbook with you." << endl; Pause(); Town_Cookbook = true;
+                        cout << "You take the cookbook with you." << endl; Pause(); Item.Cookbook = true;
                         break;
                     case 2:
                         cout << "You decide to leave the book." << endl; Pause();
@@ -539,31 +539,31 @@ void Area_Town()
         switch(gMove)
         {
         case 1:
-            if(sCutscene_OldMan1 == false && sCutscene_GrandmaHelps == false)
+            if(cutscene.OldMan1 == false && cutscene.GrandmaHelps == false)
             {
-                cName = "Old Man";
+                Character.Name = "Old Man";
                 animationText = "Good Evening to you.";
                 Dialogue();
             }
-            else if(sCutscene_OldMan1 == false && sCutscene_GrandmaHelps == true)
+            else if(cutscene.OldMan1 == false && cutscene.GrandmaHelps == true)
             {
                 Cutscene_OldMan1();
-                sCutscene_OldMan1 = true;
+                cutscene.OldMan1 = true;
             }
-            else if(sCutscene_OldMan1 == true && sCutscene_OldMan2 == false && Town_Paper == true)
+            else if(cutscene.OldMan1 == true && cutscene.OldMan2 == false && Item.Paper == true)
             {
                 Cutscene_OldMan2();
-                sCutscene_OldMan2 = true;
+                cutscene.OldMan2 = true;
             }
-            else if(sCutscene_OldMan1 == true && Town_Paper == false)
+            else if(cutscene.OldMan1 == true && Item.Paper == false)
             {
-                cName = "Old Man";
+                Character.Name = "Old Man";
                 animationText = "If you would like me to give you my sword, please bring me some paper \nto write a letter with.";
                 Dialogue();
             }
-            else if(sCutscene_OldMan1 == true && sCutscene_OldMan2 == true)
+            else if(cutscene.OldMan1 == true && cutscene.OldMan2 == true)
             {
-                cName = "Old Man";
+                Character.Name = "Old Man";
                 animationText = "Thank you for doing me this favor. Be careful on your journey.";
                 Dialogue();
             }
@@ -573,7 +573,7 @@ void Area_Town()
             gPosition = 23;
             break;
         case 3:
-            if(Town_SwordRoom == true)
+            if(Room.SwordRoom == true)
             {
                 gPosition = 27; Debug(); Move();
             }
@@ -593,7 +593,7 @@ void Area_Town()
             cout << "monster horns displayed on one wall." << endl;
             cout << endl;
             Pause();
-            cName = pName;
+            Character.Name = Player.Name;
             animationText = "He must have been quite a fighter.";
             Dialogue();
             break;
@@ -609,20 +609,20 @@ void Area_Town()
         switch(gMove)
         {
         case 1:
-            if(Player_WoodenSword == false)
+            if(Item.WoodenSword == false)
             {
-                cName = " ";
+                Character.Name = " ";
                 animationText = "You take the Wooden Sword off its decorative rack and strap it to your back.\nYou got a major item!";
                 Dialogue();
 
-                cName = pName;
+                Character.Name = Player.Name;
                 animationText = "Grandma said I'd need this, I just hope I'll be able to use it well.";
                 Dialogue();
-                Player_WoodenSword = true;
+                Item.WoodenSword = true;
 
-                if(Player_Shield == true && Player_Armor == true && Player_WoodenSword == true)
+                if(Item.Shield == true && Item.Armor == true && Item.WoodenSword == true)
                 {
-                    cName = pName;
+                    Character.Name = Player.Name;
                     animationText = "I got all of the things Grandma wanted me to collect! I'd better go back \nto her.";
                     Dialogue();
                     Grandmas_Items = true;
@@ -641,7 +641,7 @@ void Area_Town()
             break;
         case 3:
             cout << "You go up to the chest." << endl;
-            if(Town_Chest == false)
+            if(Town.Chest == false)
             {
                 cout << "Open the chest?\n" << endl;
                 cout << "1. Yes" << endl;
@@ -661,9 +661,9 @@ void Area_Town()
                     cout << "Inside the Chest are 3 elixers and 10 coins!" << endl;
                     cout << "*Elixers + 3*" << endl;
                     cout << "*Coins + 10*" << endl;
-                    pCoins += 15;
-                    pElixers += 3;
-                    Town_Chest = true;
+                    Item.Coins += 15;
+                    Item.Elixers += 3;
+                    Town.Chest = true;
                     break;
                 case 2:
                     cout << "You decide not to open the chest." << endl;
@@ -699,28 +699,28 @@ void Area_Town()
         switch(gMove)
         {
         case 1:
-            if(sCutscene_GrandmaHelps == false)
+            if(cutscene.GrandmaHelps == false)
             {
                 Cutscene_GrandmaHelps();
-                sCutscene_GrandmaHelps = true;
+                cutscene.GrandmaHelps = true;
             }
-            else if(sCutscene_GrandmasList == false && Grandmas_Items == false)
+            else if(cutscene.GrandmasList == false && Grandmas_Items == false)
             {
 
-                cName = "Grandma";
+                Character.Name = "Grandma";
                 animationText = "Before you go to the forest you must first collect the items I \nhave told you about. The Sword, The Shield, and The Armor.";
                 Dialogue();
 
             }
-            else if(sCutscene_GrandmasList == false && Grandmas_Items == true)
+            else if(cutscene.GrandmasList == false && Grandmas_Items == true)
             {
                 Cutscene_GrandmasList();
-                sCutscene_GrandmasList = true;
+                cutscene.GrandmasList = true;
             }
-            else if(sCutscene_GrandmaHelps == true && sCutscene_GrandmasList == true)
+            else if(cutscene.GrandmaHelps == true && cutscene.GrandmasList == true)
             {
 
-                cName = "Grandma";
+                Character.Name = "Grandma";
                 animationText = "Be careful on your adventure dear, and find Rose as quickly as you can!";
                 Dialogue();
 
@@ -729,14 +729,14 @@ void Area_Town()
         case 2:
             cout << "You go up to the pictures on Grandmas wall. You see her in her youth, as well asdrawings of you and Rose." << endl;
             Pause();
-            cName = pName;
+            Character.Name = Player.Name;
             animationText = "These drawings bring me back. I hope we can all be happy and together \nagain.";
             Dialogue();
             break;
         case 3:
             cout << "You go up to the wood stove." << endl;
             cout << endl;
-            if(Town_Stove == true)
+            if(Town.Stove == true)
             {
                 cout << "The fire is roaring." << endl;
             }
@@ -763,9 +763,9 @@ void Area_Town()
                     {
                         cout << "You stoked the fire. It fills you with warmth." << endl;
                         cout << "-Luck + 1-" << endl;
-                        pLuck += 1;
+                        Player.Luck += 1;
                         RandomLuckValue += 1;
-                        Town_Stove = true;
+                        Town.Stove = true;
                         Pause();
                     }
                 else
@@ -803,9 +803,9 @@ void Area_Town()
             gPosition = 23;
             break;
         case 2:
-            if(Town_Hilda == false)
+            if(Town.Hilda == false)
             {
-                cName = "Hilda";
+                Character.Name = "Hilda";
                 animationText = "Would you like to listen to my story?";
                 Dialogue();
                 cout << "               1. Yes                       2.No" << endl;
@@ -831,7 +831,7 @@ void Area_Town()
             }
             else
             {
-                cName = "Hilda";
+                Character.Name = "Hilda";
                 animationText = "*snore*";
                 Dialogue();
             }

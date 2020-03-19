@@ -27,7 +27,7 @@ void PlayerSleep()
     cout << "Your health reached full!" << endl;
 
     //Heal the player fully for sleeping
-    Player_Health = Player_MaxHealth;
+    Player.Health = Player.MaxHealth;
 
 
     //If the player was sleeping in an Inn, give them luck
@@ -35,7 +35,7 @@ void PlayerSleep()
     {
         cout << "The soft inn bed made you happy!" << endl;
         cout << "*Luck + 1*" << endl;
-        pLuck += 1;
+        Player.Luck += 1;
         RandomLuckValue += 1;
     }
 
@@ -92,7 +92,7 @@ void TravelZone()
     }
 
     //Bring up Map Menu of currently open areas and give the player options
-    tSpeaker = tRose;
+    Character.Speaker = Character.Rose;
     TextColor();
     cout << endl;
     animationText = "Go Where? :";
@@ -124,12 +124,12 @@ void TravelZone()
      case 1:
          gPosition = 1;
          //reset certain things upon leaving an area
-          YourHouse_Desk = false;
+          House.Desk = false;
          break;
       case 2:
          gPosition = 2; Debug(); Move();
          //reset certain things upon leaving an area
-         Town_Bushes = false;
+         Town.Bushes = false;
          break;
 
 
@@ -153,7 +153,7 @@ void TravelZone()
      cout << "                                   |	      |" << endl;
      cout << "                                   |    |     |" << endl;
      cout << "                                   -----|-------" << endl;
-     if(Village_Enter == true)
+     if(Room.Village == true)
      cout << "                                        Elf Village" << endl;
 
 
@@ -169,13 +169,13 @@ void TravelZone()
      case 1:
         gPosition = 1;
         //RA
-        YourHouse_Desk = false;
+        House.Desk = false;
         break;
 
      case 2:
         gPosition = 2; Debug(); Move();
         //RA
-        Town_Bushes = false;
+        Town.Bushes = false;
         break;
 
      case 3:
@@ -189,7 +189,7 @@ void TravelZone()
 
 
 
-    tSpeaker = text;
+    Character.Speaker = Character.Narrator;
     TextColor();
 
 
@@ -229,7 +229,7 @@ void GameOver()
     cout << "                          Press Enter to continue..." << endl;
     DoublePause();
     //reset players health to full
-    Player_Health = Player_MaxHealth;
+    Player.Health = Player.MaxHealth;
 
     //When the player is ready, calculate the area the player is in and bring them to the starting room in that area
     if(gPosition == 1 || gPosition == 11 || gPosition == 12 || gPosition == 13 || gPosition == 14 || gPosition == 15 || gPosition == 16)

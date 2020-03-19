@@ -5,74 +5,74 @@ void CalculateEnemy()
     //tell the game what stats to give the enemy in battle based on who your fighting
 
 
-    if(Enemy == Three_AngryFlower)
+    if(enemy == Enemy.AngryFlower)
     {
-        Enemy_Name = "Angry Flower";
-        Enemy_Health = 10;
-        Enemy_Damage = 3;
-        Enemy_Defense = 0;
-        Enemy_Approach = "                      An angry flower approaches you!";
-        Enemy_Defeat = "You defeat the rabid flower, and it falls to the ground.";
-        Enemy_Drops = food;
-        Enemy_DropText = "Flower Seeds";
-        Enemy_XP = 97;
-        Enemy_MaxHealth = 10;
-        Enemy_DefenseGame = 1;
-        Enemy_UsingItem = true;
-        Enemy_ItemHealthRegain = 3;
-        Enemy_Fooddrops = 3;
-        if(sminiScene_FirstEnemy == false) {Enemy_Run = false;}
-        else {Enemy_Run = true;}
+        Enemy.Name = "Angry Flower";
+        Enemy.Health = 10;
+        Enemy.Damage = 3;
+        Enemy.Defense = 0;
+        Enemy.Approach = "                      An angry flower approaches you!";
+        Enemy.Defeat = "You defeat the rabid flower, and it falls to the ground.";
+        Enemy.Drops = food;
+        Enemy.DropText = "Flower Seeds";
+        Enemy.XP = 97;
+        Enemy.MaxHealth = 10;
+        Enemy.DefenseGame = 1;
+        Enemy.UsingItem = true;
+        Enemy.ItemHealthRegain = 3;
+        Enemy.Fooddrops = 3;
+        if(cutscene.FirstEnemy == false) {Enemy.Run = false;}
+        else {Enemy.Run = true;}
 
     }
 
-    else if(Enemy == Three_Skeleton)
+    else if(enemy == Enemy.Skeleton)
     {
-        Enemy_Name = "Mossy Skeleton";
-        Enemy_Health = 12;
-        Enemy_Damage = 3;
-        Enemy_Defense = 0;
-        Enemy_Approach = "              A skeleton covered in moss approaches you!\n\n                          He looks angry!!!";
-        Enemy_Defeat = "You defeat the skeleton. Its bones clatter to the ground.";
-        Enemy_Drops = elixers;
-        Enemy_DropText = "       Coins";
-        Enemy_XP = 115;
-        Enemy_MaxHealth = 12;
-        Enemy_DefenseGame = 2;
-        Enemy_UsingItem = true;
-        Enemy_ItemHealthRegain = 3;
-        Enemy_Coindrops = 5;
-        Enemy_Run = true;
+        Enemy.Name = "Mossy Skeleton";
+        Enemy.Health = 12;
+        Enemy.Damage = 3;
+        Enemy.Defense = 0;
+        Enemy.Approach = "              A skeleton covered in moss approaches you!\n\n                          He looks angry!!!";
+        Enemy.Defeat = "You defeat the skeleton. Its bones clatter to the ground.";
+        Enemy.Drops = elixers;
+        Enemy.DropText = "       Coins";
+        Enemy.XP = 115;
+        Enemy.MaxHealth = 12;
+        Enemy.DefenseGame = 2;
+        Enemy.UsingItem = true;
+        Enemy.ItemHealthRegain = 3;
+        Enemy.Coindrops = 5;
+        Enemy.Run = true;
 
     }
 
-    else if(Enemy == Boss_ForestDungeon)
+    else if(enemy == Enemy.Boss)
     {
-        Enemy_Name = "Elemental Ghost";
-        Enemy_Health = 15;
-        Enemy_Damage = 3;
-        Enemy_Defense = 0;
-        Enemy_XP = 1000;
-        Enemy_MaxHealth = 15;
-        Enemy_UsingItem = false;
-        Enemy_Stages = 4;
+        Enemy.Name = "Elemental Ghost";
+        Enemy.Health = 15;
+        Enemy.Damage = 3;
+        Enemy.Defense = 0;
+        Enemy.XP = 1000;
+        Enemy.MaxHealth = 15;
+        Enemy.UsingItem = false;
+        Enemy.Stages = 4;
         Boss = true;
-        Enemy_Run = false;
+        Enemy.Run = false;
 
         switch(BossStage)
 
         {
-            case 0:
-                Enemy_DefenseGame = 3;
-                break;
             case 1:
-                Enemy_DefenseGame = 4;
+                Enemy.DefenseGame = 3;
                 break;
             case 2:
-                Enemy_DefenseGame = 5;
+                Enemy.DefenseGame = 4;
                 break;
             case 3:
-                Enemy_DefenseGame = 6;
+                Enemy.DefenseGame = 5;
+                break;
+            case 4:
+                Enemy.DefenseGame = 6;
                 break;
 
         }
@@ -93,7 +93,7 @@ void EnemyApproach()
 
     ClearScreen();
     cout << "\n\n\n\n\n\n\n";
-    cout << Enemy_Approach << endl;
+    cout << Enemy.Approach << endl;
     Pause();
 
     //glitch prevention
@@ -146,14 +146,14 @@ void BattleScreen()
     void EnemyHealthBar();
 
 
-    tSpeaker= tBattle;
+    Character.Speaker= Character.Battle;
     TextColor();
 
     ClearScreen();
 
     cout << "______________________________________________________________________________" << endl;
     cout << endl;
-    cout << "                               " << Enemy_Name << endl;
+    cout << "                               " << Enemy.Name << endl;
     cout << endl;
     HealthBar();
     EnemyHealthBar();
@@ -259,19 +259,19 @@ void BattleLoop()
         Enemy_Turn();
     }
 
-    if(Player_Health > 0)
+    if(Player.Health > 0)
     {
         BattleScreen();
     }
-    if(Player_Health > 0)
+    if(Player.Health > 0)
     {
         BattleDisplay();
     }
-    if(Player_Health > 0)
+    if(Player.Health > 0)
     {
         BattleMove();
     }
-    if(Player_Health > 0)
+    if(Player.Health > 0)
     {
         BattleMenu();
     }
@@ -294,19 +294,19 @@ void Battle()
 
     eTurn = false;
     Battle_Run = false;
-    Enemy_Health = Enemy_MaxHealth;
+    Enemy.Health = Enemy.MaxHealth;
 
-    while(Enemy_Health > 0 && Battle_Run == false)
+    while(Enemy.Health > 0 && Battle_Run == false)
     {
         BattleLoop();
-        if(Player_Health <= 0)
+        if(Player.Health <= 0)
         {
         GameOver(); break;
         break;
         }
     }
 
-   if(Player_Health > 0 && Enemy_Health <= 0)
+   if(Player.Health > 0 && Enemy.Health <= 0)
    {
        BattleDefeat();
    }
@@ -325,27 +325,28 @@ void BossBattle()
 
 
 
-    //BossStage = 1;
+    BossStage = 1;
     CalculateEnemy();
     ePosition = 1;
+
 
     Boss = true;
 
     eTurn = false;
     Battle_Run = false;
-    Enemy_Health = Enemy_MaxHealth;
+    Enemy.Health = Enemy.MaxHealth;
 
-    while(Enemy_Health > 0)
+    while(Enemy.Health > 0)
     {
         BattleLoop();
-        if(Player_Health <= 0)
+        if(Player.Health <= 0)
         {
         GameOver();
         break;
         }
-        if(Enemy_Health <= 0 && BossStage < Enemy_Stages)
+        if(Enemy.Health <= 0 && BossStage < Enemy.Stages)
         {
-            if(Enemy == Boss_ForestDungeon)
+            if(enemy == Enemy.Boss)
             {
                 switch(BossStage)
                 {
@@ -372,17 +373,17 @@ void BossBattle()
                 eTurn = false;
             }
             BossStage += 1;
-            Enemy_Health = Enemy_MaxHealth;
+            Enemy.Health = Enemy.MaxHealth;
             CalculateEnemy(); //this is there so defense minigame can change, within enemy info if statement
             //declare what minigame to use based on what stage of the battle your in.
         }
     }
 
-   if(Player_Health > 0 && Enemy_Health <= 0 && BossStage == Enemy_Stages)
+   if(Player.Health > 0 && Enemy.Health <= 0 && BossStage == Enemy.Stages)
    {
-       if(Enemy == Boss_ForestDungeon)
+       if(enemy == Enemy.Boss)
        {
-          if(Enemy == Boss_ForestDungeon) {Cutscene_DungeonBossDefeat(); Boss = false;}
+          if(enemy == Enemy.Boss) {Cutscene_DungeonBossDefeat(); Boss = false;}
        }
    }
 }
@@ -393,78 +394,78 @@ void EnemyHealthBar()
     HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(color, 4);
 
-    switch(Enemy_Health)
+    switch(Enemy.Health)
     {
         case 1:
-            Enemy_HealthBar = "|";
+            Enemy.HealthBar = "|";
             break;
         case 2:
-            Enemy_HealthBar = "||";
+            Enemy.HealthBar = "||";
             break;
         case 3:
-            Enemy_HealthBar = "|||";
+            Enemy.HealthBar = "|||";
             break;
         case 4:
-            Enemy_HealthBar = "||||";
+            Enemy.HealthBar = "||||";
             break;
         case 5:
-            Enemy_HealthBar = "|||||";
+            Enemy.HealthBar = "|||||";
             break;
         case 6:
-            Enemy_HealthBar = "||||||";
+            Enemy.HealthBar = "||||||";
             break;
         case 7:
-            Enemy_HealthBar = "|||||||";
+            Enemy.HealthBar = "|||||||";
             break;
         case 8:
-            Enemy_HealthBar = "||||||||";
+            Enemy.HealthBar = "||||||||";
             break;
         case 9:
-            Enemy_HealthBar = "|||||||||";
+            Enemy.HealthBar = "|||||||||";
             break;
         case 10:
-            Enemy_HealthBar = "||||||||||";
+            Enemy.HealthBar = "||||||||||";
             break;
         case 11:
-            Enemy_HealthBar = "|||||||||||";
+            Enemy.HealthBar = "|||||||||||";
             break;
         case 12:
-            Enemy_HealthBar = "||||||||||||";
+            Enemy.HealthBar = "||||||||||||";
             break;
         case 13:
-            Enemy_HealthBar = "|||||||||||||";
+            Enemy.HealthBar = "|||||||||||||";
             break;
         case 14:
-            Enemy_HealthBar = "||||||||||||||";
+            Enemy.HealthBar = "||||||||||||||";
             break;
         case 15:
-            Enemy_HealthBar = "|||||||||||||||";
+            Enemy.HealthBar = "|||||||||||||||";
             break;
         case 16:
-            Enemy_HealthBar = "||||||||||||||||";
+            Enemy.HealthBar = "||||||||||||||||";
             break;
         case 17:
-            Enemy_HealthBar = "|||||||||||||||||";
+            Enemy.HealthBar = "|||||||||||||||||";
             break;
         case 18:
-            Enemy_HealthBar = "||||||||||||||||||";
+            Enemy.HealthBar = "||||||||||||||||||";
             break;
         case 19:
-            Enemy_HealthBar = "|||||||||||||||||||";
+            Enemy.HealthBar = "|||||||||||||||||||";
             break;
         case 20:
-            Enemy_HealthBar = "||||||||||||||||||||";
+            Enemy.HealthBar = "||||||||||||||||||||";
             break;
     }
 
 
     cout <<"       ";
-    cout << Enemy_Name << ": " << Enemy_HealthBar << " : " << Enemy_Health << endl;
+    cout << Enemy.Name << ": " << Enemy.HealthBar << " : " << Enemy.Health << endl;
 }
 
 void RandomEnemyEncounter()
 {
-        RandomEncounter = Player_Health + pCoins + pLuck + Player_MaxHealth + Player_Defense + Player_Damage + Player_XP;
+        RandomEncounter = Player.Health + Item.Coins + Item.Luck + Player.MaxHealth + Player.Defense + Player.Damage + Player.XP;
 
         if(RandomEncounter % 2 == 0)
         {
@@ -482,7 +483,7 @@ void BattleAttack()
 {
     void AttackMiniGame1();
 
-    tSpeaker = text;
+    Character.Speaker = Character.Narrator;
     TextColor();
 
     AttackMiniGame1();
@@ -490,22 +491,22 @@ void BattleAttack()
 
     if(Battle_Attack == 2)
     {
-        Player_Hit = Player_Damage - Enemy_Defense;
+        Player.Hit = Player.Damage - Enemy.Defense;
     }
     else if(Battle_Attack == 1)
     {
-        Player_Hit = Player_Damage - Enemy_Defense - 1;
+        Player.Hit = Player.Damage - Enemy.Defense - 1;
     }
     else if(Battle_Attack == 0)
     {
-        Player_Hit = 0;
+        Player.Hit = 0;
     }
 
-    cout << "You did " << Player_Hit << " damage!" << endl;
+    cout << "You did " << Player.Hit << " damage!" << endl;
 
     Pause();
 
-    Enemy_Health -= Player_Hit;
+    Enemy.Health -= Player.Hit;
 
 
     eTurn = true;
@@ -539,7 +540,7 @@ void BattleOptions()
     switch(decision)
     {
     case 1:
-        if(Enemy_Run == true) {BattleRun();} else {cout << "You cannot run from this fight!" << endl; DoublePause();}
+        if(Enemy.Run == true) {BattleRun();} else {cout << "You cannot run from this fight!" << endl; DoublePause();}
         break;
     case 2:
         BattleDefend();
@@ -557,7 +558,7 @@ void BattleRun()
 
     void TextColor();
 
-    tSpeaker = text;
+    Character.Speaker = Character.Narrator;
     TextColor();
 
     cout << "Run from the enemy?" << endl;
@@ -585,7 +586,7 @@ void BattleRun()
             cout << "You lost some XP from running" << endl;
             cout << "*XP - 11*" << endl;
             Pause();
-            Player_XP -= 11;
+            Player.XP -= 11;
             Battle_Run = true;
         }
         else{cout << "You can't run from this Enemy!" << endl;}
@@ -593,7 +594,7 @@ void BattleRun()
     }
     else
     {
-        cout << "You decide not to run from the enemy." << endl; Pause();
+        cout << "You decide not to run from the Enemy." << endl; Pause();
     }
 
 
@@ -603,13 +604,13 @@ void BattleRun()
 void BattleItems()
 {
 
-    tSpeaker = text;
+    Character.Speaker = Character.Narrator;
     TextColor();
     cout << "-------------------------------------" << endl;
     cout << "             Items:" << endl;
     cout << endl;
-    cout << "1. Elixers - " << pElixers << endl;
-    cout << "2. Food - " << pFood << endl;
+    cout << "1. Elixers - " << Item.Elixers << endl;
+    cout << "2. Food - " << Item.Food << endl;
     cout << "3. Nothing" << endl;
     cout << endl;
     cout << "-------------------------------------" << endl;
@@ -627,36 +628,36 @@ void BattleItems()
     switch(decision)
     {
     case 1:
-        if(pElixers > 0)
+        if(Item.Elixers > 0)
         {
             cout << "You used an elixer!" << endl;
             cout << "*Health + 5*" << endl;
             Pause();
 
-            Player_Health += 5;
-            if(Player_Health > Player_MaxHealth)
+            Player.Health += 5;
+            if(Player.Health > Player.MaxHealth)
             {
-                Player_Health = Player_MaxHealth;
+                Player.Health = Player.MaxHealth;
             }
 
-            pElixers -= 1; eTurn = true;
+            Item.Elixers -= 1; eTurn = true;
         }
         else{cout << "You're out of those!" << endl; Pause();}
         break;
     case 2:
-        if(pFood > 0)
+        if(Item.Food > 0)
         {
             cout << "You used some food!" << endl;
             cout << "*Health + 2*" << endl;
             Pause();
 
-            Player_Health += 2;
-            if(Player_Health > Player_MaxHealth)
+            Player.Health += 2;
+            if(Player.Health > Player.MaxHealth)
             {
-                Player_Health = Player_MaxHealth;
+                Player.Health = Player.MaxHealth;
             }
 
-            pFood -= 1; eTurn = true;
+            Item.Food -= 1; eTurn = true;
         }
         else{cout << "You're out of food!" << endl; Pause();}
         break;
@@ -682,31 +683,31 @@ void Enemy_Turn()
 
     cout << "\n\n\n" << endl;
 
-    if(Enemy_Health % 2 == 0 && Player_Health % 2 == 1)
+    if(Enemy.Health % 2 == 0 && Player.Health % 2 == 1)
     {
         RandomLuckValue += 1;
     }
 
-    if(Enemy_Health < 6 && Enemy_ItemUsed == false && Enemy_UsingItem == true)
+    if(Enemy.Health < 6 && Enemy.ItemUsed == false && Enemy.UsingItem == true)
     {
-        Enemy_Item = true;
+        Enemy.Item = true;
     }
 
 
 
-    if(pLuck > 5 && RandomLuckValue % 2 == 0)
+    if(Player.Luck > 5 && RandomLuckValue % 2 == 0)
     {
         RandomLuckValue += 1;
         cout << "The Enemy is attacking, but it misses!" << endl;
         Pause();
         eTurn = false;
     }
-    else if(Enemy_Item == false)
+    else if(Enemy.Item == false)
     {
         cout << "                           ";
-        cout << "The " << Enemy_Name << " is attacking!" << endl;
+        cout << "The " << Enemy.Name << " is attacking!" << endl;
 
-        switch(Enemy_DefenseGame)
+        switch(Enemy.DefenseGame)
         {
         case 1:
             DefendMiniGame1();
@@ -730,14 +731,14 @@ void Enemy_Turn()
 
         if(Battle_Block == 0)
         {
-            Enemy_Hit = Enemy_Damage - Player_Defense;
-            if(Enemy_Hit <= 0 )
+            Enemy.Hit = Enemy.Damage - Player.Defense;
+            if(Enemy.Hit <= 0 )
             {
-                Enemy_Hit = 0;
+                Enemy.Hit = 0;
             }
-            Player_Health -= Enemy_Hit;
+            Player.Health -= Enemy.Hit;
 
-            if(Enemy_DefenseGame == 2)
+            if(Enemy.DefenseGame == 2)
             {
              ClearScreen();
             cout << "\n\n\n\n\n\n" << endl;
@@ -758,20 +759,20 @@ void Enemy_Turn()
 
             cout << "\n\n" << endl;
             cout << "                          ";
-            cout << " You lost " << Enemy_Hit << " health!" << endl;
+            cout << " You lost " << Enemy.Hit << " health!" << endl;
             Pause();
         }
         else if(Battle_Block == 1)
         {
-            Enemy_Hit = 0;
-            if(Enemy_Hit <= 0)
+            Enemy.Hit = 0;
+            if(Enemy.Hit <= 0)
             {
-                Enemy_Hit = 0;
+                Enemy.Hit = 0;
             }
-            Player_Health -= Enemy_Hit;
+            Player.Health -= Enemy.Hit;
             cout << "\n\n" << endl;
             cout << "                       ";
-            cout << "You blocked! You lost " << Enemy_Hit << " health!" << endl;
+            cout << "You blocked! You lost " << Enemy.Hit << " health!" << endl;
             Pause();
 
         }
@@ -780,19 +781,19 @@ void Enemy_Turn()
         Pause();
 
     }
-    else if(Enemy_Item == true)
+    else if(Enemy.Item == true)
     {
         cout << "\n\n\n\n\n\n\n\n\n" << endl;
         cout << "                ";
-        cout << "The " << Enemy_Name << " regained " << Enemy_ItemHealthRegain << " health!" << endl;
-        Enemy_Health += Enemy_ItemHealthRegain;
-        if(Enemy_Health > Enemy_MaxHealth)
+        cout << "The " << Enemy.Name << " regained " << Enemy.ItemHealthRegain << " health!" << endl;
+        Enemy.Health += Enemy.ItemHealthRegain;
+        if(Enemy.Health > Enemy.MaxHealth)
         {
-            Enemy_Health = Enemy_MaxHealth;
+            Enemy.Health = Enemy.MaxHealth;
         }
         Pause();
-        Enemy_Item = false;
-        Enemy_ItemUsed = true;
+        Enemy.Item = false;
+        Enemy.ItemUsed = true;
     }
 
 
@@ -801,7 +802,7 @@ void Enemy_Turn()
 
     if(Battle_Defend == true)
     {
-        Player_Defense -= 2;
+        Player.Defense -= 2;
     }
 
     eTurn = false;
@@ -814,33 +815,33 @@ void BattleDefeat()
 
     ClearScreen();
     cout << "\n\n\n\n\n\n           ";
-    cout << Enemy_Defeat << endl;
+    cout << Enemy.Defeat << endl;
     Pause();
     cout << "                              ";
-    cout << "You gained " << Enemy_XP << " XP!" << endl;
-    Player_XP += Enemy_XP;
+    cout << "You gained " << Enemy.XP << " XP!" << endl;
+    Player.XP += Enemy.XP;
     Pause();
     cout << "                         ";
-    cout << "You got " << Enemy_DropText << "!" << endl;
+    cout << "You got " << Enemy.DropText << "!" << endl;
 
-    if(Enemy_Drops == food)
+    if(Enemy.Drops == food)
     {
-        pFood += Enemy_Fooddrops;
+        Item.Food += Enemy.Fooddrops;
         cout << "                                 ";
-        cout << "*Food + " << Enemy_Fooddrops << "*" << endl;
+        cout << "*Food + " << Enemy.Fooddrops << "*" << endl;
     }
-    else if(Enemy_Drops == coins)
+    else if(Enemy.Drops == coins)
     {
-        pCoins += Enemy_Coindrops;
+        Item.Coins += Enemy.Coindrops;
 
         cout << "                                 ";
-        cout << "*Coins + " << Enemy_Coindrops << "*" << endl;
+        cout << "*Coins + " << Enemy.Coindrops << "*" << endl;
     }
-    else if(Enemy_Drops == elixers)
+    else if(Enemy.Drops == elixers)
     {
-        pElixers += Enemy_Elixerdrops;
+        Item.Elixers += Enemy.Elixerdrops;
         cout << "                                ";
-        cout << "*Elixers + " << Enemy_Elixerdrops << "*" << endl;
+        cout << "*Elixers + " << Enemy.Elixerdrops << "*" << endl;
     }
 
 
@@ -855,7 +856,7 @@ void BattleDefend()
 
     Battle_Defend = true;
 
-    Player_Defense += 2;
+    Player.Defense += 2;
 
     DoublePause();
 
@@ -1058,6 +1059,9 @@ void DefendMiniGame1()
 
    dPosition = 1;
    Battle_Block = 5;
+
+
+    HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
 
 
               cout << "\n\n\n\n\n\n" << endl;
@@ -1292,7 +1296,17 @@ case 8:
  cout << "    \\_ \\//___                              " << endl;
  cout << "      \\//___/            *                  " << endl;
  cout << "      //                                     " << endl;
- cout << "   /\\//__/\\\\///\\\\///\\/\\_________@_/\\\\/\\  " << endl;
+ cout << "   /\\//__/\\\\///\\\\///\\/\\_________";
+
+
+    SetConsoleTextAttribute(color, 12);
+
+ cout << "@";
+
+    SetConsoleTextAttribute(color, 7);
+
+cout << "_/\\\\/\\  " << endl;
+
   Sleep(30);
 
         if(GetKeyState(' ') & 0x8000)
@@ -1364,6 +1378,8 @@ case 10:
 void DefendMiniGame2()
 {
 
+    HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
+
 
    dPosition = 1;
    Battle_Block = 5;
@@ -1381,6 +1397,8 @@ void DefendMiniGame2()
 	          cout << "                                  ----- " << endl;
               cout << "                                    V   " << endl;
               cout << "                                    V   " << endl;
+              cout << "\n\n" << endl;
+              cout << "                                   @                        " << endl;
 
                 if(GetKeyState(' ') & 0x8000)
                 {
@@ -1428,6 +1446,8 @@ void DefendMiniGame2()
               cout << "                          " << "     \\  / " << endl;
               cout << "                          " << "      \\/\\\\ " << endl;
               cout << "                          " << "         \\\\_      " << endl;
+              cout << "\n\n" << endl;
+              cout << "                                   @                        " << endl;
                Sleep(30);
 
 
@@ -1444,6 +1464,8 @@ void DefendMiniGame2()
               cout << "                         _________| " << endl;
               cout << "                        /         |>> " << endl;
               cout << "                        \\---------| " << endl;
+              cout << "\n" << endl;
+              cout << "                                   @                        " << endl;
                Sleep(30);
 
 
@@ -1464,12 +1486,20 @@ void DefendMiniGame2()
               cout << "                              /  / " << endl;
               cout << "                             /  /" << endl;
               cout << "                             |_/ " << endl;
+              cout << endl;
+              cout << "                                   ";
+
+    SetConsoleTextAttribute(color, 12);
+
+ cout << "@";
+
+    SetConsoleTextAttribute(color, 7);
                Sleep(30);
 
 
                  if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 0;
+                    Battle_Block = 1;
                 }
                 break;
             case 5:
@@ -1483,12 +1513,13 @@ void DefendMiniGame2()
              cout << "                                    | | " << endl;
              cout << "                                    | | " << endl;
              cout << "                                    \\ / " << endl;
+
               Sleep(30);
 
 
                 if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 1;
+                    Battle_Block = 0;
                 }
                 break;
 
@@ -1510,6 +1541,8 @@ void DefendMiniGame2()
 //OWL Defense
 void DefendMiniGame3()
 {
+
+    HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
 
    dPosition = 1;
    Battle_Block = 5;
@@ -1665,7 +1698,7 @@ void DefendMiniGame3()
 
                 if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 1;
+                    Battle_Block = 0;
                 }
                 break;
 
@@ -1714,7 +1747,16 @@ void DefendMiniGame3()
             cout << "                            _____/  \\_____              " << endl;
 		    cout << "                           \\____    ____/              " << endl;
 			cout << "                             ___/    \\___               " << endl;
-			cout << "                             \\__  @   __/               " << endl;
+			cout << "                             \\__  ";
+
+    SetConsoleTextAttribute(color, 12);
+
+ cout << "@";
+
+    SetConsoleTextAttribute(color, 7);
+
+
+            cout << "   __/               " << endl;
             Sleep(30);
 
 
@@ -1771,7 +1813,7 @@ void DefendMiniGame3()
 void DefendMiniGame4()
 {
 
-
+    HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
 
    dPosition = 1;
    Battle_Block = 5;
@@ -1971,7 +2013,15 @@ void DefendMiniGame4()
 	        cout << "    |_ \\     |       \\__\\_____|             " << endl;
 	        cout << "     \\_\\____/       /\\  \\__/              " << endl;
             cout << "       \\|_  \\_____/   \\_\\/                " << endl;
-            cout << "   @     \\_______|___/                      " << endl;
+            cout << "   ";
+
+    SetConsoleTextAttribute(color, 12);
+
+ cout << "@";
+
+    SetConsoleTextAttribute(color, 7);
+
+            cout << "     \\_______|___/                      " << endl;
               Sleep(30);
 
 
@@ -2018,6 +2068,11 @@ void DefendMiniGame4()
 //DRAGON DEFENSE
 void DefendMiniGame5()
 {
+
+
+        HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
+
+
        dPosition = 1;
    Battle_Block = 5;
 
@@ -2253,7 +2308,15 @@ void DefendMiniGame5()
             cout << endl;
             cout << endl;
             cout << endl;
-            cout << "                                                     @            " << endl;
+            cout << "                                                     ";
+
+    SetConsoleTextAttribute(color, 12);
+
+ cout << "@";
+
+    SetConsoleTextAttribute(color, 7);
+
+            cout << "            " << endl;
              Sleep(30);
 
                 if(GetKeyState(' ') & 0x8000)
@@ -2351,6 +2414,8 @@ void DefendMiniGame5()
 void DefendMiniGame6()
 {
 
+
+    HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
 
    dPosition = 1;
    Battle_Block = 5;
@@ -2736,7 +2801,7 @@ void DefendMiniGame6()
 
                                     if(GetKeyState(' ') & 0x8000)
                 {
-                    Battle_Block = 1;
+                    Battle_Block = 0;
                 }
                 break;
 
@@ -2761,7 +2826,15 @@ void DefendMiniGame6()
     cout << "   /    /                 \\   \\\/ /                              " << endl;
     cout << "  /    /                   |  ^\\ \\                               " << endl;
     cout << " /    /                     \____\\/                               " << endl;
-    cout << "/____/_______________________@__________________________           " << endl;
+    cout << "/____/_______________________";
+
+    SetConsoleTextAttribute(color, 12);
+
+ cout << "@";
+
+    SetConsoleTextAttribute(color, 7);
+
+    cout << "__________________________           " << endl;
     Sleep(40);
 
 

@@ -29,22 +29,22 @@ void Dialogue()
     {
         ClearScreen();
         TopScreen();
-        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+        cout << "\n\n\n\n\n\n\n"; if(cutscene.tutorial == false){cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;}
     }
 
 
     //check who is speaking and make sure the color matches
-    if(cName == pName)
+    if(Character.Name == Player.Name)
     {
-        tSpeaker = pName;
+        Character.Speaker = Player.Name;
     }
-    if(cName == " " || cName == "Old Man" || cName == "Grandma" || cName == "Hilda" || cName == "Elder" || cName == "Loni" || cName == "Shopkeeper" || cName == "Innkeeper" || cName == "Kuhar" || cName == "Aida" || cName == "Tiki")
+    if(Character.Name == " " || Character.Name == "Old Man" || Character.Name == "Grandma" || Character.Name == "Hilda" || Character.Name == "Elder" || Character.Name == "Loni" || Character.Name == "Shopkeeper" || Character.Name == "Innkeeper" || Character.Name == "Kuhar" || Character.Name == "Aida" || Character.Name == "Tiki")
     {
-        tSpeaker = text;
+        Character.Speaker = Character.Narrator;
     }
-    if(cName == "???")
+    if(Character.Name == "???")
     {
-        tSpeaker = tUnknown;
+        Character.Speaker = Character.Unknown;
     }
     TextColor();
 
@@ -52,7 +52,7 @@ void Dialogue()
 
     //draw dialogue box
     cout << "_______________________________________________________________________________\n" << endl;
-    cout << cName << endl;
+    cout << Character.Name << endl;
     cout << "_______________________________________________________________________________" << endl;
     cout << "\n\n" << endl;
 
@@ -77,7 +77,7 @@ void Dialogue()
     Pause();
 
     //return text color to normal
-    tSpeaker = text; TextColor();
+    Character.Speaker = Character.Narrator; TextColor();
 }
 
 void Pause()
@@ -105,31 +105,31 @@ void TextColor()
 
     HANDLE color=GetStdHandle(STD_OUTPUT_HANDLE);
 
-    if(tSpeaker == tRose)
+    if(Character.Speaker == Character.Rose)
     {
         SetConsoleTextAttribute(color, 3); //aqua
     }
-    if(tSpeaker == pName)
+    if(Character.Speaker == Player.Name)
     {
         SetConsoleTextAttribute(color, 3); //purple was 13, 3 is aqua
     }
-    if(tSpeaker == tHelper)
+    if(Character.Speaker == Character.Helper)
     {
         SetConsoleTextAttribute(color, 9); //green?
     }
-    if(tSpeaker == tBattle)
+    if(Character.Speaker == Character.Battle)
     {
         SetConsoleTextAttribute(color, 12); //red
     }
-    if(tSpeaker == tUnknown)
+    if(Character.Speaker == Character.Unknown)
     {
         SetConsoleTextAttribute(color, 8); //grey
     }
-    if(tSpeaker == text)
+    if(Character.Speaker == Character.Narrator)
     {
         SetConsoleTextAttribute(color, 7); //white
     }
-    if(tSpeaker == tTopScreen)
+    if(Character.Speaker == Text.TopScreen)
     {
         SetConsoleTextAttribute(color, 7); //white
     }
